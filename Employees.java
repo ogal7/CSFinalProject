@@ -25,10 +25,14 @@ public abstract class Employee {
     public static double getRating();
     public static void main(String [] args);
 
-
     public static int getSpeed();
     public void int setSpeed(int s);
     
+    public static int getPrecision();
+    public static void setPrecision(int p);
+    
+    public static int getAccuracy();
+    public static void setAccuracy(int a);
     
 
 
