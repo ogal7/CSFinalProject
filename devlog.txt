@@ -1,4 +1,4 @@
 Final Project DevLog!
 
 1/11: Created All files 
-1/12: created instance vars and constructors for Restaurant.java and Employees.java
+1/12: created instance vars, constructors and get/set methods for Restaurant.java and Employees.java
