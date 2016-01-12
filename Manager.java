@@ -6,17 +6,17 @@ public class Manager extends Employee{
   // Constructor
   public Manager(){
     reqSalary = 75000.0;
-	  rating = .8;
-	  speed = 7;
-  	precision = 7;
-	  accuracy = 7;
-	  greediness = 2;
-	}
+    rating = .8;
+    speed = 7;
+    precision = 7;
+    accuracy = 7;
+    greediness = 2;
+  }
 	
-	// Methods
-	public void setGreediness(int i){
-	  greediness = i;}
-	public int getGreediness(){
-	  return greediness;}
+  // Methods
+  public void setGreediness(int i){
+    greediness = i;}
+  public int getGreediness(){
+    return greediness;}
 	  
 }
