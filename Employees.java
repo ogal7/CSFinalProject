@@ -34,7 +34,7 @@ public abstract class Employee {
     public static int getAccuracy();
     public static void setAccuracy(int a);
     
-
+//
 
     }
 
