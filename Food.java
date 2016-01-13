@@ -32,7 +32,7 @@ public class Food {
   	for (int r = 0; r < food.length; r ++) {
   		retStr+="\n";
   		for (int c = 0; c < food[r].length; c++) {
-  			retStr += "\t"+ food[r][c] + "~";
+  			retStr += (3*r + c)+ "\t"+ food[r][c] + "~";
   		}
   	}
   	return retStr;
