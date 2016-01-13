@@ -1,17 +1,17 @@
 public class FDA{
 
   //Instance vars
-  private boolean passedInspection;
+  private boolean hasEcoli;
   
   // Constructor
   public FDA{
-    passedInspection = true;}
+    hasEcoli = false;}
   
   // Methods
   public void setPassedInspection(boolean b){
-    passedInspection = b;}
+    hasEcoli = b;}
   public boolean getPassedInspection(){
-    return passedInspection;
+    return hasEcoli;
   }
   
 }
