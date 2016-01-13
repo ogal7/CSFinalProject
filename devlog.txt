@@ -3,3 +3,4 @@ Final Project DevLog!
 1/11: Created All files 
 1/12: created instance vars, constructors and get/set methods for Restaurant.java,
       FDA.java, Chef.java, Waiter.java, Manager.java, DEA.java, and Employees.java
+      wrote ToString() for Food.java, created food items and their attributes
