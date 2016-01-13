@@ -90,15 +90,17 @@ public class Restaurant {
       return printArray(waiters);}
   
   // menu
-  public void setMenu(){
-     
+  public void addItem(Object[] o){
+     menu = add
   }
   public String getMenu(){
      return printArray(menu);}
   
   // starRating
   public void setStarRating(){
-     avg
+     double avgEmployeeRating = 
+     double avgEmployeeSpeed = 
+     double avgEmployeeprecision = 
      starRating = 
   }
   public int getStarRating(){
