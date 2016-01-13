@@ -1,0 +1,35 @@
+We Would Walk 1000 Miles							                APCS1 pd9
+Olivia Gallager & Maddie Ostergaard			          				1/7/16				
+Final Project Proposal
+Restaurant Rush!
+
+	Our project is a simulation of owning a restaurant. The user is 
+	a starting restaurant owner, who starts the game with $100,000 
+	dollars.The user will pick staff members to work as waiters and 
+	chefs and managers from a directory of workers with varying skills
+	and required salaries. After they choose workers, they will be 
+	allowed to pick the items on the menu and their prices. Certain 
+	add-on options will  be available to choose from; for example, 
+	adding illegal drugs to your food will increase the likelihood of 
+	your restaurant being shut down, but will also increase customer 
+	satisfaction and profit. There will also be options like karaoke, 
+	live entertainment, and chocolate fountains. After the user creates
+	their restaurant they can choose how many tables/the maximum capacity
+	they would like to have. The purpose of the game is to create the 
+	most successful restaurant. 
+	
+	After the initial creation, the user will visit their restaurant each 
+	month. At each interval they will be told whether they’ve grown in the 
+	last month, and what their biggest issue is.  If the restaurant has 
+	been shut down by the FDA, the police, or by bankruptcy, the user has 
+	lost the game. If, at that point, the user is still afloat and wishes
+	to make changes, they may fire a worker and bring on a new one in hopes
+	of more success. The game will end after 1 year. If, after 12 months 
+	the restaurant is still running, the user has won. 
+	
+	Our game will incorporate a lot of math and probability, super/subclasses,
+	multidimensional arrays, and user prompting. 
+
+
+
+
