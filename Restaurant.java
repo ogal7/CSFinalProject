@@ -11,7 +11,7 @@ public class Restaurant {
   private Employee[] managers;
   private Employee[] chefs;
   private Employee[] waiters;
-  private items[] menu;  
+  private items[][][] menu;  
   private int starRating;  // scale from 1-5
   private int popularity;  // scale from 1-10
   private int fanciness;   // scale from 1-10
@@ -72,30 +72,35 @@ public class Restaurant {
      return name;}
   
   // managers
-  public void setManager(newMan){
+  public void setManager(Employee newMan){
      managers = addEmployee(managers, newMan);}
    public String getManagers(){
       return printArray(managers);}
       
    // chefs
-  public void setChef(newChef){
+  public void setChef(Employee newChef){
      chefs = addEmployee(managers, newChef);}
    public String getChefs(){
       return printArray(chefs);}
       
    // waiters
-  public void setWaiter(newWaiter){
+  public void setWaiter(Employee newWaiter){
      waiters = addEmployee(managers, newWaiter);}
    public String getWaiters(){
       return printArray(waiters);}
   
   // menu
-  //public void setMenu(){}
+  public void setMenu(){
+     
+  }
   public String getMenu(){
      return printArray(menu);}
   
   // starRating
-  // public void setStarRating(){}
+  public void setStarRating(){
+     avg
+     starRating = 
+  }
   public int getStarRating(){
      return starRating;}
      
