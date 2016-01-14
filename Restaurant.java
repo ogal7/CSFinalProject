@@ -11,15 +11,18 @@ public class Restaurant {
   private Employee[] managers;
   private Employee[] chefs;
   private Employee[] waiters;
-  private items[][][] menu;  
+  private items[][] menu;
   private int starRating;  // scale from 1-5
-  private int popularity;  // scale from 1-10
-  private int fanciness;   // scale from 1-10
+  private float popularity;  // scale from 1-10
+  private float fanciness;   // scale from 0-1
   private int healthiness; // scale from 1-10
   private int size;        // scale from 1-10
   private float MonthlyEarnings;
   private float MonthlyCosts;
   private float funds;
+  private int MonthlyRent;
+  private float priceScale;
+  
   // ~~~~~~~~~~~~~CONSTRUCTOR~~~~~~~~~~~~~
   public Restaurant(){
      name = "Restaurant";
@@ -27,12 +30,17 @@ public class Restaurant {
      hasFlies = false;
      managers = {Manager()};
      chefs = {Chef(), Chef()};
-     menu = {Bevs(), Food()};
+     menu = {Items()};
      starRating = 3;
-     popularity = 5;
-     fanciness = 5
+     popularity = .5;
+     fanciness = .5;
      healthiness = 5;
+     MonthlyEarnings = 0.0;
+     MonthlyCosts = 0.0;
+     funds = 100000.0;
      size = 5;
+     MonthlyRent=2000;
+     priceScale = 1.0;
   }
   
   
@@ -113,6 +121,10 @@ public class Restaurant {
   public int getPopularity(){
      return popularity;}
      
+   public float setpopularity() {
+      return (float) ((1+fanciness)* (1+healthiness) / priceScale );
+   }
+     
    // fanciness
   // public void setFanciness(){}
   public int getFanciness(){
@@ -136,25 +148,33 @@ public class Restaurant {
       float retCost = 0.0;
      //salaries
       for (chef x: chefs) {
-         retCost += x.salary;
+         retCost += x.reqSalary;
       }
       for (waiter x: waiters) {
-         retCost += x.salary;
+         retCost += x.reqSalary;
       }
       for (manager x: managers) {
-         retCost += x.salary;
+         retCost += x.reqSalary;
       }
    //food cost - the prices in the directory will be the original prices, and upgrading fanciness will multiply prices by a factor
       for (item x : items) {
          retCost += x.price;
       }
-   retCost *= size * .1;   
+   retCost = retCost * (1 + (size * .1)) ;   //the larger the size, the harder it is to maintain
    
    }
    
    
    public float getMonthlyEarnings() {
+      float retEarn = 0;
       //food sold = size * popularity * food prices
+      for (item x : menu) {
+         retEarn+=x.price;
+      }
+      //start out by selling one of each item on the menu, and then multiply that sum accordingly
+      retEarn *= size * (popularity + 1) ;
+      retEarn *= (1+fanciness);//the more fancy, the more money u make
+      return retEarn;
    }
    
    public float getProfits() {
@@ -169,5 +189,5 @@ public class Restaurant {
       return funds;
    }
    
-   
+ 
 }
