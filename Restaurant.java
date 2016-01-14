@@ -22,7 +22,7 @@ public class Restaurant {
   private float funds;
   private int MonthlyRent;
   private float priceScale;
-  
+  //
   // ~~~~~~~~~~~~~CONSTRUCTOR~~~~~~~~~~~~~
   public Restaurant(){
      name = "Restaurant";
