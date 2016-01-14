@@ -1,0 +1,8 @@
+Completed | Time Required | Task
+    *     | 5 min         | Create to-do.txt
+          |               |
+          |               |
+          |               |
+          |               |           
+          |               |
+          |               |
