@@ -17,7 +17,9 @@ public class Restaurant {
   private int fanciness;   // scale from 1-10
   private int healthiness; // scale from 1-10
   private int size;        // scale from 1-10
-  
+  private float MonthlyEarnings;
+  private float MonthlyCosts;
+  private float funds;
   // ~~~~~~~~~~~~~CONSTRUCTOR~~~~~~~~~~~~~
   public Restaurant(){
      name = "Restaurant";
@@ -128,4 +130,44 @@ public class Restaurant {
      size = i;}
   public int getSize(){
      return size;}
+     
+     
+   public float getMonthlyCost() {
+      float retCost = 0.0;
+     //salaries
+      for (chef x: chefs) {
+         retCost += x.salary;
+      }
+      for (waiter x: waiters) {
+         retCost += x.salary;
+      }
+      for (manager x: managers) {
+         retCost += x.salary;
+      }
+   //food cost - the prices in the directory will be the original prices, and upgrading fanciness will multiply prices by a factor
+      for (item x : items) {
+         retCost += x.price;
+      }
+   retCost *= size * .1;   
+   
+   }
+   
+   
+   public float getMonthlyEarnings() {
+      //food sold = size * popularity * food prices
+   }
+   
+   public float getProfits() {
+      return this.getMonthlyEarnings() - this.getMonthlyCosts();
+   }
+   
+   public void setFunds(float b) {
+      funds += b;
+   }
+   
+   public float getFunds() {
+      return funds;
+   }
+   
+   
 }
