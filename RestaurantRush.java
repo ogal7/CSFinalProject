@@ -1,31 +1,40 @@
 public class RestaurantRush {
-  int monthesToGo = 12;
-
-  public static void play() {
-    System.out.println("          Welcome to Restaurant Rush!         ");
-    //prompt for name
-    
-    //create restaurant
-    Restaurant game = new Restaurant;
-    
-    //pick workers
-    
-    Food olivia = new Food();
-    String lala = olivia.toString();
-    System.out.println(lala);
-    
-    //prompt which items to choose
-    
-    //play
-    while (monthesToGo > 0 ) {
-      //play
-    }
   
-  }
+  // Instance vars
+  private int monthsToGo = 12;
+  private int openRestaurants = 0;
 
+  // Methods
+  public static void play(Restaurant r) {}
+  
+  public static void stillAlive(Restaurant r){}
 
+  public static void canExpand(Restaurant r){}
+  
+  public static void expandChain(){}
+  
+  public static void renovateRestaurant(Restaurant r){}
+
+  public static void closeRestaurant(Restaurant r){}
+  
+  public static void lose(){}
+
+  // Main
   public static void main(String [] args) {
-  
+    // Welcome intro: rules & regs
+    System.out.println("          Welcome to Restaurant Rush!         ");
+    
+    // Create Restaurant: name, workers, food, location
+    Restaurant originalR = new Restaurant;
+    
+    
+    // Play
+    while (monthsToGo > 0 ) {
+      stillAlive(originalR);
+      canExpand(originalR);
+      play(originalR);
+      monthsToGo--;
+      }
   }
 
 }
