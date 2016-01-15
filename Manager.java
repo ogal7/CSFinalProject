@@ -1,3 +1,5 @@
+// Does not need editing
+
 public class Manager extends Employee{
 
   // Instance vars
@@ -20,3 +22,4 @@ public class Manager extends Employee{
     return greediness;}
 	  
 }
+
