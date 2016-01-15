@@ -19,11 +19,15 @@ public abstract class Employee {
     }
 
 
-    public static double getSalary (); 
-    public static void setSalary (double sal);
+    public static double getSalary (){
+    	return salary;}
+    public static void setSalary (double sal){
+    	salary = sal;
+    }
 
-    public static double getRating();
-    public static void main(String [] args);
+    public double getRating(){
+    	return rating;
+    }
 
     public static int getSpeed();
     public void int setSpeed(int s);
@@ -35,6 +39,8 @@ public abstract class Employee {
     public static void setAccuracy(int a);
     
 //uml
+
+
 
     }
 
