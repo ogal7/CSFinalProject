@@ -29,18 +29,30 @@ public abstract class Employee {
     	return rating;
     }
 
-    public static int getSpeed();
-    public void int setSpeed(int s);
+    public static int getSpeed(){
+    	return speed;
+    }
+    public void int setSpeed(int s){
+    	speed = s;
+    }
     
-    public static int getPrecision();
-    public static void setPrecision(int p);
+    public static int getPrecision(){
+    	return precision;
+    }
+    public void setPrecision(int p){
+    	precision = p;
+    }
     
-    public static int getAccuracy();
-    public static void setAccuracy(int a);
+    public static int getAccuracy(){
+    	return accuracy;
+    }
+    public static void setAccuracy(int a){
+    	accuracy = a;
+    }
     
 //uml
 
-
+     // main method
 
     }
 
