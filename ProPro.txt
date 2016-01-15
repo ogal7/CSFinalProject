@@ -28,7 +28,7 @@ Restaurant Rush!
 	the restaurant is still running, the user has won. 
 	
 	Our game will incorporate a lot of math and probability, super/subclasses,
-	multidimensional arrays, and user prompting. 
+	multidimensional arrays, and user prompting.  
 
 
 
