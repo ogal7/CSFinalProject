@@ -2,7 +2,7 @@ public class RestaurantRush {
   
   // Instance vars
   private int monthsToGo = 12;
-  private int openRestaurants = 0;
+  private Restaurant[] openRestaurants;
 
   // Methods
   public static void play(Restaurant r) {}
