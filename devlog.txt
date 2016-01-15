@@ -5,3 +5,6 @@ Final Project DevLog!
       FDA.java, Chef.java, Waiter.java, Manager.java, DEA.java, and Employees.java
       wrote ToString() for Food.java, created food items and their attributes
 1/13: Added money methods to Restaurant.java, fixed items.java
+1/14: Started coding RestaurantRush.java (driver file), and finished coding classes
+      that were started earlier in the week. Created online UML diagram 
+      (https://www.mindmeister.com/635427727?t=LCgVQL4fR6), Illeagals.java and to-do.txt
