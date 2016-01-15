@@ -1,3 +1,5 @@
+// Does not need editing
+
 public class Chef extends Employee{
 
   // Instance vars
