@@ -2,7 +2,7 @@ Completed | Time Required | Task
     *     | 5 min         | Create to-do.txt
           | 20 min        | Complete README.txt 
           | 20 min        | Write Emplyee.java methods
-          |               |
+          | 20 min        | Add illegal things to Illegals.java
           |               |           
           |               |
           |               |
