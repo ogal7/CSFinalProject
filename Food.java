@@ -1,19 +1,20 @@
+// Does not need editing
+
 public class Food {
 
   //instance vars
-  private String[][] food;//name, price, likelihood to go bad 
-  String name;
-  int price;
-  int rotting;
+  private String name;
+  private int price;
+  private int rotting;
   
+// constructor
 public Food() {
 	name = "Apple";
 	price = 1;
 	rotting = 1;
-	
 }
 
-
+// methods
 public Food(String n, int p, int r) {
 	name = n;
 	price = p;
