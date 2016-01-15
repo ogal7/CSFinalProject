@@ -15,7 +15,7 @@ public class Chef extends Employee{
 	
   // Methods
   public void setCookingKnowledge(int i){
-    greediness = i;}
+    cookingKnowledge = i;}
   public int getCookingKnowledge(){
     return cookingKnowledge;}
 	  
