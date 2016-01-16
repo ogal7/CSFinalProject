@@ -1,9 +1,9 @@
 Completed | Time Required | Task
     *     | 5 min         | Create to-do.txt
           | 20 min        | Complete README.txt 
-          | 20 min        | Write Emplyee.java methods
+    *     | 20 min        | Write Employee.java methods
           | 20 min        | Add illegal things to Illegals.java
-          | 45 min        | Finish Restaurant.java methods      
+    *     | 45 min        | Finish Restaurant.java methods      
           | 60-120 min    | Code RestaurantRush.java methods
           | Over time     | Construct driver file main method (LOOK AT RPG FROM HW)
           |               |
