@@ -1,6 +1,6 @@
 
 
-public abstract class Employee {
+public abstract class Employee { 
     
     //instance vars//
     private double reqSalary;
