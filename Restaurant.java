@@ -1,5 +1,6 @@
 /* Restaurant.java represents the individual establishments 
    in a user's restaurant chain */
+   
 
 
 public class Restaurant {
