@@ -8,3 +8,7 @@ Final Project DevLog!
 1/14: Started coding RestaurantRush.java (driver file), and finished coding classes
       that were started earlier in the week. Created online UML diagram 
       (https://www.mindmeister.com/635427727?t=LCgVQL4fR6), Illeagals.java and to-do.txt
+1/15: Organized files (committed ones that don't need to be touched conceptually [may not run]
+      with the message "Does not need editing!") and created a plan for what was going to be 
+      done over the long weekend.
+1/16: Finished Restaurant.java methods and Employee.java methods
