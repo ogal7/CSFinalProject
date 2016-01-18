@@ -8,15 +8,11 @@ public class Restaurant {
   // ~~~~~~~~~~~INSTANCE VARS~~~~~~~~~~
   private String name;
   private boolean hasRats;
-  private boolean hasFlies;
   private Employee[] managers;
   private Employee[] chefs;
   private Employee[] waiters;
   private items[][] menu;
   private int starRating;  // scale from 1-5
-  private float popularity;  // scale from 1-10
-  private float fanciness;   // scale from 0-1
-  private int healthiness; // scale from 1-10
   private int size;        // scale from 1-10
   private float MonthlyEarnings;
   private float MonthlyCosts;
@@ -28,14 +24,10 @@ public class Restaurant {
   public Restaurant(){
      name = "Restaurant";
      hasRats = false;
-     hasFlies = false;
      managers = {Manager()};
      chefs = {Chef(), Chef()};
      menu = {Items()};
      starRating = 3;
-     popularity = .5;
-     fanciness = .5;
-     healthiness = 5;
      MonthlyEarnings = 0.0;
      MonthlyCosts = 0.0;
      funds = 100000.0;
@@ -69,13 +61,7 @@ public class Restaurant {
      hasRats = b;}
   public boolean getRats(){
      return hasRats;}
-  
-  // hasFlies
-  public void setFlies(boolean b){
-     hasFlies = b;}
-  public boolean getFlies(){
-     return hasFlies;}
-     
+ 
   // name
   public void setName(String s){
      name = s;}
@@ -116,25 +102,6 @@ public class Restaurant {
   }
   public int getStarRating(){
      return starRating;}
-     
-   // popularity
-  // public void setPopularity(){}
-  public int getPopularity(){
-     return popularity;}
-     
-   public float setpopularity() {
-      return (float) ((1+fanciness)* (1+healthiness) / priceScale );
-   }
-     
-   // fanciness
-  // public void setFanciness(){}
-  public int getFanciness(){
-     return fanciness;}
-     
-   // healthiness
-  // public void setHealthiness(){}
-  public int getHealthiness(){
-     return healthiness;}
      
    // size
   public void setSize(int i){
