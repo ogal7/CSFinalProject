@@ -1,0 +1,121 @@
+import cs1.Keyboard; 
+   
+
+public class RestaurantV1 {
+
+
+  // Instance vars
+    private int month;
+    private double cashMoney;
+    private double waitstaff;
+    private double chefs;
+    private double managers;
+    private double food;
+    private double waitstaffCapacity;
+    private double foodCapacity;
+    private double managerCapacity;
+    private double chefCapacity;
+    private double lastMonthChefCapacity;
+    private double startMoney;
+
+  //Constructor
+    public RestaurantV1(){
+	cashMoney = 100000;
+	waitstaff = 0;
+	chefs = 0;
+	managers = 0;
+	food = 0;
+	foodCapacity = 0;
+	waitstaffCapacity = 0;
+	managerCapacity = 0;
+	startMoney = 0;
+	
+    }
+    
+  // Methods
+    // public static void stillAlive(){}
+
+
+    public void runOperations(){ //
+	double num = 0;
+	startMoney = cashMoney;
+      // Food
+      System.out.println("You have $" + cashMoney + ". How much would you like to spend on food?");
+      num = Double.parseDouble(Keyboard.readString());
+      if (num < 0){
+	  System.out.println("You cannot withdraw a negative amount. Try a positive number.");}
+      cashMoney -= num;
+      if (cashMoney < 0){
+        System.out.println("You cannot overdraw your funds. Try a smaller number.");}
+      food += num;
+      
+      // Chefs
+      System.out.println("You have $" + cashMoney + ". How much would you like to spend on chefs?");
+      num = Double.parseDouble(Keyboard.readString());
+      if (num < 0){
+	  System.out.println("You cannot withdraw a negative amount. Try a positive number.");}
+      cashMoney -= num;
+      if (cashMoney < 0){
+        System.out.println("You cannot overdraw your funds. Try a smaller number.");}
+      chefs += num;
+      
+      // Waitstaff
+      System.out.println("You have $" + cashMoney + " remaining. How much would you like to spend on waitstaff?");
+      num = Double.parseDouble(Keyboard.readString());
+      if (num < 0){
+	  System.out.println("You cannot withdraw a negative amount. Try a positive number.");}
+      cashMoney -= num;
+      if (cashMoney < 0){
+        System.out.println("You cannot overdraw your funds. Try a smaller number.");}
+      waitstaff += num;
+      
+      // Managers
+      System.out.println("You have $" + cashMoney + " remaining. How much would you like to spend on managers?");
+      num = Double.parseDouble(Keyboard.readString());
+      if (num < 0){
+	  System.out.println("You cannot withdraw a negative amount. Try a positive number.");}
+      cashMoney -= num;
+      if (cashMoney < 0){
+        System.out.println("You cannot overdraw your funds. Try a smaller number.");}
+      managers += num;
+    }
+
+    
+   public  void calculateRevenue(){
+       double revenue = 0;
+       foodCapacity = food / 0.4;
+       waitstaffCapacity = waitstaff * 12.5;
+       chefCapacity = lastMonthChefCapacity;
+       lastMonthChefCapacity = chefs * (chefs / 5000) * 18;
+       if (chefCapacity > 2){
+	   chefCapacity = 2 * chefs;
+       }
+       managerCapacity = managers * 12;
+       // Set revenue
+       if (foodCapacity < waitstaffCapacity && foodCapacity < managerCapacity && foodCapacity < chefCapacity){
+	   revenue = foodCapacity;}
+       if(waitstaffCapacity < foodCapacity && waitstaffCapacity < managerCapacity && waitstaffCapacity < chefCapacity){
+	   revenue = waitstaffCapacity;}
+       if (chefCapacity < waitstaffCapacity && chefCapacity < managerCapacity && chefCapacity < foodCapacity){
+	   revenue = chefCapacity;}
+       if(managerCapacity < foodCapacity && managerCapacity < waitstaffCapacity && managerCapacity < chefCapacity){
+	   revenue = managerCapacity;}
+       // Check for revenue
+       
+       System.out.println("\n foodCapacity = " + foodCapacity + "\n waitstaffCapacity = " + waitstaffCapacity + "\n managerCapacity = " + managerCapacity + "\n chefCapacity = " + chefCapacity);
+       cashMoney += revenue;
+       System.out.println("After " + month + " months of owning a restaurant, you started this month with $" + startMoney + " and brought in $" + revenue +
+			  " in revenue. You now have $" + cashMoney + " in the bank.");
+       month++;
+
+    }
+      
+
+    // public static void lose(){}
+
+
+
+    
+
+
+}
