@@ -51,19 +51,19 @@ public abstract class Employee {
         employeeDir.add(aa);
         
         //waiters
-        Waiter m = new Waiter("Ted", 50000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+        Waiter m = new Waiter("Ted", 50000, .7, 7, 7, 9, 9, false);
         employeeDir.add(m)
-         Waiter m = new Waiter("Robin", 60000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+         Waiter m = new Waiter("Robin", 60000, .9, 9, 10, 9, 2, false);
         employeeDir.add(m)
-         Waiter m = new Waiter("Lily", 55000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+         Waiter m = new Waiter("Lily", 55000, .8, 7, 10, 7, 4, false);
         employeeDir.add(m)
-         Waiter m = new Waiter("Marshall", 47000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+         Waiter m = new Waiter("Marshall", 47000, .7, 7, 8, 9, 7, false);
         employeeDir.add(m)
-         Waiter m = new Waiter("Barney", 40000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+         Waiter m = new Waiter("Barney", 40000, .6 , 10, 5, 6, 6, true);
         employeeDir.add(m)
-         Waiter m = new Waiter("Ranjit", 70000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+         Waiter m = new Waiter("Ranjit", 70000, .9, 6, 9, 8, 2, false);
         employeeDir.add(m)
-         Waiter m = new Waiter("Patrice", 65000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+         Waiter m = new Waiter("Patrice", 65000, .8, 7, 10, 9, 6, false);
         employeeDir.add(m)
         
         
