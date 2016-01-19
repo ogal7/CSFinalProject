@@ -55,11 +55,11 @@ public class Items {
     String retStr="Here are the items you can put on your menu: \n         FOODS \n";
     //creates a directory for the user to pick items from
     for (int x = 0; x< directory.length - 5 ; x ++) {
-      retStr+="\n" + directory.get(x);
+      retStr+="\n" + x + "~" + directory.get(x);
     }
     retStr =+ "\n      BEVERAGES";
     for (int x = directory.length - 5; x< directory.length; x ++) {
-      retStr+="\n" + directory.get(x);
+      retStr+="\n" + x + "~"+ directory.get(x);
     }
     return retStr;
   }
