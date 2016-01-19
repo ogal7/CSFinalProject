@@ -70,6 +70,27 @@ public abstract class Employee {
     }
     
     
+
+    public String toString() {
+        String retStr="Here are the Employees you can put on your Staff: \n         Chefs \n";
+    //creates a directory for the user to pick items from
+    for (int x = 0; x< employeeDir.length - 14 ; x ++) {
+      retStr+="\n" + x + "~" + employeeDir.get(x);
+    }
+    retStr =+ "\n      Managers";
+    for (int x = 7; x< employeeDir.length-7; x ++) {
+      retStr+="\n" + x + "~"+ employeeDir.get(x);
+    }
+    
+    for (int x = 14; x <employeeDir.length; x++) {
+        retStr+="\n"+ x + "~" + employeeDir.get(x);
+    }
+    
+    return retStr;
+  }
+
+    
+    
     // methods
     public double getSalary (){
     	return salary;}
