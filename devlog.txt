@@ -12,3 +12,4 @@ Final Project DevLog!
       with the message "Does not need editing!") and created a plan for what was going to be 
       done over the long weekend.
 1/16: Finished Restaurant.java methods and Employee.java methods
+1/18: Editting Restaurant.java
