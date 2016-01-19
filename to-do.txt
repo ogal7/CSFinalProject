@@ -1,14 +1,14 @@
 Completed | Time Required | Task
     *     | 5 min         | Create to-do.txt
           | 20 min        | Complete README.txt 
-    *     | 20 min        | Write Employee.java methods
+    *     | 20 min        | Write Employee.java methods (create the dir, add waiter attributes, add chef/manager attributes)
           | 20 min        | Add illegal things to Illegals.java
     *     | 45 min        | Finish Restaurant.java methods      
           | 60-120 min    | Code RestaurantRush.java methods
           | Over time     | Construct driver file main method (LOOK AT RPG FROM HW)
-          |               |
-          |               |
-          |               |
+          |               | add Decor class(styles, ambiance)
+          |               | add menu items
+          |               | change UML diagram
           |               |
           |               |
           |               |
