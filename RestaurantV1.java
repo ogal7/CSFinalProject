@@ -180,19 +180,7 @@ public class RestaurantV1 {
 
     // public static void lose(){}
 
-public static void play () {
-	//create new restaurant
-	System.out.println("Welcome to Restaurant Rush! The aim of the game is to create the most successful restaurant \n");
-	System.out.println("What do you want to name your restaurant?");
-	String name = Keyboard.readString();
-	System.out.println("What size do you want the restaurant to be? Please pick a number from 1-10:");
-	int size = Integer.parseInt(keyboard.readString());
-	System.out.println("Please pick a price scale. We will multiply the preset food item prices by this number: ");
-	float priceScale = Float.parseFloat(keyboard.readString());
-	Restaurant starter = new Restaurant(name, size, priceScale);
-	System.out.println("Alright, before you pick food items you gotta do some budgetting:");
-	runOperations();
-	
+
 	
 	//
 }
