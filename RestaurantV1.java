@@ -190,6 +190,10 @@ public static void play () {
 	System.out.println("Please pick a price scale. We will multiply the preset food item prices by this number: ");
 	float priceScale = Float.parseFloat(keyboard.readString());
 	Restaurant starter = new Restaurant(name, size, priceScale);
+	System.out.println("Alright, before you pick food items you gotta do some budgetting:");
+	runOperations();
+	
+	
 	//
 }
 
