@@ -47,10 +47,16 @@ public class RestaurantV1 {
       System.out.print("You have $" + cashMoney + ". How much would you like to spend on food?  $");
       num = Double.parseDouble(Keyboard.readString());
       if (num < 0){
-	  System.out.println("You cannot withdraw a negative amount. Try a positive number.");}
+	  System.out.println("You cannot withdraw a negative amount. Try a positive amount.");
+	  num = Double.parseDouble(Keyboard.readString());
+      }
       cashMoney -= num;
       if (cashMoney < 0){
-        System.out.println("You cannot overdraw your funds. Try a smaller number.");}
+        System.out.println("You cannot overdraw your funds. You have $"+ cashMoney+ ". Try a smaller amount.");
+      	cashMoney+=num;//this way if someone tries to overdraw money it won't actually leave the account
+      	num = Double.parseDouble(Keyboard.readString());
+      	cashMoney-=num;
+      }//at this point the moneys already been withdrawn.
       food += num;
       expenses += num;
       
@@ -58,15 +64,31 @@ public class RestaurantV1 {
       System.out.print("You have $" + cashMoney + ". How much would you like to spend on chefs?  $");
       num = Double.parseDouble(Keyboard.readString());
       if (num < 0){
-	  System.out.println("You cannot withdraw a negative amount. Try a positive number.");}
+	  System.out.println("You cannot withdraw a negative amount. Try a positive amount.");
+	  num = Double.parseDouble(Keyboard.readString());
+      }
+      cashMoney -= num;
+      if (cashMoney < 0){
+        System.out.println("You cannot overdraw your funds. You have $"+ cashMoney+ ". Try a smaller amount.");
+      	cashMoney+=num;//this way if someone tries to overdraw money it won't actually leave the account
+      	num = Double.parseDouble(Keyboard.readString());
+      	cashMoney-=num;
+      }//at this point the moneys already been withdrawn.
+      chefs += num;
+      expenses += num;
+    /*  
+      System.out.print("You have $" + cashMoney + ". How much would you like to spend on chefs?  $");
+      num = Double.parseDouble(Keyboard.readString());
+      if (num < 0){
+	  System.out.println("You cannot withdraw a negative amount. Try a positive amount.");}
       cashMoney -= num;
       if (cashMoney < 0){
         System.out.println("You cannot overdraw your funds. Try a smaller number.");}
       chefs += num;
       expenses += num;
-      
+      */
       // Waitstaff
-      System.out.print("You have $" + cashMoney + " remaining. How much would you like to spend on waitstaff?  $");
+     /* System.out.print("You have $" + cashMoney + " remaining. How much would you like to spend on waitstaff?  $");
       num = Double.parseDouble(Keyboard.readString());
       if (num < 0){
 	  System.out.println("You cannot withdraw a negative amount. Try a positive number.");}
@@ -75,7 +97,24 @@ public class RestaurantV1 {
         System.out.println("You cannot overdraw your funds. Try a smaller number.");}
       waitstaff += num;
       expenses += num;
+      */
+      System.out.print("You have $" + cashMoney + ". How much would you like to spend on Waitstaff?  $");
+      num = Double.parseDouble(Keyboard.readString());
+      if (num < 0){
+	  System.out.println("You cannot withdraw a negative amount. Try a positive amount.");
+	  num = Double.parseDouble(Keyboard.readString());
+      }
+      cashMoney -= num;
+      if (cashMoney < 0){
+        System.out.println("You cannot overdraw your funds. You have $"+ cashMoney+ ". Try a smaller amount.");
+      	cashMoney+=num;//this way if someone tries to overdraw money it won't actually leave the account
+      	num = Double.parseDouble(Keyboard.readString());
+      	cashMoney-=num;
+      }//at this point the moneys already been withdrawn.
+      waitstaff += num;
+      expenses += num;
       
+     
       // Managers
       System.out.print("You have $" + cashMoney + " remaining. How much would you like to spend on managers?  $");
       num = Double.parseDouble(Keyboard.readString());
