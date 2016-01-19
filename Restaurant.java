@@ -36,6 +36,20 @@ public class Restaurant {
      priceScale = 1.0;
   }
   
+  public Restaurant(String name, int size, float priceScale){
+     name = "name";
+     hasRats = false;
+     managers = {Manager()};
+     chefs = {Chef(), Chef()};
+     menu = {Items()};
+     starRating = 3;
+     MonthlyEarnings = 0.0;
+     MonthlyCosts = 0.0;
+     funds = 100000.0;
+     size = size;
+     MonthlyRent=2000;
+     priceScale = priceScale;
+  }
   
   // ~~~~~~~~~~~~METHODS~~~~~~~~~~~~~
   
