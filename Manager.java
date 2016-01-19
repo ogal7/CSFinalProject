@@ -4,7 +4,7 @@ public class Manager extends Employee{
 
   // Instance vars
   private int greediness;
-  
+  //ososos
   // Constructor
   public Manager(){
     name = "Mr. Mosby";
