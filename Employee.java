@@ -51,8 +51,20 @@ public abstract class Employee {
         employeeDir.add(aa);
         
         //waiters
-        Waiter m = new Waiter();
-        employeeDir.add()
+        Waiter m = new Waiter("Ted", 50000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+        employeeDir.add(m)
+         Waiter m = new Waiter("Robin", 60000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+        employeeDir.add(m)
+         Waiter m = new Waiter("Lily", 55000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+        employeeDir.add(m)
+         Waiter m = new Waiter("Marshall", 47000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+        employeeDir.add(m)
+         Waiter m = new Waiter("Barney", 40000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+        employeeDir.add(m)
+         Waiter m = new Waiter("Ranjit", 70000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+        employeeDir.add(m)
+         Waiter m = new Waiter("Patrice", 65000, double rat, int s, int prec, int acc, int clums, boolean isfel);
+        employeeDir.add(m)
         
         
     }
