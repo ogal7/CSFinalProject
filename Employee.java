@@ -8,6 +8,30 @@ public abstract class Employee {
     private int speed;
     private int precision;
     private int accuracy;
+    private String name;
+    private ArrayList employeeDir = new ArrayList<Employee>();
+    
+    
+    //constructor
+    
+    public Employee () {
+        // 7 of each job
+        Chef a = new Chef ("Lisa", 100000.0, .9, 8, 8, 8, 9 );
+        employeeDir.add(a);
+        Chef b = new Chef ("Bart", 50000, .5, 6, 2, 6, 3 );
+        employeeDir.add(a);
+        Chef c = new Chef ("Homer", reqsalary, rating, speed, precision, accuracy, cookingknowledge )
+        employeeDir.add(a);
+        Chef d = new Chef ("Marge", reqsalary, rating, speed, precision, accuracy, cookingknowledge )
+        employeeDir.add(a);
+        Chef e = new Chef ("Spongebob", reqsalary, rating, speed, precision, accuracy, cookingknowledge )
+        employeeDir.add(a);
+        Chef f = new Chef ("Patrick Star", reqsalary, rating, speed, precision, accuracy, cookingknowledge )
+        employeeDir.add(a);
+        Chef g = new Chef ("Squidward", reqsalary, rating, speed, precision, accuracy, cookingknowledge )
+        employeeDir.add(a);
+    }
+    
     
     // methods
     public double getSalary (){
