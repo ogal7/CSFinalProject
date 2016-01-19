@@ -18,9 +18,14 @@ public class RestaurantV1 {
     private double lastMonthChefCapacity;
     private double startMoney;
     private double expenses;
+    private String name;
+    private int size;
+    private float priceScale;
 
   //Constructor
     public RestaurantV1(){
+    	name = "";
+    	priceScale=1.1;
 	cashMoney = 100000;
 	waitstaff = 0;
 	chefs = 0;
@@ -32,7 +37,26 @@ public class RestaurantV1 {
 	managerCapacity = 0;
 	startMoney = 0;
 	expenses = 0;
+	size = 5;
 	
+    }
+    
+    
+    public RestaurantV1(String n,int sz, float ps) {
+    	name = n;
+    	size = sz;
+    	priceScale = ps;
+    	cashMoney = 100000;
+	waitstaff = 0;
+	chefs = 0;
+	managers = 0;
+	food = 0;
+	foodCapacity = 0;
+	waitstaffCapacity = 0;
+	chefCapacity = 
+	managerCapacity = 0;
+	startMoney = 0;
+	expenses = 0;
     }
     
   // Methods
