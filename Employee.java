@@ -98,19 +98,19 @@ public abstract class Employee {
     public void setRating(double d){
     	rating = d;}
 
-    public static int getSpeed(){
+    public int getSpeed(){
     	return speed;}
     public void int setSpeed(int s){
     	speed = s;}
     
-    public static int getPrecision(){
+    public int getPrecision(){
     	return precision; }
     public void setPrecision(int p){
     	precision = p;}
     
-    public static int getAccuracy(){
+    public int getAccuracy(){
     	return accuracy;}
-    public static void setAccuracy(int a){
+    public void setAccuracy(int a){
     	accuracy = a;}
     
 //uml
