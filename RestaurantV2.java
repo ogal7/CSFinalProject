@@ -42,7 +42,7 @@ public class RestaurantV2 {
     }
     
     
-    public RestaurantV1(String n,int sz, float ps) {
+    public RestaurantV2(String n,int sz, float ps) {
     	name = n;
     	size = sz;
     	priceScale = ps;
