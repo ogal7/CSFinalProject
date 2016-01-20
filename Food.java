@@ -23,7 +23,7 @@ public Food(String n, int p, int r) {
 
 public String toString() {
 	String retStr = "";
-	retStr=name + "   ~   $"+ price + "   ~   " + rotting+" ";	
+	retStr=name + "\n\t$"+ price + "\n\tRottingSpeed: " + rotting+" ";	
 	return retStr;
 }
 }
