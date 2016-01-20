@@ -3,7 +3,7 @@ import cs1.Keyboard;
    
 
 public class RestaurantRushV2 {
-    protected ArrayList employeeDir = new ArrayList<Employee>();
+    /*protected ArrayList employeeDir = new ArrayList<Employee>();
         Employee a = new Chef ("Lisa", 100000.0, .9, 8, 8, 8, 9 );
         employeeDir.add(a);
         Employee b = new Chef ("Bart", 50000, .5, 6, 2, 6, 3 );
@@ -51,7 +51,7 @@ public class RestaurantRushV2 {
         Waiter s = new Waiter("Patrice", 65000, .8, 7, 10, 9, 6, false);
         employeeDir.add(s);
 
- 
+ */
  public String toString() {
         String retStr="Here are the Employees you can put on your Staff: \n         Chefs \n";
     //creates a directory for the user to pick items from
@@ -77,7 +77,7 @@ public class RestaurantRushV2 {
       int months = 0;
       ArrayList menu = new ArrayList<Object>();
       // Welcome intro: rules & regs
-	 System.out.println("          Welcome to Restaurant Rush!\n \n It's the beginning of January, and you want to \n open a Restaurant!");
+	System.out.println("          Welcome to Restaurant Rush!\n \n It's the beginning of January, and you want to \n open a Restaurant!");
 	System.out.print("What do you want to name your restaurant? \n \t Name: ");
 	String name = Keyboard.readString();
 	
@@ -94,8 +94,6 @@ public class RestaurantRushV2 {
 	//food items
 	
 	Items selection = new Items();
-	Employee staff = new Employee();
-	ArrayList staffLis = new ArrayList<Employee>();
 	System.out.println(selection);
 	
 	System.out.println("Please Enter the number of the rows you wish to add to your menu. You must choose 15 items\n");
@@ -108,7 +106,8 @@ public class RestaurantRushV2 {
 	    ctr++;
 	}
 	
-
+	Employee staff = new Employee();
+	ArrayList staffLis = new ArrayList<Employee>();
 	System.out.println("Menu filled. Now let's pick out staff members");
 	System.out.println("Please Enter the number of the rows you wish to add to your staff. You may choose 5 members");
 	ctr = 0;
