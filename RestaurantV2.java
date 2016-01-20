@@ -21,6 +21,13 @@ public class RestaurantV2 {
     private String name;
     private int size;
     private double priceScale;
+    int lighting;
+    boolean hasBooths;
+    boolean hasKaraoke;
+    boolean hasLiveEnt;
+    boolean hasCarpets;
+    int musicVol;
+    boolean hasBar;
 
   //Constructor
     public RestaurantV2(){
