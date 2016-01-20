@@ -42,7 +42,7 @@ public class RestaurantV2 {
     }
     
     
-    public RestaurantV1(String n,int sz, float ps) {
+    public RestaurantV2(String n,int sz, float ps) {
     	name = n;
     	size = sz;
     	priceScale = ps;
@@ -100,28 +100,6 @@ public class RestaurantV2 {
       }//at this point the moneys already been withdrawn.
       chefs += num;
       expenses += num;
-    /*  
-      System.out.print("You have $" + cashMoney + ". How much would you like to spend on chefs?  $");
-      num = Double.parseDouble(Keyboard.readString());
-      if (num < 0){
-	  System.out.println("You cannot withdraw a negative amount. Try a positive amount.");}
-      cashMoney -= num;
-      if (cashMoney < 0){
-        System.out.println("You cannot overdraw your funds. Try a smaller number.");}
-      chefs += num;
-      expenses += num;
-      */
-      // Waitstaff
-     /* System.out.print("You have $" + cashMoney + " remaining. How much would you like to spend on waitstaff?  $");
-      num = Double.parseDouble(Keyboard.readString());
-      if (num < 0){
-	  System.out.println("You cannot withdraw a negative amount. Try a positive number.");}
-      cashMoney -= num;
-      if (cashMoney < 0){
-        System.out.println("You cannot overdraw your funds. Try a smaller number.");}
-      waitstaff += num;
-      expenses += num;
-      */
       System.out.print("You have $" + cashMoney + ". How much would you like to spend on Waitstaff?  $");
       num = Double.parseDouble(Keyboard.readString());
       if (num < 0){
@@ -137,19 +115,6 @@ public class RestaurantV2 {
       }//at this point the moneys already been withdrawn.
       waitstaff += num;
       expenses += num;
-      
-     
-      // Managers
-    /*  System.out.print("You have $" + cashMoney + " remaining. How much would you like to spend on managers?  $");
-      num = Double.parseDouble(Keyboard.readString());
-      if (num < 0){
-	  System.out.println("You cannot withdraw a negative amount. Try a positive number.");}
-      cashMoney -= num;
-      if (cashMoney < 0){
-        System.out.println("You cannot overdraw your funds. Try a smaller number.");}
-      managers += num;
-      expenses += num;
-    } */
     System.out.print("You have $" + cashMoney + ". How much would you like to spend on Managers?  $");
       num = Double.parseDouble(Keyboard.readString());
       if (num < 0){
