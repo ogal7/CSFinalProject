@@ -5,27 +5,9 @@ public class Items {
 
   // Instance vars
   public ArrayList directory = new ArrayList<Object>();
-  Food a;
-  Food b;
-  Food c;
-  Food d;
-  Food e;
-  Food f;
-  Food g;
-  Food h;
-  Food i;
-  Food j;
-  Food k;
-  Food l;
-  Food m;
-  Food n;
-  Food o;
+  Food a; Food b; Food c; Food d; Food e; Food f;  Food g; Food h; Food i; Food j; Food k; Food l; Food m; Food n; Food o;
   
-  Bev aa;
-  Bev bb;
-  Bev cc;
-  Bev dd;
-  Bev ee;
+  Bev aa; Bev bb; Bev cc; Bev dd;Bev ee;
   
   public Items() {
     a = new Food("Pizza", 4, 1);
@@ -74,7 +56,7 @@ public class Items {
   
   //Methods
   public String toString() {
-    String retStr="Here are the items you can put on your menu: \n         FOODS \n";
+    String retStr="Here are the items you can put on your menu: \n         FOODS        \n";
     //creates a directory for the user to pick items from
     for (int x = 0; x < directory.size() - 5 ; x ++) {
       retStr+="\n" + x + "~" + directory.get(x);
