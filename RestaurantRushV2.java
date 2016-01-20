@@ -25,6 +25,7 @@ public class RestaurantRushV2 {
 	//food items
 	Items selection = new Items();
 	Employee staff = new Employee();
+	ArrayList staffLis = new ArrayList<Employee>();
 	System.out.println(selection);
 	System.out.println("Please Enter the number of the rows you wish to add to your menu. You must choose 15 items\n");
 	int ctr = 0;
@@ -41,7 +42,7 @@ public class RestaurantRushV2 {
 	while (ctr < 5) {
 		int itemRow = Integer.parseInt(Keyboard.readString());
 		Employee staffer = staff.employeeDir.get(itemRow);
-		staff.add(staffer);
+		staffLis.add(staffer);
 		ctr++;
 	}
 	
