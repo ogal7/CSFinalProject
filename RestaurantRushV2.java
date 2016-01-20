@@ -41,7 +41,7 @@ public class RestaurantRushV2 {
 	ctr = 0;
 	while (ctr < 5) {
 		int itemRow = Integer.parseInt(Keyboard.readString());
-		Employee staffer = staff.employeeDir.get(itemRow);
+		Employee staffer = (Employee)staff.employeeDir.get(itemRow);
 		staffLis.add(staffer);
 		ctr++;
 	}
