@@ -25,6 +25,7 @@ public class Items {
   Bev bb;
   Bev cc;
   Bev dd;
+  Bev ee;
   
   public Items() {
     a = new Food("Pizza", 4, 1);
