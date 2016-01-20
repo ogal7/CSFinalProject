@@ -51,7 +51,7 @@ public class RestaurantRushV2 {
         Waiter s = new Waiter("Patrice", 65000, .8, 7, 10, 9, 6, false);
         employeeDir.add(s);
 
- */
+
  public String toString() {
         String retStr="Here are the Employees you can put on your Staff: \n         Chefs \n";
     //creates a directory for the user to pick items from
@@ -70,7 +70,7 @@ public class RestaurantRushV2 {
     return retStr;
   }
  
- 
+*/ 
  
   // Main
   public static void main(String [] args) {
