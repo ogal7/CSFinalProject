@@ -107,8 +107,9 @@ public class RestaurantRushV2 {
 	}
 	
 	Employee staff = new Employee();
-	ArrayList staffLis = new ArrayList<Employee>();
+	//ArrayList staffLis = new ArrayList<Employee>();
 	System.out.println("Menu filled. Now let's pick out staff members");
+	System.out.println(staff);
 	System.out.println("Please Enter the number of the rows you wish to add to your staff. You may choose 5 members");
 	ctr = 0;
 	while (ctr < 5) {
@@ -117,6 +118,53 @@ public class RestaurantRushV2 {
 		staffLis.add(staffer);
 		ctr++;
 	}
+	
+	Decor lala = new Decor() 
+	 int lighting;
+	 boolean hasBooths;
+         boolean hasKaraoke;
+         boolean hasLiveEnt;
+         boolean hasCarpets;
+         int musicVol;
+         boolean hasBar;
+	System.out.println("Now it's time to customize your restaurant's ambiance");
+	System.out.println("Do you want to add booths to your restaurant? (type y/n): ");
+	String ans = Keyboard.readString();
+	if (ans.equals("y") {
+		hasBooths = true;
+	}
+	else {hasBooths = false;}
+	System.out.println("Do you want to add Karaoke to your restaurant? (type y/n): ");
+	String ans = Keyboard.readString();
+	if (ans.equals("y") {
+		hasKaraoke = true;
+	}
+	else {
+		hasKaraoke = false;
+	}
+	System.out.println("Do you want to add Live Entertainment to your restaurant? (type y/n): ");
+	String ans = Keyboard.readString();
+	if (ans.equals("y") {
+		hasLiveEnt = true;
+	}
+	else {hasLiveEnt = false;}
+	System.out.println("Do you want to add carpets to your restaurant? (type y/n): ");
+	String ans = Keyboard.readString();
+	if (ans.equals("y") {
+		hasCarpets= true;
+	}
+	else {hasCarpets=false;}
+	System.out.println("Do you want to add a bar to your restaurant? (type y/n): ");
+	String ans = Keyboard.readString();
+	if (ans.equals("y") {
+		hasBar = true;
+	}
+	else {hasBar = false;}
+	
+	System.out.println("How strong do you want you lighting to be? (Please type a number from 0-10): ");
+		lighting = Integer.parseInt(Keyboard.readString());
+	System.out.println("How loud do you want your music to be? (Please type a number from 0-10):")
+		musicVol = Integer.parseInt(Keyboard.readString());
 	
 	
 	
