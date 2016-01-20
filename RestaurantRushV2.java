@@ -23,7 +23,7 @@ public class RestaurantRushV2 {
 	System.out.println("You have $100,000 in funds. ");
 	starter.runOperations();
 	//food items
-	Items selection = new Items();
+	Item selection = new Item();
 	Employee staff = new Employee();
 	ArrayList staffLis = new ArrayList<Employee>();
 	System.out.println(selection);
