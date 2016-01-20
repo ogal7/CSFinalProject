@@ -3,13 +3,13 @@
 public abstract class Employee { 
     
     //instance vars//
-    private double reqSalary;
-    private double rating;
-    private int speed;
-    private int precision;
-    private int accuracy;
-    private String name;
-    private ArrayList employeeDir = new ArrayList<Employee>();
+    protected double reqSalary;
+    protected double rating;
+    protected int speed;
+    protected int precision;
+    protected int accuracy;
+    protected String name;
+    protected ArrayList employeeDir = new ArrayList<Employee>();
     
     
     //constructor
