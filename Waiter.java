@@ -32,8 +32,8 @@ public class Waiter extends Employee{
   // Methods
   
   public void setFromJail(boolean i){
-    fromJail = i;}
+    isFelon = i;}
   public boolean getFromJail(){
-    return fromJail;}
+    return isFelon;}
 	  
 }
