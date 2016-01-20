@@ -1,6 +1,6 @@
 // Does not need editing
 
-public class Bevs {
+public class Bev {
 
   //instance vars
   String name;
@@ -8,7 +8,7 @@ public class Bevs {
   int maintenance;
   boolean hasAlcohol;
   
-public Bevs() {
+public Bev() {
 	name = "Apple Juice";
 	price = 1;
 	maintenance = 1;
@@ -16,7 +16,7 @@ public Bevs() {
 }
 
 
-public Bevs(String n, int p, int m, boolean a) {
+public Bev(String n, int p, int m, boolean a) {
 	name = n;
 	price = p;
 	maintenance = m;

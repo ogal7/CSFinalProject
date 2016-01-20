@@ -20,12 +20,12 @@ public class RestaurantV2 {
     private double expenses;
     private String name;
     private int size;
-    private float priceScale;
+    private double priceScale;
 
   //Constructor
     public RestaurantV2(){
     	name = "";
-    	priceScale=1.1;
+    	priceScale = 1.1;
 	cashMoney = 100000;
 	waitstaff = 0;
 	chefs = 0;
@@ -42,7 +42,7 @@ public class RestaurantV2 {
     }
     
     
-    public RestaurantV2(String n,int sz, float ps) {
+    public RestaurantV2(String n,int sz, double ps) {
     	name = n;
     	size = sz;
     	priceScale = ps;
@@ -172,9 +172,4 @@ public class RestaurantV2 {
 
 	
 	//
-}
-
-    
-
-
 }

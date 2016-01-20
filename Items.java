@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Items {
 
   // Instance vars
-  public ArrayList<Object>() directory;
+  public ArrayList<Object> directory;
   
   public Items() {
     Food a = new Food("Pizza", 4, 1);
@@ -37,15 +37,15 @@ public class Items {
     Food o = new Food("Falafel", 6, 1);
     directory.add(o);
     
-    Bevs aa = new Bev ("beer", 6, 1, true);
+    Bev aa = new Bev ("beer", 6, 1, true);
     directory.add(aa);
-    Bevs bb = new Bev ("Merlot", 10, 2, true);
+    Bev bb = new Bev ("Merlot", 10, 2, true);
     directory.add(bb);
-    Bevs cc = new Bev ("Sparkling Water", 1, 1,false);
+    Bev cc = new Bev ("Sparkling Water", 1, 1,false);
     directory.add(cc);
-    Bevs dd = new Bev ("Margherita", 7, 3,true);
+    Bev dd = new Bev ("Margherita", 7, 3,true);
     directory.add(dd);
-    Bevs ee = new Bev ("Lemonade", 2, 3,false);
+    Bev ee = new Bev ("Lemonade", 2, 3,false);
     directory.add(ee);
 
   }
@@ -54,11 +54,11 @@ public class Items {
   public String toString() {
     String retStr="Here are the items you can put on your menu: \n         FOODS \n";
     //creates a directory for the user to pick items from
-    for (int x = 0; x< directory.length - 5 ; x ++) {
+    for (int x = 0; x < directory.size() - 5 ; x ++) {
       retStr+="\n" + x + "~" + directory.get(x);
     }
-    retStr =+ "\n      BEVERAGES";
-    for (int x = directory.length - 5; x< directory.length; x ++) {
+    retStr += "\n      BEVERAGES";
+    for (int x = directory.size() - 5; x< directory.size(); x ++) {
       retStr+="\n" + x + "~"+ directory.get(x);
     }
     return retStr;
