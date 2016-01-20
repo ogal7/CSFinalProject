@@ -4,7 +4,7 @@ public class Items {
 
 
   // Instance vars
-  public ArrayList<Object>() directory;
+  public ArrayList<Object>() directory = new ArrayList<Object>();
   Food a;
   Food b;
   Food c;
