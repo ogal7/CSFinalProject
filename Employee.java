@@ -41,7 +41,7 @@ public class Employee {
         employeeDir.add(z);
         Manager xx = new Manager("Alex", 80000, .7, 9, 6, 8,6);
         employeeDir.add(xx);
-        Manager yy= new Manager("Izzie", 80000, .6 , 7, 9, 9, 1);
+        Manager yy = new Manager("Izzie", 80000, .6 , 7, 9, 9, 1);
         employeeDir.add(yy);
         Manager zz = new Manager("Miranda Bailey", 300000, .9, 8, 10, 10, 2);
         employeeDir.add(zz);
