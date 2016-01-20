@@ -8,14 +8,14 @@ public class Waiter extends Employee{
   
   // Constructor
   public Waiter(){
-    name = "Esteban"
+    name = "Esteban";
     reqSalary = 75000.0;
     rating = .8;
     speed = 7;
     precision = 7;
     accuracy = 7;
     clumsiness = 2;
-    isFelon = false
+    isFelon = false;
   }
   
   public Waiter(String n, double req, double rat, int s, int prec, int acc, int clums, boolean isfel){
