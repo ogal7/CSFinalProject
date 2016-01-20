@@ -72,11 +72,11 @@ public class Employee {
         retStr+="\n" + x + "~" + employeeDir.get(x);
     }
     retStr += "\n      Managers";
-    for (int x = 7; x< employeeDir.length-7; x ++) {
+    for (int x = 7; x< employeeDir.size()-7; x ++) {
       retStr+="\n" + x + "~"+ employeeDir.get(x);
     }
     
-    for (int x = 14; x <employeeDir.length; x++) {
+    for (int x = 14; x <employeeDir.size(); x++) {
         retStr+="\n"+ x + "~" + employeeDir.get(x);
     }
     
