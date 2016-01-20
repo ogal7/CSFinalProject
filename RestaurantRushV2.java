@@ -5,7 +5,7 @@ import cs1.Keyboard;
 public class RestaurantRushV2 {
     protected ArrayList employeeDir = new ArrayList<Employee>();
         Employee a = new Chef ("Lisa", 100000.0, .9, 8, 8, 8, 9 );
-        employeeDir.add(a);
+        employeeDir.add((Employee)a);
         Employee b = new Chef ("Bart", 50000, .5, 6, 2, 6, 3 );
         employeeDir.add(b);
         Employee c = new Chef ("Homer", 10000, .1, 1, 5, 2, 1 );
