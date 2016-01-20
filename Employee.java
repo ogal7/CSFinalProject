@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public abstract class Employee { 
+public class Employee { 
     
     //instance vars//
     protected double reqSalary;
