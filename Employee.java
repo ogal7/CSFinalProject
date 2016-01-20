@@ -100,7 +100,9 @@ public class Employee {
 
     public int getSpeed(){
     	return speed;}
-    public void int setSpeed(int s){
+    
+    
+    public void setSpeed(int s){
     	speed = s;}
     
     public int getPrecision(){
