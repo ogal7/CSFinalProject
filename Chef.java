@@ -11,18 +11,16 @@ public class Chef extends Employee{
     reqSalary = 75000.0;
     rating = .8;
     speed = 7;
-    precision = 7;
     accuracy = 7;
     cookingKnowledge = 2;
   }
   
   
-  public Chef(String n, double req, double ratin, int s, int prec, int acc, int cK ){
+  public Chef(String n, double req, double ratin, int s, int acc, int cK ){
     name = n;
     reqSalary = req;
     rating = ratin;
     speed = s;
-    precision = prec;
     accuracy = acc;
     cookingKnowledge = cK;
   }
@@ -32,6 +30,13 @@ public class Chef extends Employee{
     cookingKnowledge = i;}
   public int getCookingKnowledge(){
     return cookingKnowledge;}
+    
+    
+    public String toString() {
+    	return "Chef "+name+" needs to be paid an annual salary of $" + reqSalary + ". \nTheir rating is " 
+    	+ rating + "\nTheir speed is " + speed + "\nTheir Attentiveness is " + accuracy 
+    	+ ". \n Their cooking experience is " + cookingKnowledge + "years"; 
+    }
 	  
 }
 //
