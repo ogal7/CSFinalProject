@@ -8,7 +8,6 @@ public class Employee {
     protected int speed;
     protected int accuracy;
     protected String name;
-    protected ArrayList employeeDir;
     
     
     //constructor
