@@ -24,6 +24,7 @@ public class RestaurantRushV2 {
 	starter.runOperations();
 	//food items
 	Items selection = new Items();
+	Employee staff = new Employee();
 	System.out.println(selection);
 	System.out.println("Please Enter the number of the rows you wish to add to your menu. You must choose 15 items\n");
 	int ctr = 0;
@@ -35,7 +36,16 @@ public class RestaurantRushV2 {
 	    ctr++;
 	}
 	System.out.println("Menu filled. Now let's pick out staff members");
-	System.out.println("");
+	System.out.println("Please Enter the number of the rows you wish to add to your staff. You may choose 5 members");
+	ctr = 0;
+	while (ctr < 5) {
+		int itemRow = Integer.parseInt(Keyboard.readString());
+		Object staffer = staff.employeeDir.get(itemRow);
+		staff.add(staffer);
+		ctr++;
+	}
+	
+	
 	
 
     // Play
