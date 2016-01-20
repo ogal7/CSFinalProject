@@ -71,7 +71,7 @@ public abstract class Employee {
         for (int x = 0; x< employeeDir.length - 14 ; x ++) {
         retStr+="\n" + x + "~" + employeeDir.get(x);
     }
-    retStr =+ "\n      Managers";
+    retStr += "\n      Managers";
     for (int x = 7; x< employeeDir.length-7; x ++) {
       retStr+="\n" + x + "~"+ employeeDir.get(x);
     }
