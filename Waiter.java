@@ -3,8 +3,8 @@
 public class Waiter extends Employee{
 
   // Instance vars
-  priavte boolean isFelon;
-  private int clumsiness;
+  protected boolean isFelon;
+  protected int clumsiness;
   
   // Constructor
   public Waiter(){
