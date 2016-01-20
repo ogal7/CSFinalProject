@@ -101,28 +101,24 @@ public Directory(){
 }
 
 public void printCHEF_DIR(){
-    System.out.println("Pick your chefs!");
     for (int i = 0; i < CHEF_DIR.size(); i++){
       System.out.println(CHEF_DIR.get(i));
     }
 }
 
 public void printMANAGER_DIR(){
-    System.out.println("Pick your chefs!");
     for (int i = 0; i < MANAGER_DIR.size(); i++){
       System.out.println(MANAGER_DIR.get(i));
     }
 }
   
   public void printWAITER_DIR(){
-    System.out.println("Pick your chefs!");
     for (int i = 0; i < WIATER_DIR.size(); i++){
       System.out.println(WAITER_DIR.get(i));
     }
   }
     
  public void printITEMS_DIR(){
-    System.out.println("Pick your chefs!");
     for (int i = 0; i < ITEMS_DIR.size(); i++){
       System.out.println(ITEMS_DIR.get(i));
     }
