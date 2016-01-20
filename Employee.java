@@ -16,7 +16,6 @@ public abstract class Employee {
     
     public Employee () {
         // 7 of each job
-        
         //chefs
         Chef a = new Chef ("Lisa", 100000.0, .9, 8, 8, 8, 9 );
         employeeDir.add(a);
@@ -32,7 +31,6 @@ public abstract class Employee {
         employeeDir.add(f);
         Chef g = new Chef ("Squidward", 120000, .8, 4, 10, 10, 6 );
         employeeDir.add(g);
-        
         
         //managers
         Manager x = new Manager("Meredith", 100000, .7, 10, 9, 9, 2);
@@ -65,17 +63,13 @@ public abstract class Employee {
         employeeDir.add(r);
          Waiter s = new Waiter("Patrice", 65000, .8, 7, 10, 9, 6, false);
         employeeDir.add(s);
-        
-        
     }
     
-    
-
     public String toString() {
         String retStr="Here are the Employees you can put on your Staff: \n         Chefs \n";
     //creates a directory for the user to pick items from
-    for (int x = 0; x< employeeDir.length - 14 ; x ++) {
-      retStr+="\n" + x + "~" + employeeDir.get(x);
+        for (int x = 0; x< employeeDir.length - 14 ; x ++) {
+        retStr+="\n" + x + "~" + employeeDir.get(x);
     }
     retStr =+ "\n      Managers";
     for (int x = 7; x< employeeDir.length-7; x ++) {
@@ -93,12 +87,14 @@ public abstract class Employee {
     
     // methods
     public double getSalary (){
-    	return salary;}
+    	return reqSalary;}
+    	
     public void setSalary (double sal){
-    	salary = sal;}
+    	reqSalary = sal;}
 
     public double getRating(){
     	return rating;}
+    	
     public void setRating(double d){
     	rating = d;}
 
