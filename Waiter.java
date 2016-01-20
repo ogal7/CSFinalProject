@@ -19,7 +19,7 @@ public class Waiter extends Employee{
   }
   
   public Waiter(String n, double req, double rat, int s, int prec, int acc, int clums, boolean isfel){
-    name = "n"
+    name = "n";
     reqSalary = req;
     rating = rat;
     speed = s;
