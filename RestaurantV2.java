@@ -1,7 +1,7 @@
 import cs1.Keyboard; 
    
 
-public class RestaurantV2 {
+public class RestaurantV2 implements Directory{
 
 
   // Instance vars
