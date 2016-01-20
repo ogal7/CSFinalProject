@@ -68,7 +68,7 @@ public class Employee {
     public String toString() {
         String retStr="Here are the Employees you can put on your Staff: \n         Chefs \n";
     //creates a directory for the user to pick items from
-        for (int x = 0; x< employeeDir.length - 14 ; x ++) {
+        for (int x = 0; x< employeeDir.size() - 14 ; x ++) {
         retStr+="\n" + x + "~" + employeeDir.get(x);
     }
     retStr += "\n      Managers";
