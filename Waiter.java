@@ -12,7 +12,6 @@ public class Waiter extends Employee{
     reqSalary = 75000.0;
     rating = .8;
     speed = 7;
-    precision = 7;
     accuracy = 7;
     clumsiness = 2;
     isFelon = false;
@@ -28,6 +27,13 @@ public class Waiter extends Employee{
     clumsiness = clums;
     isFelon = isfel;
   }
+  
+  
+  public String toString() {
+    	return "Waiter "+name+" needs to be paid an annual salary of $" + reqSalary + ". \nTheir rating is " 
+    	+ rating + "\nTheir speed is " + speed + "\nTheir Attentiveness is " + accuracy 
+    	+ ". \n Their clumsiness is " + clumsiness + ". \nCriminal Record? " + isFelon; 
+    }
 	
   // Methods
   
