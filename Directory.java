@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Directory {
+public interface Directory {
 
   protected final ArrayList CHEF_DIR;
   protected final ArrayList MANAGER_DIR;
