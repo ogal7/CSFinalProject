@@ -2,6 +2,7 @@ public class Bev extends Items {
 
   //instance vars
   private boolean hasAlcohol;
+  private int maintenance;
   
 public Bev() {
 	hasAlcohol = false;
