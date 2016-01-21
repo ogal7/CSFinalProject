@@ -88,8 +88,8 @@ public Directory(){
     Food cody = new Food("Falafel", 6, 1, false);
     ITEMS_DIR.add(cody);
     
-    Bev aa = new Bev ("beer", 6, 1, true);
-    ITEMS_DIR.add(aa);
+    Bev AA = new Bev ("beer", 6, 1, true);
+    ITEMS_DIR.add(AA);
     Bev bb = new Bev ("Merlot", 10, 2, true);
     ITEMS_DIR.add(bb);
     Bev cc = new Bev ("Sparkling Water", 1, 1,false);
