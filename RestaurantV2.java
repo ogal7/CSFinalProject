@@ -28,6 +28,7 @@ public class RestaurantV2 implements Directory{
     private boolean hasCarpets;
     private int musicVol;
     private boolean hasBar;
+    private ArrayList menu;
 
   //Constructor
     public RestaurantV2(){
@@ -52,6 +53,7 @@ public class RestaurantV2 implements Directory{
 	hasCarpets = false;
 	musicVol = 4;
 	hasBar = false;
+	menu = new ArrayList<Object>();
     }
     
     
@@ -70,6 +72,7 @@ public class RestaurantV2 implements Directory{
 	managerCapacity = 0;
 	startMoney = 0;
 	expenses = 0;
+	menu = new ArrayList<Object>();
     }
     
   // Methods
