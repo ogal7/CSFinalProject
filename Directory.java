@@ -8,7 +8,8 @@ public interface Directory {
   protected final ArrayList ITEMS_DIR = new ArrayList<Items>();
 
 public Directory(){
-  fill();  
+  String name = "la";
+  fill();
 }
 
 public void fill();
