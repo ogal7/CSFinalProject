@@ -4,7 +4,6 @@ public class Waiter extends Employee{
 
   // Instance vars
   protected boolean isFelon;
-  protected int clumsiness;
   
   // Constructor
   public Waiter(){
@@ -17,13 +16,12 @@ public class Waiter extends Employee{
     isFelon = false;
   }
   
-  public Waiter(String n, int req, double rat, int s, int acc, int clums, boolean isfel){
+  public Waiter(String n, int req, double rat, int s, int acc, boolean isfel){
     name = "n";
     reqSalary = req;
     rating = rat;
     speed = s;
     accuracy = acc;
-    clumsiness = clums;
     isFelon = isfel;
   }
   
