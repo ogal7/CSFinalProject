@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public interface Directory {
 
-  protected final ArrayList CHEF_DIR = new ArrayList<Chef>();;
-  protected final ArrayList MANAGER_DIR = new ArrayList<Manager>();; 
-  protected final ArrayList WAITER_DIR = new ArrayList<Waiter>(); 
-  protected final ArrayList ITEMS_DIR = new ArrayList<Items>();
+   final ArrayList CHEF_DIR = new ArrayList<Chef>();;
+   final ArrayList MANAGER_DIR = new ArrayList<Manager>();; 
+   final ArrayList WAITER_DIR = new ArrayList<Waiter>(); 
+   final ArrayList ITEMS_DIR = new ArrayList<Items>();
 
 public Directory(){
   String name = "la";
