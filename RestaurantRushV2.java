@@ -99,7 +99,7 @@ public class RestaurantRushV2 extends Directory{
 	
 	System.out.println("How strong do you want you lighting to be? (Please type a number from 0-10): ");
 		lighting = Integer.parseInt(Keyboard.readString());
-	System.out.println("How loud do you want your music to be? (Please type a number from 0-10):")
+	System.out.println("How loud do you want your music to be? (Please type a number from 0-10):");
 		musicVol = Integer.parseInt(Keyboard.readString());
 	
 	
