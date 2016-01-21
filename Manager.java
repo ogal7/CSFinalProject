@@ -21,7 +21,6 @@ public class Manager extends Employee{
     reqSalary = req;
     rating = rat;
     speed = s;
-    precision = prec;
     accuracy = acc;
     greediness = gred;
   }
