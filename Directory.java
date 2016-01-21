@@ -24,21 +24,21 @@ public Directory(){
     Chef g = new Chef ("Squidward", 120000, .8, 4, 10, 10, 6 );
     CHEF_DIR.add(g);
         
-        //managers
-        Manager x = new Manager("Meredith", 100000, .7, 10, 9, 9, 2);
-        MANAGER_DIR.add(x);
-        Manager y = new Manager("Cristina", 200000, .9, 10, 10, 10, 5);
-        MANAGER_DIR.add(y);
-        Manager z = new Manager("George", 80000, .6, 7, 7, 8, 1);
-        MANAGER_DIR.add(z);
-        Manager xx = new Manager("Alex", 80000, .7, 9, 6, 8,6);
-        MANAGER_DIR.add(xx);
-        Manager yy = new Manager("Izzie", 80000, .6 , 7, 9, 9, 1);
-        MANAGER_DIR.add(yy);
-        Manager zz = new Manager("Miranda Bailey", 300000, .9, 8, 10, 10, 2);
-        MANAGER_DIR.add(zz);
-        Manager aa = new Manager("Callie", 100000,  .8, 9, 9, 9, 3);
-        MANAGER_DIR.add(aa);
+    //managers
+    Manager x = new Manager("Meredith", 100000, .7, 10, 9, 9, 2);
+    MANAGER_DIR.add(x);
+    Manager y = new Manager("Cristina", 200000, .9, 10, 10, 10, 5);
+    MANAGER_DIR.add(y);
+    Manager z = new Manager("George", 80000, .6, 7, 7, 8, 1);
+    MANAGER_DIR.add(z);
+    Manager xx = new Manager("Alex", 80000, .7, 9, 6, 8,6);
+    MANAGER_DIR.add(xx);
+    Manager yy = new Manager("Izzie", 80000, .6 , 7, 9, 9, 1);
+     MANAGER_DIR.add(yy);
+    Manager zz = new Manager("Miranda Bailey", 300000, .9, 8, 10, 10, 2);
+    MANAGER_DIR.add(zz);
+    Manager aa = new Manager("Callie", 100000,  .8, 9, 9, 9, 3);
+    MANAGER_DIR.add(aa);
         
         //waiters
         Waiter m = new Waiter("Ted", 50000, .7, 7, 7, 9, 9, false);
