@@ -3,27 +3,32 @@
 public class Food {
 
   //instance vars
-  private String name;
-  private int price;
-  private int rotting;
+  private boolean isRotten;
   
 // constructor
 public Food() {
-	name = "Apple";
-	price = 1;
-	rotting = 1;
+	isRotten = false;
 }
 
 // methods
-public Food(String n, int p, int r) {
+public Food(String n, int p, boolean r) {
 	name = n;
 	price = p;
-	rotting = r;
+	maintanance = 1;
+	isRotten = false;
 }
 
 public String toString() {
 	String retStr = "";
-	retStr=name + "\n\t$"+ price + "\n\tRottingSpeed: " + rotting+" ";	
+	String maintananceLevel = "Low";
+	if (maintanance >= 5){
+		maintananceLevel = "High";
+	}
+	String isFresh = "Yes";
+	if (isRotten == true){
+		isFresh = "No";
+	}
+	retStr = name + "\t$"+ price + "\t Maintanance Level: " + maintananceLevel + " Fresh?: " + isFresh;	
 	return retStr;
 }
 }
