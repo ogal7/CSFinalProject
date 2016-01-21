@@ -20,7 +20,7 @@ public class RestaurantV2 extends Directory{
     private double expenses;
     private String name;
     private int size;
-    private double priceScale;
+    private int priceScale;
     private int lighting;
     private boolean hasBooths;
     private boolean hasKaraoke;
@@ -57,7 +57,7 @@ public class RestaurantV2 extends Directory{
     }
     
     
-    public RestaurantV2(String n,int sz, double ps) {
+    public RestaurantV2(String n,int sz, int ps) {
     	name = n;
     	size = sz;
     	priceScale = ps;
