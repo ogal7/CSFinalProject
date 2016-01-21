@@ -118,7 +118,7 @@ public void printMANAGER_DIR(){
 }
 
   public void printWAITER_DIR(){
-    for (int i = 0; i < WIATER_DIR.size(); i++){
+    for (int i = 0; i < WAITER_DIR.size(); i++){
       System.out.println(WAITER_DIR.get(i));
     }
   }
