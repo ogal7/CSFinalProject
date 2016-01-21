@@ -41,19 +41,19 @@ public Directory(){
         
     //String n, double req, double rat, int s, int acc, int clums, boolean isfel    
     //waiters
-    Waiter m = new Waiter("Ted", 50000, .7, 7, 9,10, false);
+    Waiter m = new Waiter("Ted", 50000, .7, 7, 9, false);
     WAITER_DIR.add(m);
-    Waiter n = new Waiter("Robin", 60000, .9, 9, 10, 10, false);
+    Waiter n = new Waiter("Robin", 60000, .9, 9, 10,  false);
     WAITER_DIR.add(n);
-    Waiter o = new Waiter("Lily", 55000, .8, 7, 10, 10, false);
+    Waiter o = new Waiter("Lily", 55000, .8, 7, 10, false);
     WAITER_DIR.add(o);
-    Waiter p = new Waiter("Marshall", 47000, .7, 7, 8, 10,false);
+    Waiter p = new Waiter("Marshall", 47000, .7, 7, 8, false);
     WAITER_DIR.add(p);
-    Waiter q = new Waiter("Barney", 40000, .6 , 10, 5, 10, true);
+    Waiter q = new Waiter("Barney", 40000, .6 , 10, 5,  true);
     WAITER_DIR.add(q);
-    Waiter r = new Waiter("Ranjit", 70000, .9, 6, 9,10,  false);
+    Waiter r = new Waiter("Ranjit", 70000, .9, 6, 9,  false);
     WAITER_DIR.add(r);
-    Waiter s = new Waiter("Patrice", 65000, .8, 7, 9, false);
+    Waiter s = new Waiter("Patrice", 65000, .8, 7, 6, false);
     WAITER_DIR.add(s);
         
         // items
@@ -71,32 +71,32 @@ public Directory(){
     ITEMS_DIR.add(hacker);
     Food troy = new Food("Hamburger", 10, 4, false);
     ITEMS_DIR.add(troy);
-    gabriella = new Food("Veggie Burger", 9, 2, false);
+    Food gabriella = new Food("Veggie Burger", 9, 2, false);
     ITEMS_DIR.add(gabriella);
-    sharpay = new Food("Chicken Tacos", 7, 2, false);
+    Food sharpay = new Food("Chicken Tacos", 7, 2, false);
     ITEMS_DIR.add(sharpay);
-    Dora = new Food("Pancakes", 5, 1, false);
+    Food Dora = new Food("Pancakes", 5, 1, false);
     ITEMS_DIR.add(Dora);
-    Boots = new Food("Waffles", 5, 1, false);
+    Food Boots = new Food("Waffles", 5, 1, false);
     ITEMS_DIR.add(Boots);
-    Diego = new Food("Mozzarella Panini", 9, 2, false);
+    Food Diego = new Food("Mozzarella Panini", 9, 2, false);
     ITEMS_DIR.add(Diego);
-    Barbie = new Food("Veggie Panini", 9, 2, false); 
+    Food Barbie = new Food("Veggie Panini", 9, 2, false); 
     ITEMS_DIR.add(Barbie);
-    zach = new Food("Caesar Salad", 7, 2, false);
+    Food zach = new Food("Caesar Salad", 7, 2, false);
     ITEMS_DIR.add(zach);
-    cody = new Food("Falafel", 6, 1, false);
+    Food cody = new Food("Falafel", 6, 1, false);
     ITEMS_DIR.add(cody);
     
-    aa = new Bev ("beer", 6, 1, true);
+    Bev aa = new Bev ("beer", 6, 1, true);
     ITEMS_DIR.add(aa);
-    bb = new Bev ("Merlot", 10, 2, true);
+    Bev bb = new Bev ("Merlot", 10, 2, true);
     ITEMS_DIR.add(bb);
-    cc = new Bev ("Sparkling Water", 1, 1,false);
+    Bev cc = new Bev ("Sparkling Water", 1, 1,false);
     ITEMS_DIR.add(cc);
-    dd = new Bev ("Margherita", 7, 3,true);
+    Bev dd = new Bev ("Margherita", 7, 3,true);
     ITEMS_DIR.add(dd);
-    ee = new Bev ("Lemonade", 2, 3,false);
+    Bev ee = new Bev ("Lemonade", 2, 3,false);
     ITEMS_DIR.add(ee);
   }
 
