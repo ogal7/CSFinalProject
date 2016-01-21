@@ -17,7 +17,7 @@ public class Waiter extends Employee{
     isFelon = false;
   }
   
-  public Waiter(String n, double req, double rat, int s, int acc, int clums, boolean isfel){
+  public Waiter(String n, int req, double rat, int s, int acc, int clums, boolean isfel){
     name = "n";
     reqSalary = req;
     rating = rat;
