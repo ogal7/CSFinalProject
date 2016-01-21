@@ -1,4 +1,4 @@
-public class Bev {
+public class Bev extends Items {
 
   //instance vars
   private boolean hasAlcohol;
