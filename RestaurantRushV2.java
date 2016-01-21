@@ -37,18 +37,19 @@ public class RestaurantRushV2 implements Directory{
     Manager aa = new Manager("Callie", 100000,  .8, 9, 3,1);
     MANAGER_DIR.add(aa);
         
+    //String n, double req, double rat, int s, int acc, int clums, boolean isfel    
     //waiters
-    Waiter m = new Waiter("Ted", 50000, .7, 7, 9, false);
+    Waiter m = new Waiter("Ted", 50000, .7, 7, 9,10, false);
     WAITER_DIR.add(m);
-    Waiter n = new Waiter("Robin", 60000, .9, 9, 10, false);
+    Waiter n = new Waiter("Robin", 60000, .9, 9, 10, 10, false);
     WAITER_DIR.add(n);
-    Waiter o = new Waiter("Lily", 55000, .8, 7, 10, false);
+    Waiter o = new Waiter("Lily", 55000, .8, 7, 10, 10, false);
     WAITER_DIR.add(o);
-    Waiter p = new Waiter("Marshall", 47000, .7, 7, 8, false);
+    Waiter p = new Waiter("Marshall", 47000, .7, 7, 8, 10,false);
     WAITER_DIR.add(p);
-    Waiter q = new Waiter("Barney", 40000, .6 , 10, 5, true);
+    Waiter q = new Waiter("Barney", 40000, .6 , 10, 5, 10, true);
     WAITER_DIR.add(q);
-    Waiter r = new Waiter("Ranjit", 70000, .9, 6, 9, false);
+    Waiter r = new Waiter("Ranjit", 70000, .9, 6, 9,10,  false);
     WAITER_DIR.add(r);
     Waiter s = new Waiter("Patrice", 65000, .8, 7, 9, false);
     WAITER_DIR.add(s);
@@ -111,7 +112,7 @@ public void printMANAGER_DIR(){
 }
  
   public void printWAITER_DIR(){
-    for (int i = 0; i < WIATER_DIR.size(); i++){
+    for (int i = 0; i < WAITER_DIR.size(); i++){
       System.out.println(WAITER_DIR.get(i));
     }
   }
