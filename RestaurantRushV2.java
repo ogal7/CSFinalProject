@@ -167,8 +167,8 @@ public void printMANAGER_DIR(){
 	ctr = 0;
 	while (ctr < 5) {
 		int itemRow = Integer.parseInt(Keyboard.readString());
-		Employee staffer = (Employee)staff.employeeDir.get(itemRow);
-		staffLis.add(staffer);
+		Employee staffer = x.CHEF_DIR.get(itemRow);
+		menu.add(staffer);
 		ctr++;
 	}
 	
