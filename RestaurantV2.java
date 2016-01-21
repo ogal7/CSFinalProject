@@ -1,7 +1,7 @@
 import cs1.Keyboard; 
 import java.util.ArrayList;   
 
-public class RestaurantV2 implements Directory{
+public class RestaurantV2 extends Directory{
 
 
   // Instance vars
