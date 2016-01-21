@@ -27,23 +27,25 @@ public class RestaurantRushV2 implements Directory{
 	starter.runOperations();
 	//food items
 	
-	Items selection = new Items();
-	System.out.println(selection);
-	
+	//Items selection = new Items();
+	//System.out.println(selection);
+	Directory x = new Directory();
 	System.out.println("Please Enter the number of the rows you wish to add to your menu. You must choose 15 items\n");
 	int ctr = 0;
 	while (ctr < 15) {
 	    System.out.print("\t" + (ctr + 1) + ": ");
 	    int itemRow = Integer.parseInt(Keyboard.readString());
-	    Object og = selection.directory.get(itemRow);
+	    item og = x.ITEMS_DIR.get(itemRow);
 	    menu.add(og);
 	    ctr++;
 	}
 	
-	Employee staff = new Employee();
+	//Employee staff = new Employee();
 	//ArrayList staffLis = new ArrayList<Employee>();
 	System.out.println("Menu filled. Now let's pick out staff members");
-	System.out.println(staff);
+	System.out.println(x.CHEF_DIR);
+	System.out.println(x.MANAGER_DIR);
+	System.out.println(x.WAITER_DIR);
 	System.out.println("Please Enter the number of the rows you wish to add to your staff. You may choose 5 members");
 	ctr = 0;
 	while (ctr < 5) {
