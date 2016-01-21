@@ -56,8 +56,8 @@ public Directory(){
     Waiter s = new Waiter("Patrice", 65000, .8, 7, 10, 9, 6, false);
     WAITER_DIR.add(s);
         
-        // items
-        a = new Food("Pizza", 4, 1, false);
+     // items
+     a = new Food("Pizza", 4, 1, false);
     ITEMS_DIR.add(a);
     b = new Food("Spaghetti", 7, 1, false);
     ITEMS_DIR.add(b);
