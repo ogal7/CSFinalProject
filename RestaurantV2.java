@@ -28,7 +28,7 @@ public class RestaurantV2 extends Directory{
     private boolean hasCarpets;
     private int musicVol;
     private boolean hasBar;
-    private ArrayList menu;
+    public ArrayList menu;
 
   //Constructor
     public RestaurantV2(){
