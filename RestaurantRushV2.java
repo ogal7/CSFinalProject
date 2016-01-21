@@ -52,8 +52,8 @@ public class RestaurantRushV2 extends Directory{
 	ctr = 0;
 	while (ctr < 5) {
 		int itemRow = Integer.parseInt(Keyboard.readString());
-		Employee staffer = (Employee)staff.employeeDir.get(itemRow);
-		staffLis.add(staffer);
+		//Employee staffer = staff.employeeDir.get(itemRow);
+		//staffLis.add(staffer);
 		ctr++;
 	}
 	
