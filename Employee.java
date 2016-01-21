@@ -11,30 +11,13 @@ public class Employee {
     
     
     //constructor
-    
     public Employee () {
-        
+        reqSalary = 7500;
+        rating = 5;
+        speed = 5;
+        accuracy = 7;
+        name = "Shrek";
     }
-    */
-    public String toString() {
-        String retStr="Here are the Employees you can put on your Staff: \n         Chefs \n";
-    //creates a directory for the user to pick items from
-        for (int x = 0; x< employeeDir.size() - 14 ; x ++) {
-        retStr+="\n" + x + "~" + employeeDir.get(x);
-    }
-    retStr += "\n      Managers";
-    for (int x = 7; x< employeeDir.size()-7; x ++) {
-      retStr+="\n" + x + "~"+ employeeDir.get(x);
-    }
-    
-    for (int x = 14; x <employeeDir.size(); x++) {
-        retStr+="\n"+ x + "~" + employeeDir.get(x);
-    }
-    
-    return retStr;
-  }
-
-    //nvm
     
     // methods
     public double getSalary (){
@@ -52,17 +35,18 @@ public class Employee {
     public int getSpeed(){
     	return speed;}
     
-    
     public void setSpeed(int s){
     	speed = s;}
     
     public int getPrecision(){
     	return precision; }
+    
     public void setPrecision(int p){
     	precision = p;}
     
     public int getAccuracy(){
     	return accuracy;}
+    
     public void setAccuracy(int a){
     	accuracy = a;}
     
