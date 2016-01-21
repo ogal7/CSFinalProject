@@ -20,7 +20,7 @@ public class Employee {
     }
     
     // methods
-    public double getSalary (){
+    public double getSalary (){ 
     	return reqSalary;}
     	
     public void setSalary (double sal){
