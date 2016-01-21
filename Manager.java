@@ -12,12 +12,11 @@ public class Manager extends Employee{
     reqSalary = 75000.0;
     rating = .8;
     speed = 7;
-    precision = 7;
     accuracy = 7;
     greediness = 2;
   }
   
-  public Manager(String n, double req, double rat, int s, int prec, int acc, int gred){
+  public Manager(String n, double req, double rat, int s, int acc, int gred){
     name = n;
     reqSalary = req;
     rating = rat;
