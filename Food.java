@@ -1,6 +1,4 @@
-// Does not need editing
-
-public class Food {
+public class Food extends Items{
 
   //instance vars
   private boolean isRotten;
