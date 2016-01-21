@@ -2,13 +2,16 @@ import java.util.ArrayList;
 
 public interface Directory {
 
-  protected final ArrayList CHEF_DIR = new ArrayList<Chef>();
-  protected final ArrayList MANAGER_DIR = new ArrayList<Manager>();
-  protected final ArrayList WAITER_DIR = new ArrayList<Waiter>();
-  protected final ArrayList ITEMS_DIR = new ArrayList<Items>();
+  protected final ArrayList CHEF_DIR;
+  protected final ArrayList MANAGER_DIR; 
+  protected final ArrayList WAITER_DIR; 
+  protected final ArrayList ITEMS_DIR; 
 
 public Directory(){
-   
+   CHEF_DIR = new ArrayList<Chef>();
+   MANAGER_DIR = new ArrayList<Manager>();
+   WAITER_DIR = new ArrayList<Waiter>();
+   ITEMS_DIR = new ArrayList<Items>();
 }
 
 public void fill() {
