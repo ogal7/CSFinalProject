@@ -9,10 +9,10 @@ public Food() {
 }
 
 // methods
-public Food(String n, int p, boolean r) {
+public Food(String n, int p, int m,  boolean r) {
 	name = n;
 	price = p;
-	maintanance = 1;
+	maintanance = m;
 	isRotten = false;
 }
 
