@@ -21,13 +21,13 @@ public class RestaurantV2 implements Directory{
     private String name;
     private int size;
     private double priceScale;
-    int lighting;
-    boolean hasBooths;
-    boolean hasKaraoke;
-    boolean hasLiveEnt;
-    boolean hasCarpets;
-    int musicVol;
-    boolean hasBar;
+    private int lighting;
+    private boolean hasBooths;
+    private boolean hasKaraoke;
+    private boolean hasLiveEnt;
+    private boolean hasCarpets;
+    private int musicVol;
+    private boolean hasBar;
 
   //Constructor
     public RestaurantV2(){
@@ -45,7 +45,13 @@ public class RestaurantV2 implements Directory{
 	startMoney = 0;
 	expenses = 0;
 	size = 5;
-	
+	lighting = 7;
+	hasBooths = false;
+	hasKaraoke = false;
+	hasLiveEnt = false;
+	hasCarpets = false;
+	musicVol = 4;
+	hasBar = false;
     }
     
     
