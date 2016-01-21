@@ -39,9 +39,7 @@ public class Employee {
     	speed = s;}
     
     
-    
-    public void setPrecision(int p){
-    	precision = p;}
+
     
     public int getAccuracy(){
     	return accuracy;}
