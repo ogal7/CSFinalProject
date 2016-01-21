@@ -64,13 +64,13 @@ public class RestaurantRushV2 implements Directory{
 	System.out.println("Now it's time to customize your restaurant's ambiance");
 	System.out.println("Do you want to add booths to your restaurant? (type y/n): ");
 	String ans = Keyboard.readString();
-	if (ans.equals("y") {
+	if (ans.equals("y")) {
 		hasBooths = true;
 	}
 	else {hasBooths = false;}
 	System.out.println("Do you want to add Karaoke to your restaurant? (type y/n): ");
 	String ans = Keyboard.readString();
-	if (ans.equals("y") {
+	if (ans.equals("y")) {
 		hasKaraoke = true;
 	}
 	else {
@@ -78,19 +78,19 @@ public class RestaurantRushV2 implements Directory{
 	}
 	System.out.println("Do you want to add Live Entertainment to your restaurant? (type y/n): ");
 	String ans = Keyboard.readString();
-	if (ans.equals("y") {
+	if (ans.equals("y")) {
 		hasLiveEnt = true;
 	}
 	else {hasLiveEnt = false;}
 	System.out.println("Do you want to add carpets to your restaurant? (type y/n): ");
 	String ans = Keyboard.readString();
-	if (ans.equals("y") {
+	if (ans.equals("y")) {
 		hasCarpets= true;
 	}
 	else {hasCarpets=false;}
 	System.out.println("Do you want to add a bar to your restaurant? (type y/n): ");
 	String ans = Keyboard.readString();
-	if (ans.equals("y") {
+	if (ans.equals("y")) {
 		hasBar = true;
 	}
 	else {hasBar = false;}
