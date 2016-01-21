@@ -21,7 +21,7 @@ public class RestaurantRushV2 extends Directory{
 	int size = Integer.parseInt(Keyboard.readString());
 	
 	System.out.print("Please pick a price scale. We will multiply the preset food item prices by this number: \n \t");
-	double priceScale = Double.parseDouble(Keyboard.readString());
+	int priceScale = Integer.parseInt(Keyboard.readString());
 	RestaurantV2 starter = new RestaurantV2(name, size, priceScale);
 	
 	System.out.println("Alright, before you pick food items you gotta do some budgetting:");
