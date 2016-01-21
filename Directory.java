@@ -9,7 +9,11 @@ public interface Directory {
 
 public Directory(){
    //chefs
-    Chef a = new Chef ("Lisa", 100000.0, .9, 8,8, 9 );
+   fill();
+}
+
+public void fill() {
+   Chef a = new Chef ("Lisa", 100000.0, .9, 8,8, 9 );
     CHEF_DIR.add(a);
     Chef b = new Chef ("Bart", 50000, .5, 6, 2, 3 );
     CHEF_DIR.add(b);
@@ -99,6 +103,7 @@ public Directory(){
     ee = new Bev ("Lemonade", 2, 3,false);
     ITEMS_DIR.add(ee);
 }
+
 
 public void printCHEF_DIR(){
     for (int i = 0; i < CHEF_DIR.size(); i++){
