@@ -12,7 +12,6 @@ public class Waiter extends Employee{
     rating = .8;
     speed = 7;
     accuracy = 7;
-    clumsiness = 2;
     isFelon = false;
   }
   
