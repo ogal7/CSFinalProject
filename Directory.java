@@ -57,35 +57,35 @@ public Directory(){
         WAITER_DIR.add(s);
         
         // items
-        a = new Food("Pizza", 4, 1);
+        a = new Food("Pizza", 4, 1, false);
     ITEMS_DIR.add(a);
-    b = new Food("Spaghetti", 7, 1);
+    b = new Food("Spaghetti", 7, 1, false);
     ITEMS_DIR.add(b);
-    c = new Food("Chicken Burrito", 7, 2);
+    c = new Food("Chicken Burrito", 7, 2, false);
     ITEMS_DIR.add(c);
-    d = new Food("Guacamole", 5, 3);
+    d = new Food("Guacamole", 5, 3, false);
     ITEMS_DIR.add(d);
-    e = new Food("Sushi", 7, 4);
+    e = new Food("Sushi", 7, 4, false);
     ITEMS_DIR.add(e);
-    f = new Food("Steak", 15, 4);
+    f = new Food("Steak", 15, 4, false);
     ITEMS_DIR.add(f);
-    g = new Food("Hamburger", 10, 4);
+    g = new Food("Hamburger", 10, 4, false);
     ITEMS_DIR.add(g);
-    h = new Food("Veggie Burger", 9, 2);
+    h = new Food("Veggie Burger", 9, 2, false);
     ITEMS_DIR.add(h);
-    i = new Food("Chicken Tacos", 7, 2);
+    i = new Food("Chicken Tacos", 7, 2, false);
     ITEMS_DIR.add(i);
-    j = new Food("Pancakes", 5, 1);
+    j = new Food("Pancakes", 5, 1, false);
     ITEMS_DIR.add(j);
-    k = new Food("Waffles", 5, 1);
+    k = new Food("Waffles", 5, 1, false);
     ITEMS_DIR.add(k);
-    l = new Food("Mozzarella Panini", 9, 2);
+    l = new Food("Mozzarella Panini", 9, 2, false);
     ITEMS_DIR.add(l);
-    m = new Food("Veggie Panini", 9, 2);
+    m = new Food("Veggie Panini", 9, 2, false);
     ITEMS_DIR.add(m);
-    n = new Food("Caesar Salad", 7, 2);
+    n = new Food("Caesar Salad", 7, 2, false);
     ITEMS_DIR.add(n);
-    o = new Food("Falafel", 6, 1);
+    o = new Food("Falafel", 6, 1, false);
     ITEMS_DIR.add(o);
     
     aa = new Bev ("beer", 6, 1, true);
@@ -124,5 +124,5 @@ public void printMANAGER_DIR(){
     }
  }
   
-  public ArrayList EmployeeDir(){
+}
     
