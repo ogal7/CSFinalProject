@@ -78,7 +78,7 @@ public class RestaurantRushV2 implements Directory{
     ITEMS_DIR.add(k);
     l = new Food("Mozzarella Panini", 9, 2, false);
     ITEMS_DIR.add(l);
-    m = new Food("Veggie Panini", 9, 2, false);
+    m = new Food("Veggie Panini", 9, 2, false); 
     ITEMS_DIR.add(m);
     n = new Food("Caesar Salad", 7, 2, false);
     ITEMS_DIR.add(n);
@@ -96,6 +96,10 @@ public class RestaurantRushV2 implements Directory{
     ee = new Bev ("Lemonade", 2, 3,false);
     ITEMS_DIR.add(ee);
   }
+
+public String <error>() {
+	return "";
+}
 
 
  public void printCHEF_DIR(){
@@ -188,7 +192,7 @@ public void printMANAGER_DIR(){
 	}
 	else {hasBooths = false;}
 	System.out.println("Do you want to add Karaoke to your restaurant? (type y/n): ");
-	String ans = Keyboard.readString();
+	 ans = Keyboard.readString();
 	if (ans.equals("y")) {
 		hasKaraoke = true;
 	}
@@ -196,19 +200,19 @@ public void printMANAGER_DIR(){
 		hasKaraoke = false;
 	}
 	System.out.println("Do you want to add Live Entertainment to your restaurant? (type y/n): ");
-	String ans = Keyboard.readString();
+	ans = Keyboard.readString();
 	if (ans.equals("y")) {
 		hasLiveEnt = true;
 	}
 	else {hasLiveEnt = false;}
 	System.out.println("Do you want to add carpets to your restaurant? (type y/n): ");
-	String ans = Keyboard.readString();
+	ans = Keyboard.readString();
 	if (ans.equals("y")) {
 		hasCarpets= true;
 	}
 	else {hasCarpets=false;}
 	System.out.println("Do you want to add a bar to your restaurant? (type y/n): ");
-	String ans = Keyboard.readString();
+	ans = Keyboard.readString();
 	if (ans.equals("y")) {
 		hasBar = true;
 	}
