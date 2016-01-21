@@ -19,7 +19,7 @@ public class Chef extends Employee{
   public Chef(String n, double req, double rating, int s, int acc, int cK ){
     name = n;
     reqSalary = req;
-    rating = ratin;
+    rating = rating;
     speed = s;
     accuracy = acc;
     cookingKnowledge = cK;
