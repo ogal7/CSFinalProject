@@ -40,21 +40,21 @@ public Directory(){
     Manager aa = new Manager("Callie", 100000,  .8, 9, 9, 9, 3);
     MANAGER_DIR.add(aa);
         
-        //waiters
-        Waiter m = new Waiter("Ted", 50000, .7, 7, 7, 9, 9, false);
-        WAITER_DIR.add(m);
-        Waiter n = new Waiter("Robin", 60000, .9, 9, 10, 9, 2, false);
-        WAITER_DIR.add(n);
-        Waiter o = new Waiter("Lily", 55000, .8, 7, 10, 7, 4, false);
-        WAITER_DIR.add(o);
-        Waiter p = new Waiter("Marshall", 47000, .7, 7, 8, 9, 7, false);
-        WAITER_DIR.add(p);
-        Waiter q = new Waiter("Barney", 40000, .6 , 10, 5, 6, 6, true);
-        WAITER_DIR.add(q);
-        Waiter r = new Waiter("Ranjit", 70000, .9, 6, 9, 8, 2, false);
-        WAITER_DIR.add(r);
-        Waiter s = new Waiter("Patrice", 65000, .8, 7, 10, 9, 6, false);
-        WAITER_DIR.add(s);
+    //waiters
+    Waiter m = new Waiter("Ted", 50000, .7, 7, 7, 9, 9, false);
+    WAITER_DIR.add(m);
+    Waiter n = new Waiter("Robin", 60000, .9, 9, 10, 9, 2, false);
+    WAITER_DIR.add(n);
+    Waiter o = new Waiter("Lily", 55000, .8, 7, 10, 7, 4, false);
+    WAITER_DIR.add(o);
+    Waiter p = new Waiter("Marshall", 47000, .7, 7, 8, 9, 7, false);
+    WAITER_DIR.add(p);
+    Waiter q = new Waiter("Barney", 40000, .6 , 10, 5, 6, 6, true);
+    WAITER_DIR.add(q);
+    Waiter r = new Waiter("Ranjit", 70000, .9, 6, 9, 8, 2, false);
+    WAITER_DIR.add(r);
+    Waiter s = new Waiter("Patrice", 65000, .8, 7, 10, 9, 6, false);
+    WAITER_DIR.add(s);
         
         // items
         a = new Food("Pizza", 4, 1, false);
