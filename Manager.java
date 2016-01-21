@@ -16,7 +16,7 @@ public class Manager extends Employee{
     greediness = 2;
   }
   
-  public Manager(String n, double req, double rat, int s, int acc, int gred){
+  public Manager(String n, int req, double rat, int s, int acc, int gred){
     name = n;
     reqSalary = req;
     rating = rat;
