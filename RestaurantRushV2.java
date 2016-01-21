@@ -71,7 +71,7 @@ public class RestaurantRushV2 extends Directory{
 	}
 	else {hasBooths = false;}
 	System.out.println("Do you want to add Karaoke to your restaurant? (type y/n): ");
-	String ans = Keyboard.readString();
+	 ans = Keyboard.readString();
 	if (ans.equals("y")) {
 		hasKaraoke = true;
 	}
@@ -79,19 +79,19 @@ public class RestaurantRushV2 extends Directory{
 		hasKaraoke = false;
 	}
 	System.out.println("Do you want to add Live Entertainment to your restaurant? (type y/n): ");
-	String ans = Keyboard.readString();
+	ans = Keyboard.readString();
 	if (ans.equals("y")) {
 		hasLiveEnt = true;
 	}
 	else {hasLiveEnt = false;}
 	System.out.println("Do you want to add carpets to your restaurant? (type y/n): ");
-	String ans = Keyboard.readString();
+	 ans = Keyboard.readString();
 	if (ans.equals("y")) {
 		hasCarpets= true;
 	}
 	else {hasCarpets=false;}
 	System.out.println("Do you want to add a bar to your restaurant? (type y/n): ");
-	String ans = Keyboard.readString();
+	 ans = Keyboard.readString();
 	if (ans.equals("y")) {
 		hasBar = true;
 	}
