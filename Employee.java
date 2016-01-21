@@ -38,8 +38,7 @@ public class Employee {
     public void setSpeed(int s){
     	speed = s;}
     
-    public int getPrecision(){
-    	return precision; }
+    
     
     public void setPrecision(int p){
     	precision = p;}
