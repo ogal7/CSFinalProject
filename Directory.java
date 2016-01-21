@@ -2,20 +2,13 @@ import java.util.ArrayList;
 
 public interface Directory {
 
-  protected final ArrayList CHEF_DIR;
-  protected final ArrayList MANAGER_DIR; 
-  protected final ArrayList WAITER_DIR; 
-  protected final ArrayList ITEMS_DIR; 
+  protected final ArrayList CHEF_DIR = new ArrayList<Chef>();;
+  protected final ArrayList MANAGER_DIR = new ArrayList<Manager>();; 
+  protected final ArrayList WAITER_DIR = new ArrayList<Waiter>(); 
+  protected final ArrayList ITEMS_DIR = new ArrayList<Items>();
 
 public Directory(){
-   CHEF_DIR = new ArrayList<Chef>();
-   MANAGER_DIR = new ArrayList<Manager>();
-   WAITER_DIR = new ArrayList<Waiter>();
-   ITEMS_DIR = new ArrayList<Items>();
-}
-
-public void fill() {
-   Chef a = new Chef ("Lisa", 100000.0, .9, 8,8, 9 );
+    Chef a = new Chef ("Lisa", 100000.0, .9, 8,8, 9 );
     CHEF_DIR.add(a);
     Chef b = new Chef ("Bart", 50000, .5, 6, 2, 3 );
     CHEF_DIR.add(b);
@@ -107,29 +100,32 @@ public void fill() {
 }
 
 
-public void printCHEF_DIR(){
+
+
+
+public void printCHEF_DIR();/*{
     for (int i = 0; i < CHEF_DIR.size(); i++){
       System.out.println(CHEF_DIR.get(i));
     }
 }
-
-public void printMANAGER_DIR(){
+*/
+public void printMANAGER_DIR();/*{
     for (int i = 0; i < MANAGER_DIR.size(); i++){
       System.out.println(MANAGER_DIR.get(i));
     }
 }
-  
-  public void printWAITER_DIR(){
+*/  
+  public void printWAITER_DIR();/*{
     for (int i = 0; i < WIATER_DIR.size(); i++){
       System.out.println(WAITER_DIR.get(i));
     }
   }
-    
- public void printITEMS_DIR(){
+  */  
+ public void printITEMS_DIR();/*{
     for (int i = 0; i < ITEMS_DIR.size(); i++){
       System.out.println(ITEMS_DIR.get(i));
     }
- }
+ }*/
   
 }
     
