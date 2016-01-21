@@ -22,19 +22,19 @@ public class RestaurantRushV2 implements Directory{
     CHEF_DIR.add(g);
         
     //managers
-    Manager x = new Manager("Meredith", 100000, .7, 10, 2);
+    Manager x = new Manager("Meredith", 100000, .7, 10, 2,1);
     MANAGER_DIR.add(x);
-    Manager y = new Manager("Cristina", 200000, .9, 10, 5);
+    Manager y = new Manager("Cristina", 200000, .9, 10, 5,1);
     MANAGER_DIR.add(y);
-    Manager z = new Manager("George", 80000, .6, 7, 1);
+    Manager z = new Manager("George", 80000, .6, 7, 1,1);
     MANAGER_DIR.add(z);
-    Manager xx = new Manager("Alex", 80000, .7, 9, 6);
+    Manager xx = new Manager("Alex", 80000, .7, 9, 6,1);
     MANAGER_DIR.add(xx);
-    Manager yy = new Manager("Izzie", 80000, .6 , 7, 1);
+    Manager yy = new Manager("Izzie", 80000, .6 , 7, 1,1);
      MANAGER_DIR.add(yy);
-    Manager zz = new Manager("Miranda Bailey", 300000, .9, 8,  2);
+    Manager zz = new Manager("Miranda Bailey", 300000, .9, 8,  2,1);
     MANAGER_DIR.add(zz);
-    Manager aa = new Manager("Callie", 100000,  .8, 9, 3);
+    Manager aa = new Manager("Callie", 100000,  .8, 9, 3,1);
     MANAGER_DIR.add(aa);
         
     //waiters
