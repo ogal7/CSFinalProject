@@ -8,8 +8,7 @@ public interface Directory {
   protected final ArrayList ITEMS_DIR = new ArrayList<Items>();
 
 public Directory(){
-   //chefs
-   fill();
+   
 }
 
 public void fill() {
