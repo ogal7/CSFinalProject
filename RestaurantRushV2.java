@@ -97,10 +97,6 @@ public class RestaurantRushV2 implements Directory{
     ITEMS_DIR.add(ee);
   }
 
-public String <error>() {
-	return "";
-}
-
 
  public void printCHEF_DIR(){
     for (int i = 0; i < CHEF_DIR.size(); i++){
