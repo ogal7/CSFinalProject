@@ -17,12 +17,11 @@ public class Waiter extends Employee{
     isFelon = false;
   }
   
-  public Waiter(String n, double req, double rat, int s, int prec, int acc, int clums, boolean isfel){
+  public Waiter(String n, double req, double rat, int s, int acc, int clums, boolean isfel){
     name = "n";
     reqSalary = req;
     rating = rat;
     speed = s;
-    precision = prec;
     accuracy = acc;
     clumsiness = clums;
     isFelon = isfel;
