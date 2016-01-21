@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import cs1.Keyboard; 
    
 
-public class RestaurantRushV2 {
+public class RestaurantRushV2 implements Directory{
     
 
  
