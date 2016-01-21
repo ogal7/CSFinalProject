@@ -55,19 +55,19 @@ public class RestaurantRushV2 implements Directory{
     WAITER_DIR.add(s);
         
         // items
-    a = new Food("Pizza", 4, 1, false);
+    Food a = new Food("Pizza", 4, 1, false);
     ITEMS_DIR.add(a);
-    b = new Food("Spaghetti", 7, 1, false);
+    Food b = new Food("Spaghetti", 7, 1, false);
     ITEMS_DIR.add(b);
-    c = new Food("Chicken Burrito", 7, 2, false);
+    Food c = new Food("Chicken Burrito", 7, 2, false);
     ITEMS_DIR.add(c);
-    d = new Food("Guacamole", 5, 3, false);
+    Food d = new Food("Guacamole", 5, 3, false);
     ITEMS_DIR.add(d);
-    e = new Food("Sushi", 7, 4, false);
+    Food e = new Food("Sushi", 7, 4, false);
     ITEMS_DIR.add(e);
-    f = new Food("Steak", 15, 4, false);
+    Food f = new Food("Steak", 15, 4, false);
     ITEMS_DIR.add(f);
-    g = new Food("Hamburger", 10, 4, false);
+    Food g = new Food("Hamburger", 10, 4, false);
     ITEMS_DIR.add(g);
     h = new Food("Veggie Burger", 9, 2, false);
     ITEMS_DIR.add(h);
