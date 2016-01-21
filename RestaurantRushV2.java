@@ -3,6 +3,7 @@ import cs1.Keyboard;
    
 
 public class RestaurantRushV2 extends Directory{
+   
     
 
  
@@ -10,6 +11,7 @@ public class RestaurantRushV2 extends Directory{
   public static void main(String [] args) {
       int months = 0;
       ArrayList menu = new ArrayList<Object>();
+      ArrayList myDir = new ArrayList<Employee>();
       // Welcome intro: rules & regs
 	System.out.println("          Welcome to Restaurant Rush!\n \n It's the beginning of January, and you want to \n open a Restaurant!");
 	System.out.print("What do you want to name your restaurant? \n \t Name: ");
@@ -29,16 +31,16 @@ public class RestaurantRushV2 extends Directory{
 	
 	//food items
 	
-	Items selection = new Items();
-	System.out.println(selection);
-	
+	//Items selection = new Items();
+	//System.out.println(selection);
+	printITEMS_DIR();
 	System.out.println("Please Enter the number of the rows you wish to add to your menu. You must choose 15 items\n");
 	int ctr = 0;
 	while (ctr < 15) {
 	    System.out.print("\t" + (ctr + 1) + ": ");
 	    int itemRow = Integer.parseInt(Keyboard.readString());
-	    Object og = selection.directory.get(itemRow);
-	    menu.add(og);
+	    Object og = ITEMS_DIR.get(itemRow);
+	    starter.menu.add(og);
 	    ctr++;
 	}
 	
