@@ -26,7 +26,7 @@ public String toString() {
 	if (isRotten == true){
 		isFresh = "No";
 	}
-	retStr = name + "\t$"+ price + "\t Maintanance Level: " + maintananceLevel + " Fresh?: " + isFresh;	
+	retStr = name + "\t$"+ price + "\t Maintanance Level: " + maintananceLevel + " Fresh?: " + isFresh+"\n";	
 	return retStr;
 }
 }
