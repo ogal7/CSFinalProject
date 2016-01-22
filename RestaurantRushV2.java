@@ -88,7 +88,7 @@ public class RestaurantRushV2 extends Directory{
     System.out.println("Would you like to switch out any staff members? You may only switch out one per department. type (y/n)");
     if (Keyboard.readString().equals("y")) {
     	System.out.println("Do you want to switch out any of your chefs? (y/n)");
-    	if (Keyboard.readString().equals("y") {
+    	if (Keyboard.readString().equals("y")) {
 	System.out.println("This is your current staff directory: \n" + staffDir);
 	System.out.println("Please select the number of the chef you wish to remove (0/1)");
 	int removal = Integer.parseInt(Keyboard.readString());
