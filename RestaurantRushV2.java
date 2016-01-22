@@ -4,7 +4,7 @@ import cs1.Keyboard;
 
 public class RestaurantRushV2 extends Directory{
    
- public static customize() {	
+ public static void customize() {	
       System.out.println("Alright, before you pick food items you gotta do some budgetting:");
       System.out.println("You have $100,000 in funds. ");
 	
@@ -102,7 +102,7 @@ public class RestaurantRushV2 extends Directory{
 	   starter.staffDir.add(removal, temp);
     	}
     	System.out.println("Do you want to switch out any of your Managers? (y/n)");
-    	if (Keyboard.readString().equals("y") {
+    	if (Keyboard.readString().equals("y")) {
 	System.out.println("Please select the number of the Manager you wish to remove (2/3))");
 	removal = Integer.parseInt(Keyboard.readString());
 	starter.staffDir.remove(removal);
@@ -115,7 +115,7 @@ public class RestaurantRushV2 extends Directory{
 	   starter.staffDir.add(removal, temp1);
     	}   
     	System.out.println("Do you want to switch out any of your Managers? (y/n)");
-    	if (Keyboard.readString().equals("y") {
+    	if (Keyboard.readString().equals("y")) {
 	System.out.println("Please select the number of the Waiter you wish to remove (4/5)");
 	removal = Integer.parseInt(Keyboard.readString());
 	starter.staffDir.remove(removal);
@@ -130,7 +130,7 @@ public class RestaurantRushV2 extends Directory{
     }	
     
     System.out.println("Do you want to make changes to your restaurant's ambiance and decor?");	
-    if (Keyboad.readString().equals("y") {	
+    if (Keyboad.readString().equals("y")) {	
 	int lighting;
         int musicVol;
   
