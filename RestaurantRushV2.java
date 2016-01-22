@@ -112,7 +112,7 @@ public int months;
        	System.out.println("These are the Managers");
        	printMANAGER_DIR();
        	System.out.println("Which Manager do you want to add to your squad? Please enter the number you want:");
-           itemRow = Integer.parseInt(Keyboard.readString());
+           int itemRow = Integer.parseInt(Keyboard.readString());
 	   Manager temp1 = (Manager) Manager_DIR.get(itemRow);
 	   starter.staffDir.add(removal, temp1);
     	}   
