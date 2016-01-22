@@ -4,8 +4,7 @@ import cs1.Keyboard;
 
 public class RestaurantRushV2 extends Directory{
    
-    
-
+   
  
   // Main
   public static void main(String [] args) {
@@ -44,66 +43,80 @@ public class RestaurantRushV2 extends Directory{
 	    ctr++;
 	}
 	
-	Employee staff = new Employee();
+	//Employee staff = new Employee();
 	//ArrayList staffLis = new ArrayList<Employee>();
 	System.out.println("Menu filled. Now let's pick out staff members");
-	System.out.println(staff);
-	System.out.println("Please Enter the number of the rows you wish to add to your staff. You may choose 5 members");
-	ctr = 0;
+	System.out.println("You may pick five staff members. How many in each category is up to you.");
+	System.out.println("These are the chefs");
+	printCHEF_DIR();
+	System.out.println("These are the managers:");
+	printMANAGER_DIR();
+	System.out.println("These are the waiters");
+	printWAITER_DIR()
+	
+	int ctr = 0;
 	while (ctr < 5) {
+	System.out.println("Which Chefs do you want to add to your squad? (type 'f' if you are finished with selection)");
+	while ((!(Keyboard.readString.equals("f"))) && ctr <5 ) {
 		int itemRow = Integer.parseInt(Keyboard.readString());
-		//Employee staffer = staff.employeeDir.get(itemRow);
-		//staffLis.add(staffer);
+		Chef temp = CHEF_DIR.get(itemRow);
+		starter.staffDir.add(temp);
+		ctr++;
+	}
+	System.out.println("Which Managers do you want to add to your squad? (type 'f' if you are finished with selection)");
+	while ((!(Keyboard.readString.equals("f"))) && ctr < 5 ) {
+		int itemRow = Integer.parseInt(Keyboard.readString());
+		Manager temp1 = MANAGER_DIR.get(itemRow);
+		starter.staffDir.add(temp);
 		ctr++;
 	}
 	
+	
+	System.out.println("Which Waiters do you want to add to your squad? (type 'f' if you are finished with selection)");
+	while ((!(Keyboard.readString.equals("f"))) && ctr < 5 ) {
+		int itemRow = Integer.parseInt(Keyboard.readString());
+		Waiter temp2 = WAITER_DIR.get(itemRow);
+		starter.staffDir.add(temp);
+		ctr++;
+	}
+	
+	}
+	
+	
+	
 	//Decor lala = new Decor() 
-	 int lighting;
-	 boolean hasBooths;
-         boolean hasKaraoke;
-         boolean hasLiveEnt;
-         boolean hasCarpets;
-         int musicVol;
-         boolean hasBar;
+	int lighting;
+        int musicVol;
+  
 	System.out.println("Now it's time to customize your restaurant's ambiance");
+	
 	System.out.println("Do you want to add booths to your restaurant? (type y/n): ");
 	String ans = Keyboard.readString();
-	if (ans.equals("y")) {
-		hasBooths = true;
-	}
-	else {hasBooths = false;}
+	starter.makeBooths((ans.equals("y")));
+	
 	System.out.println("Do you want to add Karaoke to your restaurant? (type y/n): ");
-	 ans = Keyboard.readString();
-	if (ans.equals("y")) {
-		hasKaraoke = true;
-	}
-	else {
-		hasKaraoke = false;
-	}
+	ans = Keyboard.readString();
+	starter.setKara((ans.equals("y")));
+	
 	System.out.println("Do you want to add Live Entertainment to your restaurant? (type y/n): ");
 	ans = Keyboard.readString();
-	if (ans.equals("y")) {
-		hasLiveEnt = true;
-	}
-	else {hasLiveEnt = false;}
+	starter.setLiveEnt((ans.equals("y")));
+	
 	System.out.println("Do you want to add carpets to your restaurant? (type y/n): ");
-	 ans = Keyboard.readString();
-	if (ans.equals("y")) {
-		hasCarpets= true;
-	}
-	else {hasCarpets=false;}
+	ans = Keyboard.readString();
+	starter.setCarpet((ans.equals("y")));
+	
 	System.out.println("Do you want to add a bar to your restaurant? (type y/n): ");
-	 ans = Keyboard.readString();
-	if (ans.equals("y")) {
-		hasBar = true;
-	}
-	else {hasBar = false;}
+	ans = Keyboard.readString();
+	starter.makeBar((ans.equals("y")));
 	
 	System.out.println("How strong do you want you lighting to be? (Please type a number from 0-10): ");
-		lighting = Integer.parseInt(Keyboard.readString());
+	lighting = Integer.parseInt(Keyboard.readString());
+	starter.setLight(lighting);
+		
 	System.out.println("How loud do you want your music to be? (Please type a number from 0-10):");
-		musicVol = Integer.parseInt(Keyboard.readString());
-	
+	musicVol = Integer.parseInt(Keyboard.readString());
+	starter.setVolume(musicVol);
 	
 	
 
