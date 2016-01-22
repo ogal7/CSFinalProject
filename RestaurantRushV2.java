@@ -52,7 +52,7 @@ public class RestaurantRushV2 extends Directory{
 	System.out.println("These are the managers:");
 	printMANAGER_DIR();
 	System.out.println("These are the waiters");
-	printWAITER_DIR()
+	printWAITER_DIR();
 	
 	int ctr = 0;
 	while (ctr < 5) {
