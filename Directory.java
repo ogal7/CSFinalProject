@@ -57,11 +57,11 @@ public Directory(){
     WAITER_DIR.add(s);
         
         // items
-    Food poe = new Food("Pizza", 4, 1, false);
+    Items poe = new Food("Pizza", 4, 1, false);
     ITEMS_DIR.add(poe);
-    Food lala = new Food("Spaghetti", 7, 1, false);
+    Items lala = new Food("Spaghetti", 7, 1, false);
     ITEMS_DIR.add(lala);
-    Food dipsy = new Food("Chicken Burrito", 7, 2, false);
+    Items dipsy = new Food("Chicken Burrito", 7, 2, false);
     ITEMS_DIR.add(dipsy);
     Food TW = new Food("Guacamole", 5, 3, false);
     ITEMS_DIR.add(TW);
