@@ -189,31 +189,31 @@ public class RestaurantV2 extends Directory{
 //set methods
 
        
-        public static void setLight(int l){
+        public  void setLight(int l){
         	lighting = l;
         }
         
-        public static void setKara(boolean b) {
+        public void setKara(boolean b) {
         	hasKaraoke = b;
         }
         
-        public static void setLiveEnt(boolean le) {
+        public void setLiveEnt(boolean le) {
         	hasLiveEnt = le;
         }
         
-        public static void setVolume(int g) {
+        public void setVolume(int g) {
         	musicVol = g;
         }
         
-        public static void makeBar(boolean h) {
+        public void makeBar(boolean h) {
         	hasBar = h;
         }
 
-	public static void makeBooths(boolean d) {
+	public void makeBooths(boolean d) {
 		hasBooths = d;
 	}
 	
-	public static void setCarpet(boolean r) {
+	public void setCarpet(boolean r) {
 		hasCarpets = r;
 	}
 
