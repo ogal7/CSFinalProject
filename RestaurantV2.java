@@ -34,7 +34,7 @@ public class RestaurantV2 extends Directory{
   //Constructor
     public RestaurantV2(){
     	name = "";
-    	priceScale = 1.1;
+    	priceScale = 1;
 	cashMoney = 100000;
 	waitstaff = 0;
 	chefs = 0;
