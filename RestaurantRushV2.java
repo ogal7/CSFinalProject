@@ -17,7 +17,7 @@ public int months;
 	    System.out.print("\t" + (ctr + 1) + ": ");
 	    int itemRow = Integer.parseInt(Keyboard.readString());
 	    Object og = ITEMS_DIR.get(itemRow);
-	    starter.menu.add(og);
+	    this.starter.menu.add(og);
 	    ctr++;
 	}
        //Employee staff = new Employee();
