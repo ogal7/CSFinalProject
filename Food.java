@@ -21,7 +21,7 @@ public String toString() {
 	String maintananceLevel = "Low";
 	if (maintanance >= 5){
 		maintananceLevel = "High";
-	}
+	} 
 	String isFresh = "Yes";
 	if (isRotten == true){
 		isFresh = "No";
