@@ -67,7 +67,7 @@ public class RestaurantRushV2 extends Directory{
 	while ((!(Keyboard.readString().equals("f"))) && ctr < 5 ) {
 		int itemRow = Integer.parseInt(Keyboard.readString());
 		Manager temp1 = (Manager) MANAGER_DIR.get(itemRow);
-		starter.staffDir.add(temp);
+		starter.staffDir.add(temp1);
 		ctr++;
 	}
 	
@@ -76,7 +76,7 @@ public class RestaurantRushV2 extends Directory{
 	while ((!(Keyboard.readString().equals("f"))) && ctr < 5 ) {
 		int itemRow = Integer.parseInt(Keyboard.readString());
 		Waiter temp2 = (Waiter) WAITER_DIR.get(itemRow);
-		starter.staffDir.add(temp);
+		starter.staffDir.add(temp2);
 		ctr++;
 	}
 	
