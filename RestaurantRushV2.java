@@ -6,7 +6,7 @@ public class RestaurantRushV2 extends Directory{
 	
 public int months;	
    
- public static void customize() {	
+ public static void customize(RestaurantV2 starter) {	
       System.out.println("Alright, before you pick food items you gotta do some budgetting:");
       System.out.println("You have $100,000 in funds. ");
 	
@@ -17,7 +17,7 @@ public int months;
 	    System.out.print("\t" + (ctr + 1) + ": ");
 	    int itemRow = Integer.parseInt(Keyboard.readString());
 	    Object og = ITEMS_DIR.get(itemRow);
-	    this.starter.menu.add(og);
+	    starter.menu.add(og);
 	    ctr++;
 	}
        //Employee staff = new Employee();
@@ -202,7 +202,7 @@ public int months;
     RestaurantV2 starter = new RestaurantV2(name, size, priceScale);  
 
 
-    starter.customize();
+    starter.customize(starter);
 
     // Play
     while (months < 3) {
