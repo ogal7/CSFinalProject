@@ -55,7 +55,6 @@ public class RestaurantRushV2 extends Directory{
 	printWAITER_DIR();
 	
 	ctr = 0;
-	while (ctr < 5) {
 	System.out.println("Which Chefs do you want to add to your squad? (type 'done' if you are finished with selection)");
 	while ((!(Keyboard.readString().equals("done"))) && ctr <5 ) {
 		int itemRow = Integer.parseInt(Keyboard.readString());
@@ -71,7 +70,6 @@ public class RestaurantRushV2 extends Directory{
 		ctr++;
 	}
 	
-	
 	System.out.println("Which Waiters do you want to add to your squad? (type 'done' if you are finished with selection)");
 	while ((!(Keyboard.readString().equals("done"))) && ctr < 5 ) {
 		int itemRow = Integer.parseInt(Keyboard.readString());
@@ -80,7 +78,7 @@ public class RestaurantRushV2 extends Directory{
 		ctr++;
 	}
 	
-	}
+	
 	
 	
 	
