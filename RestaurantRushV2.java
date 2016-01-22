@@ -3,6 +3,8 @@ import cs1.Keyboard;
    
 
 public class RestaurantRushV2 extends Directory{
+	
+public int months;	
    
  public static void customize() {	
       System.out.println("Alright, before you pick food items you gotta do some budgetting:");
