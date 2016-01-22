@@ -54,28 +54,28 @@ public class RestaurantRushV2 extends Directory{
 	System.out.println("These are the waiters");
 	printWAITER_DIR();
 	
-	int ctr = 0;
+	ctr = 0;
 	while (ctr < 5) {
 	System.out.println("Which Chefs do you want to add to your squad? (type 'f' if you are finished with selection)");
-	while ((!(Keyboard.readString.equals("f"))) && ctr <5 ) {
+	while ((!(Keyboard.readString().equals("f"))) && ctr <5 ) {
 		int itemRow = Integer.parseInt(Keyboard.readString());
-		Chef temp = CHEF_DIR.get(itemRow);
+		Chef temp = (Chef) CHEF_DIR.get(itemRow);
 		starter.staffDir.add(temp);
 		ctr++;
 	}
 	System.out.println("Which Managers do you want to add to your squad? (type 'f' if you are finished with selection)");
-	while ((!(Keyboard.readString.equals("f"))) && ctr < 5 ) {
+	while ((!(Keyboard.readString().equals("f"))) && ctr < 5 ) {
 		int itemRow = Integer.parseInt(Keyboard.readString());
-		Manager temp1 = MANAGER_DIR.get(itemRow);
+		Manager temp1 = (Manager) MANAGER_DIR.get(itemRow);
 		starter.staffDir.add(temp);
 		ctr++;
 	}
 	
 	
 	System.out.println("Which Waiters do you want to add to your squad? (type 'f' if you are finished with selection)");
-	while ((!(Keyboard.readString.equals("f"))) && ctr < 5 ) {
+	while ((!(Keyboard.readString().equals("f"))) && ctr < 5 ) {
 		int itemRow = Integer.parseInt(Keyboard.readString());
-		Waiter temp2 = WAITER_DIR.get(itemRow);
+		Waiter temp2 = (Waiter) WAITER_DIR.get(itemRow);
 		starter.staffDir.add(temp);
 		ctr++;
 	}
