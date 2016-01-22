@@ -91,7 +91,7 @@ public int months;
     if (Keyboard.readString().equals("y")) {
     	System.out.println("Do you want to switch out any of your chefs? (y/n)");
     	if (Keyboard.readString().equals("y")) {
-	System.out.println("This is your current staff directory: \n" + staffDir);
+	System.out.println("This is your current staff directory: \n" + starter.staffDir);
 	System.out.println("Please select the number of the chef you wish to remove (0/1)");
 	int removal = Integer.parseInt(Keyboard.readString());
 	starter.staffDir.remove(removal);
