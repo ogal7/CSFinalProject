@@ -29,6 +29,7 @@ public class RestaurantV2 extends Directory{
     private int musicVol;
     private boolean hasBar;
     public ArrayList menu;
+    public ArrayList staffDir;
 
   //Constructor
     public RestaurantV2(){
@@ -54,6 +55,7 @@ public class RestaurantV2 extends Directory{
 	musicVol = 4;
 	hasBar = false;
 	menu = new ArrayList<Object>();
+	staffDir = new ArrayList<Employee>();
     }
     
     
@@ -73,6 +75,7 @@ public class RestaurantV2 extends Directory{
 	startMoney = 0;
 	expenses = 0;
 	menu = new ArrayList<Object>();
+	staffDir = new ArrayList<Employee>();
     }
     
   // Methods
@@ -182,6 +185,38 @@ public class RestaurantV2 extends Directory{
 
     }
       
+
+//set methods
+
+       
+        public static void setLight(int l){
+        	lighting = l;
+        }
+        
+        public static void setKara(boolean b) {
+        	hasKaraoke = b;
+        }
+        
+        public static void setLiveEnt(boolean le) {
+        	hasLiveEnt = le;
+        }
+        
+        public static void setVolume(int g) {
+        	musicVol = g;
+        }
+        
+        public static void makeBar(boolean h) {
+        	hasBar = h;
+        }
+
+	public static void makeBooths(boolean d) {
+		hasBooths = d;
+	}
+	
+	public static void setCarpet(boolean r) {
+		hasCarpets = r;
+	}
+
 
     // public static void lose(){}
 
