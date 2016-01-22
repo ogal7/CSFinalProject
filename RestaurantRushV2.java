@@ -86,7 +86,7 @@ public int months;
 	starter.setVolume(musicVol);
  }  
    
-   public static void customizeMonthly(Restaurantv2 starter) {
+   public static void customizeMonthly(RestaurantV2 starter) {
     System.out.println("Would you like to switch out any staff members? You may only switch out one per department. type (y/n)");
     if (Keyboard.readString().equals("y")) {
     	System.out.println("Do you want to switch out any of your chefs? (y/n)");
