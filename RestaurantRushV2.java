@@ -85,34 +85,52 @@ public class RestaurantRushV2 extends Directory{
  }  
    
    public static void customizeMonthly() {
-       System.out.println("These are the chefs");
-       printCHEF_DIR();
-       System.out.println("Which Chefs do you want to add to your squad? Please enter the two Chef numbers you want:");
+    System.out.println("Would you like to switch out any staff members? You may only switch out one per department. type (y/n)");
+    if (Keyboard.readString().equals("y")) {
+    	System.out.println("Do you want to switch out any of your chefs? (y/n)");
+    	if (Keyboard.readString().equals("y") {
+	System.out.println("This is your current staff directory: \n" + staffDir);
+	System.out.println("Please select the number of the chef you wish to remove (0/1)");
+	int removal = Integer.parseInt(Keyboard.readString());
+	starter.staffDir.remove(removal);
+       	System.out.println("Now please select a replacement:");
+       	System.out.println("These are the chefs");
+       	printCHEF_DIR();
+       	System.out.println("Which Chef do you want to add to your squad? Please enter the number you want:");
            int itemRow = Integer.parseInt(Keyboard.readString());
 	   Chef temp = (Chef) CHEF_DIR.get(itemRow);
-	   starter.staffDir.add(temp);
-	   itemRow = Integer.parseInt(Keyboard.readString());
-	   Chef temp = (Chef) CHEF_DIR.get(itemRow);
-	   starter.staffDir.add(temp);
-	System.out.println("These are the managers:");
-	printMANAGER_DIR();
-	System.out.println("Which Managers do you want to add to your squad? Please enter the two Manager numbers you want:");
-	    itemRow = Integer.parseInt(Keyboard.readString());
-	    Manager temp1 = (Manager) MANAGER_DIR.get(itemRow);
-	    starter.staffDir.add(temp1);
-	    itemRow = Integer.parseInt(Keyboard.readString());
-	    Manager temp1 = (Manager) MANAGER_DIR.get(itemRow);
-	    starter.staffDir.add(temp1);
-	System.out.println("These are the waiters");
-	printWAITER_DIR();
-	System.out.println("Which Waiters do you want to add to your squad? Please enter the two Waiter numbers you want:");
-	    itemRow = Integer.parseInt(Keyboard.readString());
-	    Waiter temp2 = (Waiter) WAITER_DIR.get(itemRow);
-	    starter.staffDir.add(temp2);
-	    itemRow = Integer.parseInt(Keyboard.readString());
-	    Waiter temp2 = (Waiter) WAITER_DIR.get(itemRow);
-	    starter.staffDir.add(temp2);
-		
+	   starter.staffDir.add(removal, temp);
+    	}
+    	System.out.println("Do you want to switch out any of your Managers? (y/n)");
+    	if (Keyboard.readString().equals("y") {
+	System.out.println("Please select the number of the Manager you wish to remove (2/3))");
+	removal = Integer.parseInt(Keyboard.readString());
+	starter.staffDir.remove(removal);
+       	System.out.println("Now please select a replacement:");
+       	System.out.println("These are the Managers");
+       	printMANAGER_DIR();
+       	System.out.println("Which Manager do you want to add to your squad? Please enter the number you want:");
+           itemRow = Integer.parseInt(Keyboard.readString());
+	   Manager temp1 = (Manager) Manager_DIR.get(itemRow);
+	   starter.staffDir.add(removal, temp1);
+    	}   
+    	System.out.println("Do you want to switch out any of your Managers? (y/n)");
+    	if (Keyboard.readString().equals("y") {
+	System.out.println("Please select the number of the Waiter you wish to remove (4/5)");
+	removal = Integer.parseInt(Keyboard.readString());
+	starter.staffDir.remove(removal);
+       	System.out.println("Now please select a replacement:");
+       	System.out.println("These are the Waiters");
+       	printWAITER_DIR();
+       	System.out.println("Which Waiter do you want to add to your squad? Please enter the number you want:");
+           itemRow = Integer.parseInt(Keyboard.readString());
+	   Waiter temp2 = (Waiter) WAITER_DIR.get(itemRow);
+	   starter.staffDir.add(removal, temp2);
+    	}	
+    }	
+    
+    System.out.println("Do you want to make changes to your restaurant's ambiance and decor?");	
+    if (Keyboad.readString().equals("y") {	
 	int lighting;
         int musicVol;
   
@@ -144,7 +162,26 @@ public class RestaurantRushV2 extends Directory{
 	System.out.println("How loud do you want your music to be? (Please type a number from 0-10):");
 	musicVol = Integer.parseInt(Keyboard.readString());
 	starter.setVolume(musicVol);
-   }
+   
+    	}
+    	if (months%3 == 0) {
+    		System.out.println("Would you like to purchase a seasonal package? (y/n)");
+    		if (Keyboard.readString().equals("y")) {
+    			if (months == 0) {
+    				starter.setPackage(0);
+    			}
+    			if (months == 3) {
+    				starter.setPackage(3);
+    			}
+    			if (months == 6) {
+    				starter.setPackage(6);
+    			}
+    			if (months == 9) {
+    				starter.setPackage(9);
+    			}
+    		}
+    	}	
+    }
    
   // Main
   public static void main(String [] args) {
@@ -167,9 +204,9 @@ public class RestaurantRushV2 extends Directory{
 
     // Play
     while (months < 3) {
-    	starter.customizeMonthly();
 		starter.runOperations();
 		starter.calculateRevenue();
+		starter.customizeMonthly();
 	// stillAlive();
 		months++;
       }
