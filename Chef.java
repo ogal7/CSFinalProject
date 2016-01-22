@@ -35,7 +35,7 @@ public class Chef extends Employee{
     public String toString() {
     	return "Chef "+name+" needs to be paid an annual salary of $" + reqSalary + ". \nTheir rating is " 
     	+ rating + "\nTheir speed is " + speed + "\nTheir Attentiveness is " + accuracy 
-    	+ ". \n Their cooking experience is " + cookingKnowledge + "years"; 
+    	+ ". \n Their cooking experience is " + cookingKnowledge + "years\n"; 
     }
 	  
 }
