@@ -70,7 +70,7 @@ public class RestaurantRushV2 extends Directory{
 	System.out.println("Do you want to add carpets to your restaurant? (type y/n): ");
 	ans = Keyboard.readString();
 	starter.setCarpet((ans.equals("y")));
-	
+	 
 	System.out.println("Do you want to add a bar to your restaurant? (type y/n): ");
 	ans = Keyboard.readString();
 	starter.makeBar((ans.equals("y")));
