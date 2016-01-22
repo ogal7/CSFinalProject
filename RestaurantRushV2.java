@@ -113,13 +113,13 @@ public int months;
        	printMANAGER_DIR();
        	System.out.println("Which Manager do you want to add to your squad? Please enter the number you want:");
            int itemRow = Integer.parseInt(Keyboard.readString());
-	   Manager temp1 = (Manager) Manager_DIR.get(itemRow);
+	   Manager temp1 = (Manager) MANAGER_DIR.get(itemRow);
 	   starter.staffDir.add(removal, temp1);
     	}   
     	System.out.println("Do you want to switch out any of your Managers? (y/n)");
     	if (Keyboard.readString().equals("y")) {
 	System.out.println("Please select the number of the Waiter you wish to remove (4/5)");
-	removal = Integer.parseInt(Keyboard.readString());
+	int removal = Integer.parseInt(Keyboard.readString());
 	starter.staffDir.remove(removal);
        	System.out.println("Now please select a replacement:");
        	System.out.println("These are the Waiters");
