@@ -4,9 +4,10 @@ import cs1.Keyboard;
 
 public class RestaurantRushV2 extends Directory{
 	
-public int months;	
+//public int months;	
    
- public static void customize(RestaurantV2 starter) {	
+ public static void customize(RestaurantV2 starter) {
+      	
       System.out.println("Alright, before you pick food items you gotta do some budgetting:");
       System.out.println("You have $100,000 in funds. ");
 	
@@ -87,6 +88,7 @@ public int months;
  }  
    
    public static void customizeMonthly(RestaurantV2 starter) {
+    	
     System.out.println("Would you like to switch out any staff members? You may only switch out one per department. type (y/n)");
     if (Keyboard.readString().equals("y")) {
     	System.out.println("Do you want to switch out any of your chefs? (y/n)");
@@ -125,14 +127,14 @@ public int months;
        	System.out.println("These are the Waiters");
        	printWAITER_DIR();
        	System.out.println("Which Waiter do you want to add to your squad? Please enter the number you want:");
-           itemRow = Integer.parseInt(Keyboard.readString());
+           int itemRow = Integer.parseInt(Keyboard.readString());
 	   Waiter temp2 = (Waiter) WAITER_DIR.get(itemRow);
 	   starter.staffDir.add(removal, temp2);
     	}	
     }	
     
     System.out.println("Do you want to make changes to your restaurant's ambiance and decor?");	
-    if (Keyboad.readString().equals("y")) {	
+    if (Keyboard.readString().equals("y")) {	
 	int lighting;
         int musicVol;
   
