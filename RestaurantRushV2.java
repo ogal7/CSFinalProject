@@ -106,7 +106,7 @@ public int months;
     	System.out.println("Do you want to switch out any of your Managers? (y/n)");
     	if (Keyboard.readString().equals("y")) {
 	System.out.println("Please select the number of the Manager you wish to remove (2/3))");
-	removal = Integer.parseInt(Keyboard.readString());
+	int removal = Integer.parseInt(Keyboard.readString());
 	starter.staffDir.remove(removal);
        	System.out.println("Now please select a replacement:");
        	System.out.println("These are the Managers");
