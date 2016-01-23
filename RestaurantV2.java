@@ -229,19 +229,25 @@ public class RestaurantV2 extends Directory{
     		System.out.println("Would you like to purchase a seasonal package? (y/n)");
     		if (Keyboard.readString().equals("y")) {
     			if (months == 0) {
-    				this.setPackage(0);
+			    System.out.println("You have added the Winter Package! \n Your restaurant has been decorated with snowflakes and snowmen, and is offering lasagna and hot chocolate to customers!");
+			    this.setPackage(0);
     			}
     			if (months == 3) {
-    				this.setPackage(3);
+			    System.out.println("You have added the Spring Package! \n Your restaurant has been decorated with fresh flowers and string lights, and is offering spring salmon and chocolate milk to customers!");
+			    this.setPackage(3);
     			}
     			if (months == 6) {
-    				this.setPackage(6);
+			    System.out.println("You have added the Summer Package! \n Your restaurant has been decorated with surfboards and tiki torches, and is offering smoothies and hotlemonade to customers!");
+			    this.setPackage(6);
     			}
     			if (months == 9) {
-    				this.setPackage(9);
+			    System.out.println("You have added the Fall Package! \n Your restaurant has been decorated with leaves and gords, and is offering chili and chai tea lattes to customers!");
+			    this.setPackage(9);
     			}
     		}
-    	}	
+    	}// END OF SEASONAL EDITS
+
+	// MONTHLY SPECIALS: to come but calcRev > monthly specials
     }
 
     
@@ -281,34 +287,35 @@ public class RestaurantV2 extends Directory{
 //set methods
 
        
-        public  void setLight(int l){
-        	lighting = l;
-        }
+    public  void setLight(int l){
+	lighting = l;
+    }
         
-        public void setKara(boolean b) {
-        	hasKaraoke = b;
-        }
+    public void setKara(boolean b) {
+	hasKaraoke = b;
+    }
         
-        public void setLiveEnt(boolean le) {
-        	hasLiveEnt = le;
-        }
+    public void setLiveEnt(boolean le) {
+	hasLiveEnt = le;
+    }
         
-        public void setVolume(int g) {
-        	musicVol = g;
-        }
+    public void setVolume(int g) {
+	musicVol = g;
+    }
         
-        public void makeBar(boolean h) {
-        	hasBar = h;
-        }
+    public void makeBar(boolean h) {
+	hasBar = h;
+    }
 
-	public void makeBooths(boolean d) {
-		hasBooths = d;
-	}
+    public void makeBooths(boolean d) {
+	    hasBooths = d;
+    }
 	
-	public void setCarpet(boolean r) {
-		hasCarpets = r;
-	}
+    public void setCarpet(boolean r) {
+	hasCarpets = r;
+    }
 
+    public 
 
     // public static void lose(){}
 
