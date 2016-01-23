@@ -7,17 +7,12 @@ public class RestaurantV2 extends Directory{
   // Instance vars
     private int month;
     private double cashMoney;
-    private double waitstaff;
-    private double chefs;
-    private double managers;
-    private double food;
-    private double waitstaffCapacity;
-    private double foodCapacity;
-    private double managerCapacity;
-    private double chefCapacity;
-    private double lastMonthChefCapacity;
-    private double startMoney;
-    private double expenses;
+    private ArrayList waiterDir;
+    private ArrayList foodDir;
+    private ArrayList managerDir;
+    private ArrayList chefDir;
+    private ArrayList bevDir;
+    private double startOfMonthMoney;
     private String name;
     private int size;
     private int priceScale;
@@ -28,24 +23,18 @@ public class RestaurantV2 extends Directory{
     private boolean hasCarpets;
     private int musicVol;
     private boolean hasBar;
-    public ArrayList menu;
-    public ArrayList staffDir;
 
   //Constructor
     public RestaurantV2(){
     	name = "";
     	priceScale = 1;
 	cashMoney = 100000;
-	waitstaff = 0;
-	chefs = 0;
-	managers = 0;
-	food = 0;
-	foodCapacity = 0;
-	waitstaffCapacity = 0;
-	chefCapacity = 
-	managerCapacity = 0;
-	startMoney = 0;
-	expenses = 0;
+	waiterDir = new ArrayList<Waiter>();
+	chefDir = new ArrayList<Chef>;
+	managerDir = new ArrayList<Manager>();
+	foodDir = new ArrayList<Food>();
+	bevDir = new ArrayList<Bev>();
+	startOfMonthMoney = 0;
 	size = 5;
 	lighting = 7;
 	hasBooths = false;
@@ -54,8 +43,6 @@ public class RestaurantV2 extends Directory{
 	hasCarpets = false;
 	musicVol = 4;
 	hasBar = false;
-	menu = new ArrayList<Object>();
-	staffDir = new ArrayList<Employee>();
     }
     
     
@@ -64,92 +51,102 @@ public class RestaurantV2 extends Directory{
     	size = sz;
     	priceScale = ps;
     	cashMoney = 100000;
-	waitstaff = 0;
-	chefs = 0;
-	managers = 0;
-	food = 0;
-	foodCapacity = 0;
-	waitstaffCapacity = 0;
-	chefCapacity = 
-	managerCapacity = 0;
-	startMoney = 0;
-	expenses = 0;
-	menu = new ArrayList<Object>();
-	staffDir = new ArrayList<Employee>();
+	waiterDir = new ArrayList<Waiter>();
+	chefDir = new ArrayList<Chef>;
+	managerDir = new ArrayList<Manager>();
+	menu = new ArrayList<Food>();
+	startOfMonthMoney = 0;
+	size = 5;
+	lighting = 7;
+	hasBooths = false;
+	hasKaraoke = false;
+	hasLiveEnt = false;
+	hasCarpets = false;
+	musicVol = 4;
+	hasBar = false;
     }
     
   // Methods
     // public static void stillAlive(){}
 
+    public String printMenu(){
+	for (int i = 0; i < menu.size(); i++){
+	    System.out.println(size.get(i));
+	}
+    }
 
     public void runOperations(){ //
+	String ans = "";
 	double num = 0;
 	expenses = 0;
-	startMoney = cashMoney;
-      // Food
-      System.out.print("You have $" + cashMoney + ". How much would you like to spend on food?  $");
-      num = Double.parseDouble(Keyboard.readString());
-      if (num < 0){
-	  System.out.println("You cannot withdraw a negative amount. Try a positive amount.");
-	  num = Double.parseDouble(Keyboard.readString());
-      }
-      cashMoney -= num;
-      if (cashMoney < 0){
-        System.out.println("You cannot overdraw your funds. You have $"+ cashMoney+ ". Try a smaller amount.");
-      	cashMoney+=num;//this way if someone tries to overdraw money it won't actually leave the account
-      	num = Double.parseDouble(Keyboard.readString());
-      	cashMoney-=num;
-      }//at this point the moneys already been withdrawn.
-      food += num;
-      expenses += num;
-      
-      // Chefs
-      System.out.print("You have $" + cashMoney + ". How much would you like to spend on chefs?  $");
-      num = Double.parseDouble(Keyboard.readString());
-      if (num < 0){
-	  System.out.println("You cannot withdraw a negative amount. Try a positive amount.");
-	  num = Double.parseDouble(Keyboard.readString());
-      }
-      cashMoney -= num;
-      if (cashMoney < 0){
-        System.out.println("You cannot overdraw your funds. You have $"+ cashMoney+ ". Try a smaller amount.");
-      	cashMoney+=num;//this way if someone tries to overdraw money it won't actually leave the account
-      	num = Double.parseDouble(Keyboard.readString());
-      	cashMoney-=num;
-      }//at this point the moneys already been withdrawn.
-      chefs += num;
-      expenses += num;
-      System.out.print("You have $" + cashMoney + ". How much would you like to spend on Waitstaff?  $");
-      num = Double.parseDouble(Keyboard.readString());
-      if (num < 0){
-	  System.out.println("You cannot withdraw a negative amount. Try a positive amount.");
-	  num = Double.parseDouble(Keyboard.readString());
-      }
-      cashMoney -= num;
-      if (cashMoney < 0){
-        System.out.println("You cannot overdraw your funds. You have $"+ cashMoney+ ". Try a smaller amount.");
-      	cashMoney+=num;//this way if someone tries to overdraw money it won't actually leave the account
-      	num = Double.parseDouble(Keyboard.readString());
-      	cashMoney-=num;
-      }//at this point the moneys already been withdrawn.
-      waitstaff += num;
-      expenses += num;
-    System.out.print("You have $" + cashMoney + ". How much would you like to spend on Managers?  $");
-      num = Double.parseDouble(Keyboard.readString());
-      if (num < 0){
-	  System.out.println("You cannot withdraw a negative amount. Try a positive amount.");
-	  num = Double.parseDouble(Keyboard.readString());
-      }
-      cashMoney -= num;
-      if (cashMoney < 0){
-        System.out.println("You cannot overdraw your funds. You have $"+ cashMoney+ ". Try a smaller amount.");
-      	cashMoney+=num;//this way if someone tries to overdraw money it won't actually leave the account
-      	num = Double.parseDouble(Keyboard.readString());
-      	cashMoney-=num;
-      }//at this point the moneys already been withdrawn.
-      managers += num;
-      expenses += num;
-    
+	startofMonthMoney = cashMoney;
+
+	// MENU
+	System.out.println("This is your current menu: \n" + this.printMenu() + " \n ** menu above **");
+	System.out.print("Current Funds: $" + cashMoney);
+	System.out.print("Would you like to change the menu? (y/n)     ");
+	ans = Keyboard.readString();
+	if (ans.equals("y")){
+	    // Adding Items
+	    System.out.print("Do you want to add items to your menu? (y/n)    ");
+	    ans = Keyboard.readString();
+	    if (ans.equals("y")){
+		System.out.println("These are the items you can choose from: \n" + this.printITEMS_DIR() + "\n ** options above **");
+		System.out.println("Please enter the number of the row you wish to add to your menu \n");
+		while (ans.equals("y")) {
+		    System.out.print("\t Row: ");
+		    int itemRow = Integer.parseInt(Keyboard.readString());
+		    Object og = ITEMS_DIR.get(itemRow);
+		    this.menu.add(og);
+		    System.out.print("Continue adding? (y/n)    ");
+		    ans = Keyboard.readString();
+		}
+	    }
+	    // Removing Items
+	    System.out.print("Do you want to remove items to your menu? (y/n)    ");
+	    ans = Keyboard.readString();
+	    if (ans.equals("y")){
+		System.out.println("This is your current menu: \n" + menu + " \n ** menu above **");
+		System.out.println("Please enter the number of the row you wish to remove from your menu \n");
+		while (ans.equals("y")) {
+		    System.out.print("\t Row: ");
+		    int itemRow = Keyboard.readInt();
+		    this.menu.remove(itemRow);
+		    System.out.print("Want to remove sonmething else? (y/n)    ");
+		    ans = Keyboard.readString();
+		}
+	    }
+	}
+
+	// STAFF
+	
+	}
+		    
+	
+	// Employees
+	System.out.print("\n Current Funds: $" + cashMoney);
+	System.out.print("Do you want to shake up your staff? (y/n)     ");
+	ans = Keyboard.readString();
+	while (ans.equals("y")){
+	    System.out.println("Indicate the department you want to improve (Waitstaff/Chefs/Managers");
+	    ans = Keyboard.readString();
+	    if (ans.equals("chefs") || ans.equals("Chefs") || ans.equals("chef") || ans.equals("Chef")){
+		// 
+	    }
+	    if (ans.equals("Waitstaff") || ans.equals("waitstaff")){
+		// EDIT STAFF DIR
+	    }
+	    if (ans.equals("Managers") || ans.equals("managers") || ans.equals("manager") || ans.equals("Manager") ){
+		// EDIT STAFF DIR
+	    }
+	    System.out.println("Do you want to continue shaking up your staff? (y/n)    ");
+	}
+
+	// 
+	System.out.print("Current Funds: $" + cashMoney);
+	System.out.print("Would you like to change the menu? (y/n)     ");
+	ans = Keyboard.readString();
+	
     }
 
     
