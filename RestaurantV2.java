@@ -186,7 +186,12 @@ public class RestaurantV2 extends Directory{
 	    System.out.println("Do you want to continue shaking up your staff? (y/n)    ");
 	} // END OF EMPLOYEE EDITS
 
-	
+	// DECOR / VIBE CHANGES
+	System.put.println("Alright! Now for the fun stuff! "
+	System.out.print("\n Current Funds: $" + cashMoney);
+	System.out.print("Do you want to shake up your staff? (y/n)     ");
+	ans = Keyboard.readString();
+	while (ans.equals("y")){
     }
 
     
