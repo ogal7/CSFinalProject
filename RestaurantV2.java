@@ -184,6 +184,7 @@ public class RestaurantV2 extends Directory{
 		}
 	    }
 	    System.out.println("Do you want to continue shaking up your staff? (y/n)    ");
+	    ans = Keyboard.readString();
 	} // END OF EMPLOYEE EDITS
 
 	// VIBE CHANGES
