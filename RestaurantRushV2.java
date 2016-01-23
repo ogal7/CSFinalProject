@@ -20,7 +20,7 @@ public class RestaurantRushV2 extends Directory{
 	    Object og = ITEMS_DIR.get(itemRow);
 	    this.menu.add(og);
 	    ctr++;
-	}
+       }
        //Employee staff = new Employee();
        //ArrayList staffLis = new ArrayList<Employee>();
        System.out.println("Menu filled. Now let's pick out staff members");
