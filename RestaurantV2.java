@@ -71,7 +71,25 @@ public class RestaurantV2 extends Directory{
 
     public String printMenu(){
 	for (int i = 0; i < menu.size(); i++){
-	    System.out.println(size.get(i));
+	    System.out.println(menu.get(i));
+	}
+    }
+
+    public String printWaiterDir(){
+	for (int i = 0; i < waiterDir.size(); i++){
+	    System.out.println(waiterDir.get(i));
+	}
+    }
+
+    public String printChefDir(){
+	for (int i = 0; i < chefDir.size(); i++){
+	    System.out.println(chefDir.get(i));
+	}
+    }
+
+    public String printManagerDir(){
+	for (int i = 0; i < managerDir.size(); i++){
+	    System.out.println(managerDir.get(i));
 	}
     }
 
@@ -87,7 +105,7 @@ public class RestaurantV2 extends Directory{
 	System.out.print("Would you like to change the menu? (y/n)     ");
 	ans = Keyboard.readString();
 	if (ans.equals("y")){
-	    // Adding Items
+	    // ADDING ITEMS
 	    System.out.print("Do you want to add items to your menu? (y/n)    ");
 	    ans = Keyboard.readString();
 	    if (ans.equals("y")){
@@ -102,11 +120,11 @@ public class RestaurantV2 extends Directory{
 		    ans = Keyboard.readString();
 		}
 	    }
-	    // Removing Items
+	    // REMOVING ITEMS
 	    System.out.print("Do you want to remove items to your menu? (y/n)    ");
 	    ans = Keyboard.readString();
 	    if (ans.equals("y")){
-		System.out.println("This is your current menu: \n" + menu + " \n ** menu above **");
+		System.out.println("This is your current menu: \n" + this.printMenu() + " \n ** menu above **");
 		System.out.println("Please enter the number of the row you wish to remove from your menu \n");
 		while (ans.equals("y")) {
 		    System.out.print("\t Row: ");
@@ -117,13 +135,8 @@ public class RestaurantV2 extends Directory{
 		}
 	    }
 	}
-
-	// STAFF
-	
-	}
 		    
-	
-	// Employees
+	// EMPLOYEES
 	System.out.print("\n Current Funds: $" + cashMoney);
 	System.out.print("Do you want to shake up your staff? (y/n)     ");
 	ans = Keyboard.readString();
@@ -131,10 +144,24 @@ public class RestaurantV2 extends Directory{
 	    System.out.println("Indicate the department you want to improve (Waitstaff/Chefs/Managers");
 	    ans = Keyboard.readString();
 	    if (ans.equals("chefs") || ans.equals("Chefs") || ans.equals("chef") || ans.equals("Chef")){
-		// 
+		System.out.println("These are your chefs: \n" + this.printChefDir() + "\n ** Chefs listed above **");
+		System.out.println("The way to improve your chefs is to send them to culinary school. \n Chefs will be able to work while they are in school, but their salary will increase.\n How many years would you like to send your chefs to culinary school? ");
+		System.out.print(" \t # of years (0 - 10): ");
+		num = Keyboard.readInt;
+		for (i : chefDir){
+		    i.setCookingKnowledge(i.getCookingKnowledge() + num);
+		    i.setSalary(i.getSalary() * (1 + num * .2));
+		}
 	    }
 	    if (ans.equals("Waitstaff") || ans.equals("waitstaff")){
-		// EDIT STAFF DIR
+		System.out.println("These are your waiters: \n" + this.printWaiterDir() + "\n ** Waiters listed above **");
+		System.out.println("The way to improve your waitstaff is to traint them. \n Waiters' accuracy and precision will improve, but their salary will increase. \n How many weeks would you like to train your waitstaff? ");
+		System.out.print(" \t # of weeks (0 - 10): ");
+		num = Keyboard.readInt;
+		for (i : waiterDir){
+		    i.setAccuracy(i.getCookingKnowledge() + num);
+		    i.setSalary(i.getSalary() * (1 + num * .2));
+		}
 	    }
 	    if (ans.equals("Managers") || ans.equals("managers") || ans.equals("manager") || ans.equals("Manager") ){
 		// EDIT STAFF DIR
