@@ -15,5 +15,8 @@ public Items(){
 }
   
   // Methods
+  public double getPrice(){
+   return this.price;
+  }
 }
 
