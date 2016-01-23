@@ -39,7 +39,7 @@ public Directory(){
     Manager aa = new Manager("Callie", 100000,  .8, 9, 3,1);
     MANAGER_DIR.add(aa);
         
-    //String n, double req, double rat, int s, int acc, int clums, boolean isfel    
+    //String n, double req, double rat, int s, int acc, boolean isfel    
     //waiters
     Waiter m = new Waiter("Ted", 50000, .7, 7, 9, false);
     WAITER_DIR.add(m);
@@ -49,7 +49,7 @@ public Directory(){
     WAITER_DIR.add(o);
     Waiter p = new Waiter("Marshall", 47000, .7, 7, 8, false);
     WAITER_DIR.add(p);
-    Waiter q = new Waiter("Barney", 40000, .6 , 10, 5,  true);
+    Waiter q = new Waiter("Barney", 40000, .9, 10, 5,  true);
     WAITER_DIR.add(q);
     Waiter r = new Waiter("Ranjit", 70000, .9, 6, 9,  false);
     WAITER_DIR.add(r);
