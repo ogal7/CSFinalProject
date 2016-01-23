@@ -186,12 +186,62 @@ public class RestaurantV2 extends Directory{
 	    System.out.println("Do you want to continue shaking up your staff? (y/n)    ");
 	} // END OF EMPLOYEE EDITS
 
-	// DECOR / VIBE CHANGES
-	System.put.println("Alright! Now for the fun stuff! "
-	System.out.print("\n Current Funds: $" + cashMoney);
-	System.out.print("Do you want to shake up your staff? (y/n)     ");
+	// VIBE CHANGES
+	System.put.println("Alright! Now for the fun stuff! ");
+	System.out.println("\n Current Funds: $" + cashMoney + " NOTE: If you improved your staff, their salary at the end of the month will be higher" );
+	System.out.print("Do you want to change the vibe of your restaurant? (y/n)     ");
 	ans = Keyboard.readString();
+	int lighting;
+        int musicVol;
 	while (ans.equals("y")){
+	    // BOOTHS
+	    System.out.println("Do you want to add booths to your restaurant? (type y/n): ");
+	    String ans = Keyboard.readString();
+	    this.makeBooths((ans.equals("y")));
+	    // KARAOKE
+	    System.out.println("Do you want to add Karaoke to your restaurant? (type y/n): ");
+	    ans = Keyboard.readString();
+	    this.setKara((ans.equals("y")));
+	    // LIVE ENTERTAINMENT
+	    System.out.println("Do you want to add Live Entertainment to your restaurant? (type y/n): ");
+	    ans = Keyboard.readString();
+	    this.setLiveEnt((ans.equals("y")));
+	    // CARPETS
+	    System.out.println("Do you want to add carpets to your restaurant? (type y/n): ");
+	    ans = Keyboard.readString();
+	    this.setCarpet((ans.equals("y")));
+	    // BAR
+	    System.out.println("Do you want to add a bar to your restaurant? (type y/n): ");
+	    ans = Keyboard.readString();
+	    this.makeBar((ans.equals("y")));
+	    // LIGHTING
+	    System.out.println("How strong do you want you lighting to be? (Please type a number from 0-10): ");
+	    lighting = Integer.parseInt(Keyboard.readString());
+	    this.setLight(lighting);
+	    // MUSIC VOLUME
+	    System.out.println("How loud do you want your music to be? (Please type a number from 0-10):");
+	    musicVol = Integer.parseInt(Keyboard.readString());
+	    this.setVolume(musicVol);
+    	}
+	
+	// SEASONAL CHANGES
+    	if (months%3 == 0) {
+    		System.out.println("Would you like to purchase a seasonal package? (y/n)");
+    		if (Keyboard.readString().equals("y")) {
+    			if (months == 0) {
+    				this.setPackage(0);
+    			}
+    			if (months == 3) {
+    				this.setPackage(3);
+    			}
+    			if (months == 6) {
+    				this.setPackage(6);
+    			}
+    			if (months == 9) {
+    				this.setPackage(9);
+    			}
+    		}
+    	}	
     }
 
     
