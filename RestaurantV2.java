@@ -7,7 +7,7 @@ public class RestaurantV2 extends Directory{
   // Instance vars
     private int month;
     private double cashMoney;
-    private ArrayList waiterDir;
+    protected ArrayList waiterDir;
     protected ArrayList foodDir;
     protected ArrayList managerDir;
     protected ArrayList chefDir;
