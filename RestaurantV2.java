@@ -154,10 +154,10 @@ public class RestaurantV2 extends Directory{
 		System.out.print(" \t # of years (0 - 10): ");
 		num = Keyboard.readInt();
 		for (Object i : chefDir){
-			i = (Chef) i;	
-		    i.setCookingKnowledge((Chef)i.getCookingKnowledge() + num);
-		    if ((Chef)i.getCookingKnowledge() > 10) (Chef)i.setCookingKnowledge(10);
-		    (Chef)i.setSalary((Chef)i.getSalary() * (1 + num * .1));
+		    i = (Chef) i;
+		    i.setCookingKnowledge(i.getCookingKnowledge() + num);
+		    if (i.getCookingKnowledge() > 10) i.setCookingKnowledge(10);
+		    i.setSalary(i.getSalary() * (1 + num * .1));
 		}
 	    }
 	    // WAITERS
