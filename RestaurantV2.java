@@ -185,7 +185,7 @@ public class RestaurantV2 extends Directory{
 		for (Object i : chefDir){
 		    //Chef a = new Chef();
 		    //i = a;
-		    ((Chef)i).setCookingKnowledge(((Chef)i).getCookingKnowledge() + num);
+		    ((Chef)i).setCookingKnowledge(   ((Chef)i).getCookingKnowledge() + num);
 		    if (((Chef)i).getCookingKnowledge() > 10) ((Chef)i).setCookingKnowledge(10);
 		    ((Chef)i).setSalary(((Chef)i).getSalary() * (1 + num * .1));
 		}
