@@ -5,8 +5,8 @@ public class Employee {
     //instance vars//
     protected double reqSalary;
     protected double rating;
-    protected int speed;
-    protected int accuracy;
+    protected double speed;
+    protected double accuracy;
     protected String name;
     
     
@@ -41,10 +41,10 @@ public class Employee {
     
 
     
-    public int getAccuracy(){
+    public double getAccuracy(){
     	return accuracy;}
     
-    public void setAccuracy(int a){
+    public void setAccuracy(double a){
     	accuracy = a;}
     
 //uml
