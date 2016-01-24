@@ -3,7 +3,7 @@
 public class Manager extends Employee{
 
   // Instance vars
-  private int greediness;
+  private double greediness;
 
   // Constructor
   public Manager(){
@@ -25,7 +25,7 @@ public class Manager extends Employee{
   }
 	
   // Methods
-  public void setGreediness(int i){
+  public void setGreediness(double i){
     greediness = i;}
   public int getGreediness(){
     return greediness;}
