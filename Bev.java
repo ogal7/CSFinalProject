@@ -20,6 +20,9 @@ public String toString() {
 	String retStr = ""; 
 	retStr=name + "\n\t$"+ price + "\n\tDifficulty: " + maintenance+"\n\tAlcoholic? :" + hasAlcohol;	
 	return retStr;
-}
+	}
+	
+public boolean hasAlcohol();
+	return hasAlcohol;
 }
 //uml done
