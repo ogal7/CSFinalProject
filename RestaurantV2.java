@@ -166,12 +166,13 @@ public class RestaurantV2 extends Directory{
 		System.out.println("The way to improve your waitstaff is to train them. \n Waiters' accuracy and precision will improve, but their salary will increase. \n How many weeks would you like to train your waitstaff? ");
 		System.out.print(" \t # of weeks (0 - 10): ");
 		num = Keyboard.readInt();
-		for (Waiter i : waiterDir){
-		    (Waiter)i.setAccuracy((Waiter)i.getAccuracy() + num);
-		    if ((Waiter)i.getAccuracy() > 10) (Waiter)i.setAccuracy(10);
-		    (Waiter)i.setPrecision((Waiter)i.getPrecision() + num);
-		    if ((Waiter)i.getPrecision() > 10) (Waiter)i.setPrecision(10);
-		    (Waiter)i.setSalary((Waiter)i.getSalary() * (1 + num * .1));
+		for (Object i : waiterDir){
+			i = (Waiter) i;
+		    i.setAccuracy(i.getAccuracy() + num);
+		    if (i.getAccuracy() > 10) (i.setAccuracy(10);
+		    i.setPrecision(i.getPrecision() + num);
+		    if (i.getPrecision() > 10) i.setPrecision(10);
+		    i.setSalary(i.getSalary() * (1 + num * .1));
 		}
 	    }
 	    // MANAGERS
@@ -180,12 +181,13 @@ public class RestaurantV2 extends Directory{
 		System.out.println("The way to improve your managers is to be nice to them. \n Managers' greediness will decrease and their ratings willg go up, but their salary will increase because you will have to take them out to dinner. \n How many times do you want to take your managers out to dinner? ");
 		System.out.print(" \t # of times (0 - 10): ");
 		num = Keyboard.readInt;
-		for (Managers i : managerDir){
-		    (Managet)i.setGreediness((Manager)i.getGreediness() - num);
-		    if ((Manager)i.getGreediness() < 0) (Manager) i.setGreediness(0);
-		    (Manager)i.setRating((Manager)i.getRating() + (.1 * num));
-		    if ((Manager)i.getRating() > 1) (Manager)i.setRating(1);
-		    (Manager)i.setSalary((Manager)i.getSalary() * (1 + num * .1));
+		for (Object i : managerDir){
+			i = (Manager) i;
+		    i.setGreediness(i.getGreediness() - num);
+		    if (i.getGreediness() < 0) i.setGreediness(0);
+		    i.setRating(i.getRating() + (.1 * num));
+		    if (i.getRating() > 1) i.setRating(1);
+		    i.setSalary(i.getSalary() * (1 + num * .1));
 		}
 	    }
 	    System.out.println("Do you want to continue shaking up your staff? (y/n)    ");
