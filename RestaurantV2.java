@@ -193,7 +193,7 @@ public class RestaurantV2 extends Directory{
 	} // END OF EMPLOYEE EDITS
 
 	// VIBE CHANGES
-	System.put.println("Alright! Now for the fun stuff! ");
+	System.out.println("Alright! Now for the fun stuff! ");
 	System.out.println("\n Current Funds: $" + cashMoney + " NOTE: If you improved your staff, their salary at the end of the month will be higher" );
 	System.out.print("Do you want to change the vibe of your restaurant? (y/n)     ");
 	ans = Keyboard.readString();
