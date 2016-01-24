@@ -18,7 +18,7 @@ public class RestaurantRushV2 extends Directory{
 	    System.out.print("\t" + (ctr + 1) + ": ");
 	    int itemRow = Integer.parseInt(Keyboard.readString());
 	    Object og = ITEMS_DIR.get(itemRow);
-	    this.menu.add(og);
+	    starter.foodDir.add(og);
 	    ctr++;
        }
        //Employee staff = new Employee();
