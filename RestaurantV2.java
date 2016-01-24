@@ -261,8 +261,8 @@ public class RestaurantV2 extends Directory{
     
    public  void calculateRevenue(){
        double revenue = 0;
-       foodCapacity = food / 0.4;
-       waitstaffCapacity = waitstaff * 12.5;
+       float foodCapacity = food / 0.4;
+       float waitstaffCapacity = waitstaff * 12.5;
        if (month == 0){
 	   lastMonthChefCapacity = 18 * chefs * chefs / 5000;
        }
