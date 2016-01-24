@@ -327,7 +327,7 @@ public class RestaurantV2 extends Directory{
     	if (hasDrugs == true) {
     		if ( (int)(Math.random()*10)%3 == 0   ) {
     			System.out.println( officer.getName() + " from the DEA have shut down your operation. You lost.");
-    			funds = -100;
+    			cashMoney = 0;
     		}
     	}
 		
