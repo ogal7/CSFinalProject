@@ -107,7 +107,7 @@ public class RestaurantRushV2 extends Directory{
     int size = Integer.parseInt(Keyboard.readString());
 	
     System.out.print("\033[34mPlease pick a \033[31mprice scale in decimal form\033[34m. We will multiply the preset food item prices by this number: \t \033[36m x");
-    double priceScale = (double) Keyboard.parseFloat();
+    double priceScale = (double) Keyboard.readDouble();
     RestaurantV2 starter = new RestaurantV2(name, size, priceScale);  
     customize(starter);
     starter.calculateExpenses();
