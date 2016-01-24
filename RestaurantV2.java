@@ -25,6 +25,8 @@ public class RestaurantV2 extends Directory{
     private double expenses;
     private double cleanliness;
     private double ambiance; //out of 10
+    private boolean hasDrugs;
+    private double rating;
   //Constructor
     public RestaurantV2(){
     	name = "";
@@ -46,6 +48,7 @@ public class RestaurantV2 extends Directory{
 	month = 0;
 	expenses = 0;
 	cleanliness = this.getCleanlinessInit();
+	rating = 10.0;
     }
     
     
@@ -311,10 +314,11 @@ public class RestaurantV2 extends Directory{
     			}
     		} 
     	}// END OF SEASONAL EDITS
+    	DEA officer = new DEA();
+    	FDA officer2 = new FDA();
 	if (months > 1) {
     		System.out.println("Would you like to add illegal items to your menu? Your customers will be addicted to coming to your restaurant! ;) type (y/n");
     		if (Keyboard.readString().equals("y")) {
-    			DEA officer = new DEA();
     			hasDrugs = true;
     			rating +=1;
     		}
@@ -328,7 +332,6 @@ public class RestaurantV2 extends Directory{
     	}
 		
 		if ( (int) (Math.random() * 10) == 5 || cleanliness < 5) {
-			FDA officer2 = new FDA();
 			officer2.setPassedInspection(false);
 			System.out.println(officer2.getName() + " from the FDA has shut you down because you have EColi");
 		}    	
