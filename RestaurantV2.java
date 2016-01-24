@@ -154,11 +154,11 @@ public class RestaurantV2 extends Directory{
 		System.out.print(" \t # of years (0 - 10): ");
 		num = Keyboard.readInt();
 		for (Object i : chefDir){
-		    Chef a = new Chef();
-		    i = a;
-		    i.setCookingKnowledge(i.getCookingKnowledge() + num);
-		    if (i.getCookingKnowledge() > 10) i.setCookingKnowledge(10);
-		    i.setSalary(i.getSalary() * (1 + num * .1));
+		    //Chef a = new Chef();
+		    //i = a;
+		    ((Chef)i).setCookingKnowledge(((Chef)i).getCookingKnowledge() + num);
+		    if (((Chef)i).getCookingKnowledge() > 10) ((Chef)i).setCookingKnowledge(10);
+		    ((Chef)i).setSalary(((Chef)i).getSalary() * (1 + num * .1));
 		}
 	    }
 	    // WAITERS
@@ -168,12 +168,11 @@ public class RestaurantV2 extends Directory{
 		System.out.print(" \t # of weeks (0 - 10): ");
 		num = Keyboard.readInt();
 		for (Object i : waiterDir){
-		    i = (Waiter) i;
-		    i.setAccuracy(i.getAccuracy() + num);
-		    if (i.getAccuracy() > 10) i.setAccuracy(10);
-		    i.setPrecision(i.getPrecision() + num);
-		    if (i.getPrecision() > 10) i.setPrecision(10);
-		    i.setSalary(i.getSalary() * (1 + num * .1));
+		    ((Waiter)i).setAccuracy(((Waiter)i).getAccuracy() + num);
+		    if (((Waiter)i).getAccuracy() > 10) ((Waiter)i).setAccuracy(10);
+		    ((Waiter)i).setPrecision(((Waiter)i).getPrecision() + num);
+		    if (((Waiter)i).getPrecision() > 10) ((Waiter)i).setPrecision(10);
+		    ((Waiter)i).setSalary(((Waiter)i).getSalary() * (1 + num * .1));
 		}
 	    }
 	    // MANAGERS
@@ -183,12 +182,11 @@ public class RestaurantV2 extends Directory{
 		System.out.print(" \t # of times (0 - 10): ");
 		num = Keyboard.readInt;
 		for (Object i : managerDir){
-			i = (Manager) i;
-		    i.setGreediness(i.getGreediness() - num);
-		    if (i.getGreediness() < 0) i.setGreediness(0);
-		    i.setRating(i.getRating() + (.1 * num));
-		    if (i.getRating() > 1) i.setRating(1);
-		    i.setSalary(i.getSalary() * (1 + num * .1));
+		    ((Manager)i).setGreediness(((Manager)i).getGreediness() - num);
+		    if (((Manager)i).getGreediness() < 0) ((Manager)i).setGreediness(0);
+		    ((Manager)i).setRating(((Manager)i).getRating() + (.1 * num));
+		    if (((Manager)i).getRating() > 1) ((Manager)i).setRating(1);
+		    ((Manager)i).setSalary(((Manager)i).getSalary() * (1 + num * .1));
 		}
 	    }
 	    System.out.println("Do you want to continue shaking up your staff? (y/n)    ");
