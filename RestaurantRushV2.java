@@ -112,7 +112,7 @@ public class RestaurantRushV2 extends Directory{
     while (months < 3) {
 		starter.runOperations();
 		starter.calculateRevenue();
-		starter.customizeMonthly(starter);
+		//starter.customizeMonthly(starter);
 	// stillAlive();
 		months++;
       }
