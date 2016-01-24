@@ -29,8 +29,12 @@ public String toString() {
 	retStr = name + "\t$"+ price + "\t Maintenance Level: " + maintenanceLevel + " Fresh?: " + isFresh+"\n";	
 	return retStr;
 }
+<<<<<<< HEAD
     public boolean getRottenness(){
 	return isRotten;
 }
+=======
+
+>>>>>>> 02149a5869841c4ac4b726dd9974a14f5b25a26d
 }
 //
