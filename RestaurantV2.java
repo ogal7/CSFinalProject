@@ -24,6 +24,7 @@ public class RestaurantV2 extends Directory{
     private int musicVol;
     private boolean hasBar;
     private int food;
+    private double waitStaff;
 
   //Constructor
     public RestaurantV2(){
@@ -264,7 +265,7 @@ public class RestaurantV2 extends Directory{
    public  void calculateRevenue(){
        double revenue = 0;
        double foodCapacity = food / 0.4;
-       double waitstaffCapacity = waitstaff * 12.5;
+       double waitstaffCapacity = waitStaff * 12.5;
        if (month == 0){
 	   lastMonthChefCapacity = 18 * chefs * chefs / 5000;
        }
