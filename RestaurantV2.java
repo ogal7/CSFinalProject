@@ -30,7 +30,7 @@ public class RestaurantV2 extends Directory{
     	priceScale = 1;
 	cashMoney = 100000;
 	waiterDir = new ArrayList<Waiter>();
-	chefDir = new ArrayList<Chef>;
+	chefDir = new ArrayList<Chef>();
 	managerDir = new ArrayList<Manager>();
 	foodDir = new ArrayList<Food>();
 	bevDir = new ArrayList<Bev>();
@@ -149,7 +149,7 @@ public class RestaurantV2 extends Directory{
 		System.out.println("The way to improve your chefs is to send them to culinary school. \n Chefs will be able to work while they are in school, but their salary will increase.\n How many years would you like to send your chefs to culinary school? ");
 		System.out.print(" \t # of years (0 - 10): ");
 		num = Keyboard.readInt;
-		for (i : chefDir){
+		for (Chef i : chefDir){
 		    i.setCookingKnowledge(i.getCookingKnowledge() + num);
 		    if (i.getCookingKnowledge() > 10) i.setCookingKnowledge(10);
 		    i.setSalary(i.getSalary() * (1 + num * .1));
@@ -161,7 +161,7 @@ public class RestaurantV2 extends Directory{
 		System.out.println("The way to improve your waitstaff is to train them. \n Waiters' accuracy and precision will improve, but their salary will increase. \n How many weeks would you like to train your waitstaff? ");
 		System.out.print(" \t # of weeks (0 - 10): ");
 		num = Keyboard.readInt;
-		for (i : waiterDir){
+		for (Waiter i : waiterDir){
 		    i.setAccuracy(i.getAccuracy() + num);
 		    if (i.getAccuracy() > 10) i.setAccuracy(10);
 		    i.setPrecision(i.getPrecision() + num);
@@ -175,7 +175,7 @@ public class RestaurantV2 extends Directory{
 		System.out.println("The way to improve your managers is to be nice to them. \n Managers' greediness will decrease and their ratings willg go up, but their salary will increase because you will have to take them out to dinner. \n How many times do you want to take your managers out to dinner? ");
 		System.out.print(" \t # of times (0 - 10): ");
 		num = Keyboard.readInt;
-		for (i : waiterDir){
+		for (Waiter i : managerDir){
 		    i.setGreediness(i.getGreediness() - num);
 		    if (i.getGreediness() < 0) i.setGreediness(0);
 		    i.setRating(i.getRating() + (.1 * num))
