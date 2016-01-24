@@ -3,7 +3,7 @@
 public class Chef extends Employee{
 
   // Instance vars
-  private int cookingKnowledge;
+  private double cookingKnowledge;
   
   // Constructor
   public Chef(){
@@ -26,7 +26,7 @@ public class Chef extends Employee{
   }
 	
   // Methods
-  public void setCookingKnowledge(int i){
+  public void setCookingKnowledge(double i){
     cookingKnowledge = i;}
   public int getCookingKnowledge(){
     return cookingKnowledge;}
