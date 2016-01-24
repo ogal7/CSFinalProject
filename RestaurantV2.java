@@ -43,6 +43,7 @@ public class RestaurantV2 extends Directory{
 	hasCarpets = false;
 	musicVol = 4;
 	hasBar = false;
+	month = 0;
     }
     
     
@@ -65,6 +66,7 @@ public class RestaurantV2 extends Directory{
 	hasCarpets = false;
 	musicVol = 4;
 	hasBar = false;
+	month = 0;
     }
     
   // Methods
@@ -97,7 +99,7 @@ public class RestaurantV2 extends Directory{
 	}
     }
 
-    public void runOperations(){ //
+    public void runOperations(int months){ //
 	String ans = "";
 	double num = 0;
 	float expenses = 0;
@@ -321,7 +323,20 @@ public class RestaurantV2 extends Directory{
 	hasCarpets = r;
     }
 
- 
+    public void setPackage(int m) {
+    	if (m == 0) {
+    		System.out.println("Winter Package");	
+    	}
+    	if (m == 3) {
+    		System.out.println("Spring Package");	
+    	}
+    	if (m == 6){
+    		System.out.println("Summer Package");
+    	}
+    	if (m == 9) {
+    		System.out.println("Fall Package");	
+    	}
+    } 
 
     // public static void lose(){}
 
