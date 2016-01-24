@@ -93,6 +93,13 @@ public class RestaurantV2 extends Directory{
 	return rating;
 }
 
+	public double getAmbiance() {
+		return ambiance;
+	}
+	public void setAmbiance(double r) {
+		ambiance = r;
+	}
+
     public String printWaiterDir(){
 	String retStr = "";
 	for (int i = 0; i < waiterDir.size(); i++){
@@ -453,16 +460,20 @@ public class RestaurantV2 extends Directory{
 
     public void setPackage(int m) {
     	if (m == 0) {
-    		System.out.println("Winter Package");	
+    		System.out.println("Winter Package");
+    		cashMoney -= 1000;
     	}
     	if (m == 3) {
-    		System.out.println("Spring Package");	
+    		System.out.println("Spring Package");
+    		cashMoney -= 1000;
     	}
     	if (m == 6){
     		System.out.println("Summer Package");
+    		cashMoney -= 1000;
     	}
     	if (m == 9) {
     		System.out.println("Fall Package");	
+    		cashMoney -= 1000;
     	}
     } 
 
