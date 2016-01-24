@@ -279,7 +279,7 @@ public class RestaurantV2 extends Directory{
 			    System.out.println("You have added the Fall Package! \n Your restaurant has been decorated with leaves and gords, and is offering chili and chai tea lattes to customers!");
 			    this.setPackage(9);
     			}
-    		}
+    		} 
     	}// END OF SEASONAL EDITS
 
 	// MONTHLY SPECIALS: to come but calcRev > monthly specials
