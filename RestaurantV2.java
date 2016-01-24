@@ -30,6 +30,7 @@ public class RestaurantV2 extends Directory{
     private double managerCapacity;
     private int managers;
     private double expenses;
+    private double lastMonthChefCapacity;
 
   //Constructor
     public RestaurantV2(){
