@@ -113,7 +113,7 @@ public class RestaurantV2 extends Directory{
 	    System.out.print("Do you want to add items to your menu? (y/n)    ");
 	    ans = Keyboard.readString();
 	    if (ans.equals("y")){
-		System.out.println("These are the items you can choose from: \n" + this.printITEMS_DIR() + "\n ** options above **");
+		System.out.println("These are the items you can choose from: \n" + foodDir + "\n ** options above **");
 		System.out.println("Please enter the number of the row you wish to add to your menu \n");
 		while (ans.equals("y")) {
 		    System.out.print("\t Row: ");
@@ -154,7 +154,7 @@ public class RestaurantV2 extends Directory{
 		System.out.print(" \t # of years (0 - 10): ");
 		num = Keyboard.readInt();
 		for (Object i : chefDir){
-		    i = (Chef) i;
+		    i = new Chef();
 		    i.setCookingKnowledge(i.getCookingKnowledge() + num);
 		    if (i.getCookingKnowledge() > 10) i.setCookingKnowledge(10);
 		    i.setSalary(i.getSalary() * (1 + num * .1));
