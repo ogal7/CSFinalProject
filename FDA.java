@@ -6,7 +6,7 @@ public class FDA{
   public String name;
   
   // Constructor
-  public FDA{
+  public FDA() {
     hasEcoli = false;
     name = "Inspector Cruso";
 
