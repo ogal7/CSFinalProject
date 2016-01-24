@@ -56,7 +56,7 @@ public class RestaurantRushV2 extends Directory{
 		
 	int lighting;
         int musicVol;
-  
+   
 	System.out.println("Now it's time to customize your restaurant's ambiance");
 	System.out.println("Do you want to add booths to your restaurant? (type y/n): ");
 	String ans = Keyboard.readString();
