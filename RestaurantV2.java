@@ -7,11 +7,11 @@ public class RestaurantV2 extends Directory{
   // Instance vars
     private int month;
     private double cashMoney;
-    protected ArrayList waiterDir;
-    protected ArrayList foodDir;
-    protected ArrayList managerDir;
-    protected ArrayList chefDir;
-    protected ArrayList bevDir;
+    protected ArrayList<Waiter> waiterDir;
+    protected ArrayList<Food> foodDir;
+    protected ArrayList<Manager> managerDir;
+    protected ArrayList<Chef> chefDir;
+    protected ArrayList<Bev> bevDir;
     private double startOfMonthMoney;
     private String name;
     private int size;
@@ -287,32 +287,67 @@ public class RestaurantV2 extends Directory{
 
     
    public  void calculateRevenue(){
-   	double startMoney = cashMoney;
-       //double lastMonthChefCapacity;
        double revenue = 0;
-       double foodCapacity = food / 0.4;
-       double waitstaffCapacity = waitStaff * 12.5;
-       if (month == 0){
-	   lastMonthChefCapacity = 18 * chefs * chefs / 5000;
+       double menuCapacity = 0;   //finito
+       double waiterCapacity = 0; //finito
+       double chefCapacity = 0;   //finito
+       double managerCapacity = 0;//finito
+
+       // FINDING MENU CAPACITY
+       for (Food food : foodDir){
+	   if (food.getRottenness() == false){
+	       menuCapacity += food.getPrice();
+	   }
        }
-       chefCapacity = lastMonthChefCapacity;
-       lastMonthChefCapacity = chefs * (chefs / 5000) * 18;
-       if (chefCapacity > 2){
-	   chefCapacity = 20 * chefs;
+       for (Bev bev : bevDir){
+	   if (bev.hasAlcohol() == true){
+	       menuCapacity += bev.getPrice() * 1.2;
+	   }
+	   else {
+	       menuCapacity += bev.getPrice();
+	   }
        }
-       managerCapacity = managers * 120;
-       // Set revenue
-       if (foodCapacity <= waitstaffCapacity && foodCapacity <= managerCapacity && foodCapacity <= chefCapacity){
-	   revenue = foodCapacity;}
-       if(waitstaffCapacity <= foodCapacity && waitstaffCapacity <= managerCapacity && waitstaffCapacity <= chefCapacity){
-	   revenue = waitstaffCapacity;}
-       if (chefCapacity <= waitstaffCapacity && chefCapacity <= managerCapacity && chefCapacity <= foodCapacity){
+       for (Food food : foodDir){
+	   menuCapacity -= (food.getMainenance() * 10);
+       } 
+       menuCapacity /= .4;
+       for (Bev bev : bevDir){
+	   menuCapacity -= (bev.getMainenance() * 10);
+       } 
+
+       // FINDING WAITER CAPACITY
+       for (Waiter waiter : waiterDir){
+	   waiterCapacity += waiter.getSalary() * 12.5 * (.5 + (waiter.getRating() + waiter.getAccuracy() + waiter.getSpeed()) / 10);
+       }
+       for (Waiter waiter : waiterDir){
+	   if (waiter.getFromJail() == true){
+	       waiterCapacity -= 250;
+	   }
+       } 
+
+       // FINDING CHEF CAPACITY
+       for (Chef chef : chefDir){
+	   chefCapacity += chef.getSalary() * (.5 + (chef.getRating() + chef.getSpeed() + chef.getAccuracy() + chef.getCookingKnowledge()) / 15);
+       }
+       chefCapacity *= 18 * chefCapacity / 5000;
+
+       // FINDING MANAGER CAPACITY
+       for (Manager manager : managerDir){
+	   managerCapacity = manager.getSalary() * (.5 + manager.getRating() - manager.getGreediness() / 10)  * 120;
+       }
+
+       // SETTING REVENUE 
+       if (menuCapacity <= waiterCapacity && menuCapacity <= managerCapacity && menuCapacity <= chefCapacity){
+	   revenue = menuCapacity;}
+       if(waiterCapacity <= menuCapacity && waiterCapacity <= managerCapacity && waiterCapacity <= chefCapacity){
+	   revenue = waiterCapacity;}
+       if (chefCapacity <= waiterCapacity && chefCapacity <= managerCapacity && chefCapacity <= menuCapacity){
 	   revenue = chefCapacity;}
-       if(managerCapacity <= foodCapacity && managerCapacity <= waitstaffCapacity && managerCapacity <= chefCapacity){
+       if(managerCapacity <= menuCapacity && managerCapacity <= waiterCapacity && managerCapacity <= chefCapacity){
 	   revenue = managerCapacity;}
        // Check for revenue
        
-       System.out.println("revenue = " +revenue+ "\n foodCapacity = " + foodCapacity + "\n waitstaffCapacity = " + waitstaffCapacity + "\n managerCapacity = " + managerCapacity + "\n chefCapacity = " + chefCapacity);
+       System.out.println("revenue = " +revenue+ "\n foodCapacity = " + foodCapacity + "\n bevCapacity = " + bevCapacity + "\n waiterCapacity = " + waiterCapacity + "\n managerCapacity = " + managerCapacity + "\n chefCapacity = " + chefCapacity);
        cashMoney += revenue;
        System.out.println("After " + (month + 1) + " months of owning a restaurant, you started this month with $" + startMoney + ", spent $" + expenses+ " and brought in $" + revenue +
 			  " in revenue. You now have $" + cashMoney + " in the bank.");
