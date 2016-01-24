@@ -54,7 +54,8 @@ public class RestaurantV2 extends Directory{
 	waiterDir = new ArrayList<Waiter>();
 	chefDir = new ArrayList<Chef>();
 	managerDir = new ArrayList<Manager>();
-	menu = new ArrayList<Food>();
+	foodDir = new ArrayList<Food>();
+	bevDir = new ArrayList<Bev>();
 	startOfMonthMoney = 0;
 	size = 5;
 	lighting = 7;
@@ -115,7 +116,7 @@ public class RestaurantV2 extends Directory{
 		    System.out.print("\t Row: ");
 		    int itemRow = Integer.parseInt(Keyboard.readString());
 		    Object og = ITEMS_DIR.get(itemRow);
-		    this.menu.add(og);
+		    this.foodDir.add(og);
 		    System.out.print("Continue adding? (y/n)    ");
 		    ans = Keyboard.readString();
 		}
@@ -129,7 +130,7 @@ public class RestaurantV2 extends Directory{
 		while (ans.equals("y")) {
 		    System.out.print("\t Row: ");
 		    int itemRow = Keyboard.readInt();
-		    this.menu.remove(itemRow);
+		    this.foodDir.remove(itemRow);
 		    System.out.print("Want to remove sonmething else? (y/n)    ");
 		    ans = Keyboard.readString();
 		}
