@@ -14,7 +14,7 @@ public class RestaurantV2 extends Directory{
     private double startOfMonthMoney;
     private String name;
     private int size;
-    private int priceScale;
+    private double priceScale;
     private int lighting;
     private boolean hasBooths;
     private boolean hasKaraoke;
@@ -23,7 +23,8 @@ public class RestaurantV2 extends Directory{
     private int musicVol;
     private boolean hasBar;
     private double expenses;
-    
+    private double cleanliness;
+    private double ambiance; //out of 10
   //Constructor
     public RestaurantV2(){
     	name = "";
@@ -44,6 +45,7 @@ public class RestaurantV2 extends Directory{
 	hasBar = false;
 	month = 0;
 	expenses = 0;
+	cleanliness = this.getCleanlinessInit();
     }
     
     
@@ -79,6 +81,17 @@ public class RestaurantV2 extends Directory{
 	}
 	return retStr;
     }
+    
+    public double setCleanlinessInit() {
+	double rating = 0;
+	int num = 0;
+	for (Manager x: managerDir) {
+		rating += x.getRating()
+		num += 1;
+	}
+	rating /= num;
+	return rating;
+}
 
     public String printWaiterDir(){
 	String retStr = "";
@@ -261,10 +274,12 @@ public class RestaurantV2 extends Directory{
 	    System.out.print("\033[34mHow strong do you want you lighting to be? (Please type a\033[31m number \033[31mfrom 0-10): \033[36m");
 	    lighting = Integer.parseInt(Keyboard.readString());
 	    this.setLight(lighting);
+	    if (lighting > 8) {ambiance -=1;}
 	    // MUSIC VOLUME
 	    System.out.print("\033[34mHow loud do you want your music to be? (Please type a\033[31m number\033[31m from 0-10): \033[36m");
 	    musicVol = Integer.parseInt(Keyboard.readString());
 	    this.setVolume(musicVol);
+	    if (musicVol > 8) {ambiance -=1;}
     	}
 	
 	// SEASONAL CHANGES
@@ -289,7 +304,27 @@ public class RestaurantV2 extends Directory{
     			}
     		} 
     	}// END OF SEASONAL EDITS
+	if (months > 1) {
+    		System.out.println("Would you like to add illegal items to your menu? Your customers will be addicted to coming to your restaurant! ;) type (y/n");
+    		if (Keyboard.readString().equals("y")) {
+    			DEA officer = new DEA();
+    			hasDrugs = true;
+    			rating +=1;
+    		}
+    	}
 
+    	if (hasDrugs == true) {
+    		if ( (int)(Math.random()*10)%3 == 0   ) {
+    			System.out.println( officer.getName() + " from the DEA have shut down your operation. You lost.");
+    			funds = -100;
+    		}
+    	}
+		
+		if ( (int) (Math.random() * 10) == 5 || cleanliness < 5) {
+			FDA officer2 = new FDA();
+			officer2.setPassedInspection(false);
+			System.out.println(officer2.getName() + " from the FDA has shut you down because you have EColi");
+		}    	
 	// MONTHLY SPECIALS: to come but calcRev > monthly specials
     }
 
