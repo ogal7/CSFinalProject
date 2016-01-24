@@ -71,8 +71,11 @@ public class RestaurantV2 extends Directory{
     // public static void stillAlive(){}
 
     public String printMenu(){
-	for (int i = 0; i < menu.size(); i++){
-	    System.out.println(menu.get(i));
+	for (int i = 0; i < foodDir.size(); i++){
+	    System.out.println(foodDir.get(i));
+	}
+	for (int i = 0; i < bevDir.size(); i++){
+	    System.out.println(bevDir.get(i));
 	}
     }
 
