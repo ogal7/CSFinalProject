@@ -202,7 +202,7 @@ public class RestaurantV2 extends Directory{
 	while (ans.equals("y")){
 	    // BOOTHS
 	    System.out.println("Do you want to add booths to your restaurant? (type y/n): ");
-	    String ans = Keyboard.readString();
+	    ans = Keyboard.readString();
 	    this.makeBooths((ans.equals("y")));
 	    // KARAOKE
 	    System.out.println("Do you want to add Karaoke to your restaurant? (type y/n): ");
