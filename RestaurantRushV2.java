@@ -106,8 +106,8 @@ public class RestaurantRushV2 extends Directory{
     System.out.print("\033[34mWhat \033[31msize\033[34m do you want the restaurant to be? Please pick a number from 1-10: \t \033[36m #");
     int size = Integer.parseInt(Keyboard.readString());
 	
-    System.out.print("\033[34mPlease pick a \033[31mprice scale\033[34m. We will multiply the preset food item prices by this number: \t \033[36m x");
-    int priceScale = Integer.parseInt(Keyboard.readString());
+    System.out.print("\033[34mPlease pick a \033[31mprice scale in decimal form\033[34m. We will multiply the preset food item prices by this number: \t \033[36m x");
+    double priceScale = Keyboard.parseDouble();
     RestaurantV2 starter = new RestaurantV2(name, size, priceScale);  
     customize(starter);
     starter.calculateExpenses();
