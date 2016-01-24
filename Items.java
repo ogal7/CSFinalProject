@@ -5,7 +5,7 @@ public class Items {
  // Instance vars
   protected String name;
   protected double price;
-  protected int maintanance;
+  protected int maintenance;
 
 // Constructor
 public Items(){
@@ -17,6 +17,10 @@ public Items(){
   // Methods
   public double getPrice(){
    return this.price;
+  }
+  
+  public int getMaintenance(){
+   return maintenance;
   }
 }
 
