@@ -82,7 +82,7 @@ public class RestaurantV2 extends Directory{
 	return retStr;
     }
     
-    public double setCleanlinessInit() {
+    public double getCleanlinessInit() {
 	double rating = 0;
 	int num = 0;
 	for (Manager x: managerDir) {
