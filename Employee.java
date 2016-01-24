@@ -32,7 +32,7 @@ public class Employee {
     public void setRating(double d){
     	rating = d;}
 
-    public int getSpeed(){
+    public double getSpeed(){
     	return speed;}
     
     public void setSpeed(int s){
