@@ -179,7 +179,7 @@ public class RestaurantV2 extends Directory{
 		System.out.println("These are your managers: \n" + this.printManagerDir() + "\n ** Managers listed above **");
 		System.out.println("The way to improve your managers is to be nice to them. \n Managers' greediness will decrease and their ratings willg go up, but their salary will increase because you will have to take them out to dinner. \n How many times do you want to take your managers out to dinner? ");
 		System.out.print(" \t # of times (0 - 10): ");
-		num = Keyboard.readInt;
+		num = Keyboard.readInt();
 		for (Object i : managerDir){
 		    ((Manager)i).setGreediness(((Manager)i).getGreediness() - num);
 		    if (((Manager)i).getGreediness() < 0) ((Manager)i).setGreediness(0);
