@@ -52,7 +52,7 @@ public class RestaurantV2 extends Directory{
     	priceScale = ps;
     	cashMoney = 100000;
 	waiterDir = new ArrayList<Waiter>();
-	chefDir = new ArrayList<Chef>;
+	chefDir = new ArrayList<Chef>();
 	managerDir = new ArrayList<Manager>();
 	menu = new ArrayList<Food>();
 	startOfMonthMoney = 0;
@@ -175,7 +175,7 @@ public class RestaurantV2 extends Directory{
 		System.out.println("The way to improve your managers is to be nice to them. \n Managers' greediness will decrease and their ratings willg go up, but their salary will increase because you will have to take them out to dinner. \n How many times do you want to take your managers out to dinner? ");
 		System.out.print(" \t # of times (0 - 10): ");
 		num = Keyboard.readInt;
-		for (Waiter i : managerDir){
+		for (Managers i : managerDir){
 		    i.setGreediness(i.getGreediness() - num);
 		    if (i.getGreediness() < 0) i.setGreediness(0);
 		    i.setRating(i.getRating() + (.1 * num))
