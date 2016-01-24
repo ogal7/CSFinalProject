@@ -170,8 +170,7 @@ public class RestaurantV2 extends Directory{
 		for (Object i : waiterDir){
 		    ((Waiter)i).setAccuracy(((Waiter)i).getAccuracy() + num);
 		    if (((Waiter)i).getAccuracy() > 10) ((Waiter)i).setAccuracy(10);
-		    ((Waiter)i).setPrecision(((Waiter)i).getPrecision() + num);
-		    if (((Waiter)i).getPrecision() > 10) ((Waiter)i).setPrecision(10);
+		 
 		    ((Waiter)i).setSalary(((Waiter)i).getSalary() * (1 + num * .1));
 		}
 	    }
