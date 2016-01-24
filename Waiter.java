@@ -23,7 +23,7 @@ public class Waiter extends Employee{
     accuracy = acc;
     isFelon = isfel;
   }
-  
+   
   
   public String toString() {
     	return "Waiter "+name+" needs to be paid an annual salary of $" + reqSalary + ". \nTheir rating is " 
