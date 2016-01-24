@@ -18,7 +18,7 @@ public Bev(String n, int p, int m, boolean a) {
 
 public String toString() {
 	String retStr = ""; 
-	retStr=name + "\t$"+ price + "\tDifficulty: " + maintenance+"\tAlcoholic? :" + hasAlcohol + "\n";	
+	retStr=name + "\t$"+ price + "\t Maintenance Level: " + maintenance+"\tAlcoholic? :" + hasAlcohol + "\n";	
 	return retStr;
 	}
 	

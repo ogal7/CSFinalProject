@@ -8,19 +8,19 @@ public class Directory {
    protected static final ArrayList ITEMS_DIR = new ArrayList<Items>();
 
 public Directory(){
-   Chef a = new Chef ("Lisa", 100000.0, .9, 8,8, 9 );
+    Chef a = new Chef ("Lisa", 100000.0, .9, 8,8, 9. );
     CHEF_DIR.add(a);
-    Chef b = new Chef ("Bart", 50000, .5, 6, 2, 3 );
+    Chef b = new Chef ("Bart", 50000, .5, 6, 2, 3. );
     CHEF_DIR.add(b);
-    Chef c = new Chef ("Homer", 10000, .1, 1, 5, 1 );
+    Chef c = new Chef ("Homer", 10000, .1, 1, 5, 1. );
     CHEF_DIR.add(c);
-    Chef d = new Chef ("Marge", 60000, .6, 2, 7, 2 );
+    Chef d = new Chef ("Marge", 60000, .6, 2, 7, 2. );
     CHEF_DIR.add(d);
-    Chef e = new Chef ("Spongebob", 10, .2, 1, 1, 6 );
+    Chef e = new Chef ("Spongebob", 10, .2, 1, 1, 6. );
     CHEF_DIR.add(e);
-    Chef f = new Chef ("Patrick Star", 5, .1, 1, 1, 2 );
+    Chef f = new Chef ("Patrick Star", 5, .1, 1, 1, 2. );
     CHEF_DIR.add(f);
-    Chef g = new Chef ("Squidward", 120000, .8, 4, 10, 6 );
+    Chef g = new Chef ("Squidward", 120000, .8, 4, 10, 6. );
     CHEF_DIR.add(g);
         
     //managers
