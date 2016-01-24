@@ -277,6 +277,7 @@ public class RestaurantV2 extends Directory{
 
     
    public  void calculateRevenue(){
+   	double startMoney = cashMoney;
        double lastMonthChefCapacity;
        double revenue = 0;
        double foodCapacity = food / 0.4;
