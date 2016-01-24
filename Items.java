@@ -11,7 +11,7 @@ public class Items {
 public Items(){
   name = "smoothie";
   price = 1;
-  maintanance = 1;
+  maintenance = 1;
 }
   
   // Methods

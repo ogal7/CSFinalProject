@@ -57,46 +57,46 @@ public Directory(){
     WAITER_DIR.add(s);
         
         // items
-    Items poe = new Food("Pizza", 4, 1, false);
+    Items poe =      new Food("Pizza            ", 4, 1, false);
     ITEMS_DIR.add(poe);
-    Items lala = new Food("Spaghetti", 7, 1, false);
+    Items lala =     new Food("Spaghetti        ", 7, 1, false);
     ITEMS_DIR.add(lala);
-    Items dipsy = new Food("Chicken Burrito", 7, 2, false);
+    Items dipsy =    new Food("Chicken Burrito  ", 7, 2, false);
     ITEMS_DIR.add(dipsy);
-    Food TW = new Food("Guacamole", 5, 3, false);
+    Food TW =        new Food("Guacamole        ", 5, 3, false);
     ITEMS_DIR.add(TW);
-    Food Barnie = new Food("Sushi", 7, 4, false);
+    Food Barnie =    new Food("Sushi            ", 7, 4, false);
     ITEMS_DIR.add(Barnie);
-    Food hacker = new Food("Steak", 15, 4, false);
-    ITEMS_DIR.add(hacker);
-    Food troy = new Food("Hamburger", 10, 4, false);
+    Food hacker =    new Food("Steak            ", 15, 4, false);
+    ITEMS_DIR.add(hacker); 
+    Food troy =      new Food("Hamburger        ", 10, 4, false);
     ITEMS_DIR.add(troy);
-    Food gabriella = new Food("Veggie Burger", 9, 2, false);
+    Food gabriella = new Food("Veggie Burger    ", 9, 2, false);
     ITEMS_DIR.add(gabriella);
-    Food sharpay = new Food("Chicken Tacos", 7, 2, false);
+    Food sharpay =   new Food("Chicken Tacos    ", 7, 2, false);
     ITEMS_DIR.add(sharpay);
-    Food Dora = new Food("Pancakes", 5, 1, false);
+    Food Dora =      new Food("Pancakes         ", 5, 1, false);
     ITEMS_DIR.add(Dora);
-    Food Boots = new Food("Waffles", 5, 1, false);
+    Food Boots =     new Food("Waffles          ", 5, 1, false);
     ITEMS_DIR.add(Boots);
-    Food Diego = new Food("Mozzarella Panini", 9, 2, false);
+    Food Diego =     new Food("Mozzarella Panini", 9, 2, false);
     ITEMS_DIR.add(Diego);
-    Food Barbie = new Food("Veggie Panini", 9, 2, false); 
+    Food Barbie =    new Food("Veggie Panini     ", 9, 2, false); 
     ITEMS_DIR.add(Barbie);
-    Food zach = new Food("Caesar Salad", 7, 2, false);
+    Food zach =      new Food("Caesar Salad      ", 7, 2, false);
     ITEMS_DIR.add(zach);
-    Food cody = new Food("Falafel", 6, 1, false);
+    Food cody =      new Food("Falafel           ", 6, 1, false);
     ITEMS_DIR.add(cody);
     
-    Bev AA = new Bev ("beer", 6, 1, true);
+    Bev AA = new Bev ("Beer           ", 6, 1, true);
     ITEMS_DIR.add(AA);
-    Bev bb = new Bev ("Merlot", 10, 2, true);
+    Bev bb = new Bev ("Merlot         ", 10, 2, true);
     ITEMS_DIR.add(bb);
     Bev cc = new Bev ("Sparkling Water", 1, 1,false);
     ITEMS_DIR.add(cc);
-    Bev dd = new Bev ("Margherita", 7, 3,true);
+    Bev dd = new Bev ("Margherita     ", 7, 3,true);
     ITEMS_DIR.add(dd);
-    Bev ee = new Bev ("Lemonade", 2, 3,false);
+    Bev ee = new Bev ("Lemonade       ", 2, 3,false);
     ITEMS_DIR.add(ee);
   }
 
@@ -125,7 +125,13 @@ public static void printMANAGER_DIR(){
     
  public static void printITEMS_DIR(){
     for (int i = 0; i < ITEMS_DIR.size(); i++){
-      System.out.println(ITEMS_DIR.get(i));
+	if (i == 0){
+	    System.out.println("FOOD ITEMS");
+	}
+	if (i == 15){
+	    System.out.println("BEVERAGES");
+	}
+	System.out.println(" \t " + (i + 1) + ") " + ITEMS_DIR.get(i));
     }
  }
   

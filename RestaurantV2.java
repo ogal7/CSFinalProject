@@ -8,10 +8,9 @@ public class RestaurantV2 extends Directory{
     private int month;
     private double cashMoney;
     protected ArrayList<Waiter> waiterDir;
-    protected ArrayList<Food> foodDir;
     protected ArrayList<Manager> managerDir;
     protected ArrayList<Chef> chefDir;
-    protected ArrayList<Bev> bevDir;
+    protected ArrayList<Items> menu;
     private double startOfMonthMoney;
     private String name;
     private int size;
@@ -23,15 +22,8 @@ public class RestaurantV2 extends Directory{
     private boolean hasCarpets;
     private int musicVol;
     private boolean hasBar;
-    private int food;
-    private double waitStaff;
-    private int chefs;
-    private double chefCapacity;
-    private double managerCapacity;
-    private int managers;
     private double expenses;
-    private double lastMonthChefCapacity;
-
+    
   //Constructor
     public RestaurantV2(){
     	name = "";
@@ -40,8 +32,7 @@ public class RestaurantV2 extends Directory{
 	waiterDir = new ArrayList<Waiter>();
 	chefDir = new ArrayList<Chef>();
 	managerDir = new ArrayList<Manager>();
-	foodDir = new ArrayList<Food>();
-	bevDir = new ArrayList<Bev>();
+	menu = new ArrayList<Items>();
 	startOfMonthMoney = 0;
 	size = 5;
 	lighting = 7;
@@ -52,14 +43,7 @@ public class RestaurantV2 extends Directory{
 	musicVol = 4;
 	hasBar = false;
 	month = 0;
-	food = 100;
-	waitStaff = 10;
-	chefs = 2;
-	chefCapacity = 2;
-	managerCapacity = 2;
-	managers = 2;
-	expenses = 100;
-	lastMonthChefCapacity = 4;
+	expenses = 0;
     }
     
     
@@ -71,8 +55,7 @@ public class RestaurantV2 extends Directory{
 	waiterDir = new ArrayList<Waiter>();
 	chefDir = new ArrayList<Chef>();
 	managerDir = new ArrayList<Manager>();
-	foodDir = new ArrayList<Food>();
-	bevDir = new ArrayList<Bev>();
+	menu = new ArrayList<Items>();
 	startOfMonthMoney = 0;
 	size = 5;
 	lighting = 7;
@@ -83,24 +66,15 @@ public class RestaurantV2 extends Directory{
 	musicVol = 4;
 	hasBar = false;
 	month = 0;
-	waitStaff = 10;
-	chefs = 2;
-	chefCapacity = 2;
-	managerCapacity = 2;
-	managers = 2;
-	expenses = 100;
-	lastMonthChefCapacity = 4;
+	expenses = 0;
     }
     
   // Methods
     // public static void stillAlive(){}
 
     public String printMenu(){
-	for (int i = 0; i < foodDir.size(); i++){
-	    System.out.println(foodDir.get(i));
-	}
-	for (int i = 0; i < bevDir.size(); i++){
-	    System.out.println(bevDir.get(i));
+	for (int i = 0; i < menu.size(); i++){
+	    System.out.println(menu.get(i));
 	}
 	return "";
     }
@@ -129,8 +103,7 @@ public class RestaurantV2 extends Directory{
     public void runOperations(int months){ //
 	String ans = "";
 	double num = 0;
-	float expenses = 0;
-	float startofMonthMoney = (float) cashMoney;
+	startOfMonthMoney = cashMoney;
 
 	// MENU
 	System.out.println("This is your current menu: \n" + this.printMenu() + " \n ** menu above **");
@@ -142,13 +115,13 @@ public class RestaurantV2 extends Directory{
 	    System.out.print("Do you want to add items to your menu? (y/n)    ");
 	    ans = Keyboard.readString();
 	    if (ans.equals("y")){
-		System.out.println("These are the items you can choose from: \n" + foodDir + "\n ** options above **");
+		System.out.println("These are the items you can choose from: \n" + ITEMS_DIR + "\n ** options above **");
 		System.out.println("Please enter the number of the row you wish to add to your menu \n");
 		while (ans.equals("y")) {
 		    System.out.print("\t Row: ");
 		    int itemRow = Integer.parseInt(Keyboard.readString());
-		    Object og = ITEMS_DIR.get(itemRow);
-		    this.foodDir.add(og);
+		    Items og = (Items)ITEMS_DIR.get(itemRow);
+		    this.menu.add(og);
 		    System.out.print("Continue adding? (y/n)    ");
 		    ans = Keyboard.readString();
 		}
@@ -162,7 +135,7 @@ public class RestaurantV2 extends Directory{
 		while (ans.equals("y")) {
 		    System.out.print("\t Row: ");
 		    int itemRow = Keyboard.readInt();
-		    this.foodDir.remove(itemRow);
+		    this.menu.remove(itemRow);
 		    System.out.print("Want to remove sonmething else? (y/n)    ");
 		    ans = Keyboard.readString();
 		}
@@ -285,8 +258,28 @@ public class RestaurantV2 extends Directory{
 	// MONTHLY SPECIALS: to come but calcRev > monthly specials
     }
 
+
+
+    public void calculateExpenses(){
+	expenses = 0;
+	for (Manager i : managerDir){
+	    expenses += i.getSalary();
+	}
+	for (Chef i : chefDir){
+	    expenses += i.getSalary();
+	}
+	for (Waiter i : waiterDir){
+	    expenses += i.getSalary();
+	}
+	for (Items i : menu){
+	    expenses += i.getPrice();
+	}
+	cashMoney -= expenses;
+    }
+	
     
-   public  void calculateRevenue(){
+    
+    public  void calculateRevenue(){
        double revenue = 0;
        double menuCapacity = 0;   //finito
        double waiterCapacity = 0; //finito
@@ -294,26 +287,27 @@ public class RestaurantV2 extends Directory{
        double managerCapacity = 0;//finito
 
        // FINDING MENU CAPACITY
-       for (Food food : foodDir){
-	   if (food.getRottenness() == false){
-	       menuCapacity += food.getPrice();
+       for (Items item : menu){
+	   if (item instanceof Food){
+	       if (((Food)item).getRottenness() == false){
+		   menuCapacity += item.getPrice();
+	       }
 	   }
        }
-       for (Bev bev : bevDir){
-	   if (bev.hasAlcohol() == true){
-	       menuCapacity += bev.getPrice() * 1.2;
-	   }
-	   else {
-	       menuCapacity += bev.getPrice();
+       for (Items item : menu){
+	   if (item instanceof Bev){
+	       if (((Bev)item).hasAlcohol() == true){
+		   menuCapacity += item.getPrice() * 1.2;
+	       }
+	       else {
+		   menuCapacity += item.getPrice();
+	       }
 	   }
        }
-       for (Food food : foodDir){
-	   menuCapacity -= (food.getMainenance() * 10);
+       for (Items item : menu){
+	   menuCapacity -= (item.getMaintenance() * 10);
        } 
        menuCapacity /= .4;
-       for (Bev bev : bevDir){
-	   menuCapacity -= (bev.getMainenance() * 10);
-       } 
 
        // FINDING WAITER CAPACITY
        for (Waiter waiter : waiterDir){
@@ -347,9 +341,9 @@ public class RestaurantV2 extends Directory{
 	   revenue = managerCapacity;}
        // Check for revenue
        
-       System.out.println("revenue = " +revenue+ "\n foodCapacity = " + foodCapacity + "\n bevCapacity = " + bevCapacity + "\n waiterCapacity = " + waiterCapacity + "\n managerCapacity = " + managerCapacity + "\n chefCapacity = " + chefCapacity);
+       System.out.println("revenue = " +revenue+ "\n menuCapacity = " + menuCapacity + "\n waiterCapacity = " + waiterCapacity + "\n managerCapacity = " + managerCapacity + "\n chefCapacity = " + chefCapacity);
        cashMoney += revenue;
-       System.out.println("After " + (month + 1) + " months of owning a restaurant, you started this month with $" + startMoney + ", spent $" + expenses+ " and brought in $" + revenue +
+       System.out.println("After " + (month + 1) + " months of owning a restaurant, you started this month with $" + startOfMonthMoney + ", spent $" + expenses+ " and brought in $" + revenue +
 			  " in revenue. You now have $" + cashMoney + " in the bank.");
        month++;
 

@@ -18,11 +18,12 @@ public Bev(String n, int p, int m, boolean a) {
 
 public String toString() {
 	String retStr = ""; 
-	retStr=name + "\n\t$"+ price + "\n\tDifficulty: " + maintenance+"\n\tAlcoholic? :" + hasAlcohol;	
+	retStr=name + "\t$"+ price + "\tDifficulty: " + maintenance+"\tAlcoholic? :" + hasAlcohol + "\n";	
 	return retStr;
 	}
 	
-public boolean hasAlcohol();
+    public boolean hasAlcohol(){
 	return hasAlcohol;
+    }
 }
 //uml done
