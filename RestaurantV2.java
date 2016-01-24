@@ -23,6 +23,7 @@ public class RestaurantV2 extends Directory{
     private boolean hasCarpets;
     private int musicVol;
     private boolean hasBar;
+    private int food;
 
   //Constructor
     public RestaurantV2(){
@@ -44,6 +45,7 @@ public class RestaurantV2 extends Directory{
 	musicVol = 4;
 	hasBar = false;
 	month = 0;
+	food = 100;
     }
     
     
