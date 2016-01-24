@@ -26,6 +26,7 @@ public class RestaurantV2 extends Directory{
     private int food;
     private double waitStaff;
     private int chefs;
+    private double chefCapacity;
 
   //Constructor
     public RestaurantV2(){
@@ -50,6 +51,7 @@ public class RestaurantV2 extends Directory{
 	food = 100;
 	waitStaff = 10;
 	chefs = 2;
+	chefCapacity = 2;
     }
     
     
@@ -75,6 +77,7 @@ public class RestaurantV2 extends Directory{
 	month = 0;
 	waitStaff = 10;
 	chefs = 2;
+	chefCapacity = 2;
     }
     
   // Methods
