@@ -49,7 +49,7 @@ public class RestaurantV2 extends Directory{
     }
     
     
-    public RestaurantV2(String n,int sz, int ps) {
+    public RestaurantV2(String n,int sz, double ps) {
     	name = n;
     	size = sz;
     	priceScale = ps;
@@ -86,7 +86,7 @@ public class RestaurantV2 extends Directory{
 	double rating = 0;
 	int num = 0;
 	for (Manager x: managerDir) {
-		rating += x.getRating()
+		rating += x.getRating();
 		num += 1;
 	}
 	rating /= num;
