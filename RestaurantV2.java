@@ -99,24 +99,28 @@ public class RestaurantV2 extends Directory{
 	for (int i = 0; i < bevDir.size(); i++){
 	    System.out.println(bevDir.get(i));
 	}
+	return "";
     }
 
     public String printWaiterDir(){
 	for (int i = 0; i < waiterDir.size(); i++){
 	    System.out.println(waiterDir.get(i));
 	}
+	return "";
     }
 
     public String printChefDir(){
 	for (int i = 0; i < chefDir.size(); i++){
 	    System.out.println(chefDir.get(i));
 	}
+	return "";
     }
 
     public String printManagerDir(){
 	for (int i = 0; i < managerDir.size(); i++){
 	    System.out.println(managerDir.get(i));
 	}
+	return "";
     }
 
     public void runOperations(int months){ //
