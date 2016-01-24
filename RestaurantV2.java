@@ -25,6 +25,7 @@ public class RestaurantV2 extends Directory{
     private boolean hasBar;
     private int food;
     private double waitStaff;
+    private int chefs;
 
   //Constructor
     public RestaurantV2(){
@@ -48,6 +49,7 @@ public class RestaurantV2 extends Directory{
 	month = 0;
 	food = 100;
 	waitStaff = 10;
+	chefs = 2;
     }
     
     
@@ -72,6 +74,7 @@ public class RestaurantV2 extends Directory{
 	hasBar = false;
 	month = 0;
 	waitStaff = 10;
+	chefs = 2;
     }
     
   // Methods
