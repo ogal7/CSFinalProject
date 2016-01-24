@@ -77,6 +77,13 @@ public class RestaurantV2 extends Directory{
   // Methods
     // public static void stillAlive(){}
 
+	public boolean isAlive () {
+		if (cashMoney < 0) {
+			return false;
+		}
+		else {return true;}
+	}
+	
     public String printMenu(){
 	String retStr = "";
 	for (int i = 0; i < menu.size(); i++){
