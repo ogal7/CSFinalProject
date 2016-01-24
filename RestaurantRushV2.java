@@ -101,10 +101,10 @@ public class RestaurantRushV2 extends Directory{
     System.out.println("\033c \033[40m \033[35m    \t\t\t \t\t     Welcome to Restaurant Rush!\n \n \t\t\t It's the beginning of January, and you want to open a Restaurant!");
     System.out.print("\033[34mWhat do you want to\033[31m name \033[34myour restaurant? \t \033[36m Name: ");
     String name = Keyboard.readString();
-    System.out.print("\033[34mWhat \033[31m size\033[34mdo you want the restaurant to be? Please pick a number from 1-10: \t \033[36m #");
+    System.out.print("\033[34mWhat \033[31msize\033[34m do you want the restaurant to be? Please pick a number from 1-10: \t \033[36m #");
     int size = Integer.parseInt(Keyboard.readString());
 	
-    System.out.print("\033[34mPlease pick a \033[31m price scale\033[34m. We will multiply the preset food item prices by this number: \t \033[36m x");
+    System.out.print("\033[34mPlease pick a \033[31mprice scale\033[34m. We will multiply the preset food item prices by this number: \t \033[36m x");
     int priceScale = Integer.parseInt(Keyboard.readString());
     RestaurantV2 starter = new RestaurantV2(name, size, priceScale);  
     customize(starter);
