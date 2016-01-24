@@ -178,7 +178,7 @@ public class RestaurantV2 extends Directory{
 		for (Managers i : managerDir){
 		    i.setGreediness(i.getGreediness() - num);
 		    if (i.getGreediness() < 0) i.setGreediness(0);
-		    i.setRating(i.getRating() + (.1 * num))
+		    i.setRating(i.getRating() + (.1 * num));
 		    if (i.getRating() > 1) i.setRating(1);
 		    i.setSalary(i.getSalary() * (1 + num * .1));
 		}
@@ -316,12 +316,9 @@ public class RestaurantV2 extends Directory{
 	hasCarpets = r;
     }
 
-    public 
+ 
 
     // public static void lose(){}
 
-
-	
-	//
 }
  
