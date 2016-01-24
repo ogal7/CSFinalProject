@@ -4,6 +4,7 @@ public class Manager extends Employee{
 
   // Instance vars
   private double greediness;
+  private double orgo
 
   // Constructor
   public Manager(){
@@ -13,6 +14,7 @@ public class Manager extends Employee{
     speed = 7;
     accuracy = 7;
     greediness = 2;
+    orgo = (double) speed * accuracy;
   }
   
   public Manager(String n, int req, double rat, int s, int acc, int gred){
