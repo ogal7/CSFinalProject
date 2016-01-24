@@ -7,7 +7,7 @@ public class DEA{
   public String name;
   
   // Constructor
-  public DEA{
+  public DEA() {
     foundDrugs = false;
     name = "Doug and Brad McQuaid";
   }
