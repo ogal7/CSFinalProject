@@ -47,6 +47,7 @@ public class RestaurantV2 extends Directory{
 	hasBar = false;
 	month = 0;
 	food = 100;
+	waitStaff = 10;
     }
     
     
@@ -70,6 +71,7 @@ public class RestaurantV2 extends Directory{
 	musicVol = 4;
 	hasBar = false;
 	month = 0;
+	waitStaff = 10;
     }
     
   // Methods
