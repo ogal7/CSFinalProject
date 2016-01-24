@@ -119,6 +119,10 @@ public class RestaurantRushV2 extends Directory{
 		starter.calculateExpenses();
 		// stillAlive();
 		starter.calculateRevenue();
+		if (starter.isAlive() == false) {
+			System.out.println("You lost.");
+			testMonths = 12;
+		}
 		testMonths++;
       }
     System.out.println("Test Complete!");
