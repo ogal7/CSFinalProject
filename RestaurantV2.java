@@ -58,6 +58,7 @@ public class RestaurantV2 extends Directory{
 	managerCapacity = 2;
 	managers = 2;
 	expenses = 100;
+	lastMonthChefCapacity = 4;
     }
     
     
@@ -87,6 +88,7 @@ public class RestaurantV2 extends Directory{
 	managerCapacity = 2;
 	managers = 2;
 	expenses = 100;
+	lastMonthChefCapacity = 4;
     }
     
   // Methods
