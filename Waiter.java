@@ -16,7 +16,7 @@ public class Waiter extends Employee{
   }
   
   public Waiter(String n, int req, double rat, int s, int acc, boolean isfel){
-    name = "n";
+    name = n;
     reqSalary = req;
     rating = rat;
     speed = s;
@@ -26,9 +26,9 @@ public class Waiter extends Employee{
    
   
   public String toString() {
-    	return "Waiter "+name+" needs to be paid an annual salary of $" + reqSalary + ". \nTheir rating is " 
-    	+ rating + "\nTheir speed is " + speed + "\nTheir Attentiveness is " + accuracy 
-    	+ "\nCriminal Record? " + isFelon+"\n"; 
+    	return "Waiter "+name+" needs to be paid an annual salary of $" + reqSalary + ". \n   Their rating is " 
+    	+ rating + "\n   Their speed is " + speed + "\n   Their Attentiveness is " + accuracy 
+    	+ "\n   Criminal Record? " + isFelon+"\n"; 
     }
 	
   // Methods

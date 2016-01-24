@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class Directory {
 
-   static final ArrayList CHEF_DIR = new ArrayList<Chef>();;
-   static final ArrayList MANAGER_DIR = new ArrayList<Manager>();; 
-   static final ArrayList WAITER_DIR = new ArrayList<Waiter>(); 
-   static final ArrayList ITEMS_DIR = new ArrayList<Items>();
+   protected static final ArrayList CHEF_DIR = new ArrayList<Chef>();;
+   protected static final ArrayList MANAGER_DIR = new ArrayList<Manager>();; 
+   protected static final ArrayList WAITER_DIR = new ArrayList<Waiter>(); 
+   protected static final ArrayList ITEMS_DIR = new ArrayList<Items>();
 
 public Directory(){
    Chef a = new Chef ("Lisa", 100000.0, .9, 8,8, 9 );
@@ -107,29 +107,29 @@ public Directory(){
 
 public static void printCHEF_DIR(){
     for (int i = 0; i < CHEF_DIR.size(); i++){
-      System.out.println(CHEF_DIR.get(i));
+	System.out.println((i+1) + ") " + CHEF_DIR.get(i));
     }
 }
 
 public static void printMANAGER_DIR(){
     for (int i = 0; i < MANAGER_DIR.size(); i++){
-      System.out.println(MANAGER_DIR.get(i));
+      System.out.println((i+1) + ") " + MANAGER_DIR.get(i));
     }
 }
 
   public static void printWAITER_DIR(){
     for (int i = 0; i < WAITER_DIR.size(); i++){
-      System.out.println(WAITER_DIR.get(i));
+      System.out.println((i+1) + ") " + WAITER_DIR.get(i));
     }
   }
     
  public static void printITEMS_DIR(){
     for (int i = 0; i < ITEMS_DIR.size(); i++){
 	if (i == 0){
-	    System.out.println("FOOD ITEMS");
+	    System.out.println("FOOD ITEMS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FOOD ITEMS");
 	}
 	if (i == 15){
-	    System.out.println("BEVERAGES");
+	    System.out.println("BEVERAGES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~BEVERAGES");
 	}
 	System.out.println(" \t " + (i + 1) + ") " + ITEMS_DIR.get(i));
     }

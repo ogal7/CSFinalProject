@@ -3,7 +3,7 @@
 public class Chef extends Employee{
 
   // Instance vars
-  private double cookingKnowledge;
+  private int cookingKnowledge;
   
   // Constructor
   public Chef(){
@@ -26,16 +26,16 @@ public class Chef extends Employee{
   }
 	
   // Methods
-  public void setCookingKnowledge(double i){
+  public void setCookingKnowledge(int i){
     cookingKnowledge = i;}
   public double getCookingKnowledge(){
     return cookingKnowledge;}
     
     
     public String toString() {
-    	return "Chef "+name+" needs to be paid an annual salary of $" + reqSalary + ". \nTheir rating is " 
-    	+ rating + "\nTheir speed is " + speed + "\nTheir Attentiveness is " + accuracy 
-    	+ ". \n Their cooking experience is " + cookingKnowledge + "years\n"; 
+    	return "Chef "+name+" needs to be paid an annual salary of $" + reqSalary + ". \n   Their rating is " 
+    	+ rating + "\n   Their speed is " + speed + "\n   Their Attentiveness is " + accuracy 
+    	+ ". \n   Their cooking experience is " + cookingKnowledge + " years\n"; 
     }
 	  
 }

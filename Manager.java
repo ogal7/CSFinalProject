@@ -35,9 +35,9 @@ public class Manager extends Employee{
     
     
     public String toString() {
-    	return "Manager "+name+" needs to be paid an annual salary of $" + reqSalary + ". \nTheir rating is " 
-    	+ rating + "\nTheir speed is " + speed + "\nTheir Attentiveness is " + accuracy 
-    	+ ". \n Their greediness is " + greediness + ". \nTheir organization level is " + orgo+"\n"; 
+    	return "Manager "+name+" needs to be paid an annual salary of $" + reqSalary + ". \n   Their rating is " 
+    	+ rating + "\n   Their speed is " + speed + "\n   Their Attentiveness is " + accuracy 
+    	+ ". \n   Their greediness is " + greediness + ". \n   Their organization level is " + orgo+"\n"; 
     }
 	  
 }
