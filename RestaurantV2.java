@@ -100,8 +100,8 @@ public class RestaurantV2 extends Directory{
     public void runOperations(){ //
 	String ans = "";
 	double num = 0;
-	expenses = 0;
-	startofMonthMoney = cashMoney;
+	float expenses = 0;
+	float startofMonthMoney = (float) cashMoney;
 
 	// MENU
 	System.out.println("This is your current menu: \n" + this.printMenu() + " \n ** menu above **");
@@ -152,11 +152,11 @@ public class RestaurantV2 extends Directory{
 		System.out.println("These are your chefs: \n" + this.printChefDir() + "\n ** Chefs listed above **");
 		System.out.println("The way to improve your chefs is to send them to culinary school. \n Chefs will be able to work while they are in school, but their salary will increase.\n How many years would you like to send your chefs to culinary school? ");
 		System.out.print(" \t # of years (0 - 10): ");
-		num = Keyboard.readInt;
-		for (Chef i : chefDir){
-		    i.setCookingKnowledge(i.getCookingKnowledge() + num);
-		    if (i.getCookingKnowledge() > 10) i.setCookingKnowledge(10);
-		    i.setSalary(i.getSalary() * (1 + num * .1));
+		num = Keyboard.readInt();
+		for (Object i : chefDir){
+		    (Chef)i.setCookingKnowledge((Chef)i.getCookingKnowledge() + num);
+		    if ((Chef)i.getCookingKnowledge() > 10) (Chef)i.setCookingKnowledge(10);
+		    (Chef)i.setSalary((Chef)i.getSalary() * (1 + num * .1));
 		}
 	    }
 	    // WAITERS
@@ -164,13 +164,13 @@ public class RestaurantV2 extends Directory{
 		System.out.println("These are your waiters: \n" + this.printWaiterDir() + "\n ** Waiters listed above **");
 		System.out.println("The way to improve your waitstaff is to train them. \n Waiters' accuracy and precision will improve, but their salary will increase. \n How many weeks would you like to train your waitstaff? ");
 		System.out.print(" \t # of weeks (0 - 10): ");
-		num = Keyboard.readInt;
+		num = Keyboard.readInt();
 		for (Waiter i : waiterDir){
-		    i.setAccuracy(i.getAccuracy() + num);
-		    if (i.getAccuracy() > 10) i.setAccuracy(10);
-		    i.setPrecision(i.getPrecision() + num);
-		    if (i.getPrecision() > 10) i.setPrecision(10);
-		    i.setSalary(i.getSalary() * (1 + num * .1));
+		    (Waiter)i.setAccuracy((Waiter)i.getAccuracy() + num);
+		    if ((Waiter)i.getAccuracy() > 10) (Waiter)i.setAccuracy(10);
+		    (Waiter)i.setPrecision((Waiter)i.getPrecision() + num);
+		    if ((Waiter)i.getPrecision() > 10) (Waiter)i.setPrecision(10);
+		    (Waiter)i.setSalary((Waiter)i.getSalary() * (1 + num * .1));
 		}
 	    }
 	    // MANAGERS
@@ -180,11 +180,11 @@ public class RestaurantV2 extends Directory{
 		System.out.print(" \t # of times (0 - 10): ");
 		num = Keyboard.readInt;
 		for (Managers i : managerDir){
-		    i.setGreediness(i.getGreediness() - num);
-		    if (i.getGreediness() < 0) i.setGreediness(0);
-		    i.setRating(i.getRating() + (.1 * num));
-		    if (i.getRating() > 1) i.setRating(1);
-		    i.setSalary(i.getSalary() * (1 + num * .1));
+		    (Managet)i.setGreediness((Manager)i.getGreediness() - num);
+		    if ((Manager)i.getGreediness() < 0) (Manager) i.setGreediness(0);
+		    (Manager)i.setRating((Manager)i.getRating() + (.1 * num));
+		    if ((Manager)i.getRating() > 1) (Manager)i.setRating(1);
+		    (Manager)i.setSalary((Manager)i.getSalary() * (1 + num * .1));
 		}
 	    }
 	    System.out.println("Do you want to continue shaking up your staff? (y/n)    ");
