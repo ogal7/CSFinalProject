@@ -8,10 +8,10 @@ public class RestaurantV2 extends Directory{
     private int month;
     private double cashMoney;
     private ArrayList waiterDir;
-    private ArrayList foodDir;
-    private ArrayList managerDir;
-    private ArrayList chefDir;
-    private ArrayList bevDir;
+    protected ArrayList foodDir;
+    protected ArrayList managerDir;
+    protected ArrayList chefDir;
+    protected ArrayList bevDir;
     private double startOfMonthMoney;
     private String name;
     private int size;
