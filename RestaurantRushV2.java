@@ -84,10 +84,12 @@ public class RestaurantRushV2 extends Directory{
 	System.out.print("\033[34m How strong do you want you lighting to be? (Please type a \033[31mnumber\033[34m from 0-10):\033[36m ");
 	lighting = Integer.parseInt(Keyboard.readString());
 	starter.setLight(lighting);
+	if (lighting > 7) {starter.setAmbiance(starter.getAmbiance() - 1);}
 		
 	System.out.print("\033[34m How loud do you want your music to be? (Please type a\033[31m number\033[34m from 0-10): \033[36m");
 	musicVol = Integer.parseInt(Keyboard.readString());
 	starter.setVolume(musicVol);
+	if (musicVol > 8) {starter.setAmbiance(starter.getAmbiance() -1);}
  }  
    
    
