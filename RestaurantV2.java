@@ -167,9 +167,9 @@ public class RestaurantV2 extends Directory{
 		System.out.print(" \t # of weeks (0 - 10): ");
 		num = Keyboard.readInt();
 		for (Object i : waiterDir){
-			i = (Waiter) i;
+		    i = (Waiter) i;
 		    i.setAccuracy(i.getAccuracy() + num);
-		    if (i.getAccuracy() > 10) (i.setAccuracy(10);
+		    if (i.getAccuracy() > 10) i.setAccuracy(10);
 		    i.setPrecision(i.getPrecision() + num);
 		    if (i.getPrecision() > 10) i.setPrecision(10);
 		    i.setSalary(i.getSalary() * (1 + num * .1));
