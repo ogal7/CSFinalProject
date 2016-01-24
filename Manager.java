@@ -27,7 +27,8 @@ public class Manager extends Employee{
   // Methods
   public void setGreediness(double i){
     greediness = i;}
-  public int getGreediness(){
+ 
+  public double getGreediness(){
     return greediness;}
     
     
