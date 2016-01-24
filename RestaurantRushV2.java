@@ -104,9 +104,7 @@ public class RestaurantRushV2 extends Directory{
     System.out.print("Please pick a price scale. We will multiply the preset food item prices by this number: \n \t");
     int priceScale = Integer.parseInt(Keyboard.readString());
     RestaurantV2 starter = new RestaurantV2(name, size, priceScale);  
-
-
-    starter.customize(starter);
+    customize(starter);
 
     // Play
     while (months < 3) {
