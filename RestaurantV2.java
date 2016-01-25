@@ -113,7 +113,7 @@ public class RestaurantV2 extends Directory{
     public String printWaiterDir(){
 	String retStr = "";
 	for (int i = 0; i < waiterDir.size(); i++){
-	   retStr += "\t" + (i+1) + ") " + waiterDir.get(i) + "\n";
+	   retStr +=  (i+1) + ") " + waiterDir.get(i) + "\n";
 	}
 	return retStr;
     }
@@ -121,7 +121,7 @@ public class RestaurantV2 extends Directory{
     public String printChefDir(){
 	String retStr = "";
 	for (int i = 0; i < chefDir.size(); i++){
-	   retStr += "\t" + (i+1) + ") " + chefDir.get(i) + "\n";
+	   retStr += (i+1) + ") " + chefDir.get(i) + "\n";
 	}
 	return retStr;
     }
@@ -129,7 +129,7 @@ public class RestaurantV2 extends Directory{
     public String printManagerDir(){
 	String retStr = "";
 	for (int i = 0; i < managerDir.size(); i++){
-	   retStr += "\t" + (i+1) + ") " + managerDir.get(i) + "\n";
+	   retStr += (i+1) + ") " + managerDir.get(i) + "\n";
 	}
 	return retStr;
     }
@@ -166,7 +166,7 @@ public class RestaurantV2 extends Directory{
 	    ans = Keyboard.readString();
 	    if (ans.equals("y")){
 		System.out.println("\033[35mThis is your current menu: \n");
-		this.printMenu();
+		System.out.println(this.printMenu());
 		System.out.println("\033[34mPlease enter the number of the row you wish to remove from your menu \033[36m");
 		while (ans.equals("y")) {
 		    System.out.print("\t Row: ");
@@ -183,12 +183,12 @@ public class RestaurantV2 extends Directory{
 	System.out.print("\033[34mDo you want to shake up your staff? (y/n)     \033[36m");
 	ans = Keyboard.readString();
 	while (ans.equals("y")){
-	    System.out.print("\033[34mIndicate the department you want to improve (Waitstaff/Chefs/Managers:  \033[36m");
+	    System.out.print("\033[34mIndicate the department you want to improve (Waitstaff/Chefs/Managers):  \033[36m");
 	    ans = Keyboard.readString();
 	    // CHEFS
 	    if (ans.equals("chefs") || ans.equals("Chefs") || ans.equals("chef") || ans.equals("Chef")){
 		System.out.println("\033[35mThese are your chefs:");
-		this.printChefDir();
+		System.out.println(this.printChefDir());
 		System.out.println("\033[31mThe way to improve your chefs is to send them to culinary school. \nChefs will be able to work while they are in school, but their salary will increase.\n\033[34mHow many years would you like to send your chefs to culinary school? \033[36m");
 		System.out.print(" \t # of years (0 - 10): ");
 		num = Keyboard.readInt();
@@ -203,7 +203,7 @@ public class RestaurantV2 extends Directory{
 	    // WAITERS
 	    if (ans.equals("Waitstaff") || ans.equals("waitstaff")){
 		System.out.println("\033[35mThese are your waiters:"); 
-		this.printWaiterDir();
+		System.out.println(this.printWaiterDir());
 		System.out.println("\033[31mThe way to improve your waitstaff is to train them. \nWaiters' accuracy and precision will improve, but their salary will increase. \n\033[34mHow many weeks would you like to train your waitstaff? \033[36m");
 		System.out.print(" \t # of weeks (0 - 10): ");
 		num = Keyboard.readInt();
@@ -217,7 +217,7 @@ public class RestaurantV2 extends Directory{
 	    // MANAGERS
 	    if (ans.equals("Managers") || ans.equals("managers") || ans.equals("manager") || ans.equals("Manager") ){
 		System.out.println("\033[35mThese are your managers: \n");
-		this.printManagerDir();
+		System.out.println(this.printManagerDir());
 		System.out.println("\033[31mThe way to improve your managers is to be nice to them. \nManagers' greediness will decrease and their ratings willg go up, but their salary\nwill increase because you will have to take them out to dinner. \n\033[34mHow many times do you want to take your managers out to dinner? \033[36m");
 		System.out.print(" \t # of times (0 - 10): ");
 		num = Keyboard.readInt();
@@ -259,41 +259,41 @@ public class RestaurantV2 extends Directory{
 	while (ans.equals("y")){
 	    // BOOTHS
 	    if (! (hasBooths())){
-		System.out.print("\033[34mDo you want to add booths to your restaurant? (type y/n): \033[36m");
+		System.out.print("\033[34mDo you want to add \033[31mbooths \033[34mto your restaurant? (type y/n): \033[36m");
 		ans = Keyboard.readString();
 		this.makeBooths((ans.equals("y")));
 	    }
 	    // KARAOKE
 	    if (! (hasKara())){
-		System.out.print("\033[34mDo you want to add Karaoke to your restaurant? (type y/n): \033[36m");
+		System.out.print("\033[34mDo you want to add \033[31mKaraoke\033[34m to your restaurant? (type y/n): \033[36m");
 		ans = Keyboard.readString();
 		this.setKara((ans.equals("y")));
 	    }
 	    // LIVE ENTERTAINMENT
 	    if (! (hasLiveEnt())){
-		System.out.print("\033[34mDo you want to add Live Entertainment to your restaurant? (type y/n): \033[36m");
+		System.out.print("\033[34mDo you want to add \033[31mLive Entertainment\033[34m to your restaurant? (type y/n): \033[36m");
 		ans = Keyboard.readString();
 		this.setLiveEnt((ans.equals("y")));
 	    }
 	    // CARPETS
 	    if (! (hasCarpet())){
-		System.out.print("\033[34mDo you want to add carpets to your restaurant? (type y/n): \033[36m");
+		System.out.print("\033[34mDo you want to add \033[31mcarpets \033[34mto your restaurant? (type y/n): \033[36m");
 		ans = Keyboard.readString();
 		this.setCarpet((ans.equals("y")));
 	    }
 	    // BAR
 	    if (! (hasBar())){
-		System.out.print("\033[34mDo you want to add a bar to your restaurant? (type y/n): \033[36m");
+		System.out.print("\033[34mDo you want to add a \033[31mbar\033[34m to your restaurant? (type y/n): \033[36m");
 		ans = Keyboard.readString();
 		this.makeBar((ans.equals("y")));
 	    }
 	    // LIGHTING
-	    System.out.print("\033[34mHow strong do you want you lighting to be? (Please type a\033[31m number \033[31mfrom 0-10): \033[36m");
+	    System.out.print("\033[34mHow strong do you want you \033[31mlighting \033[34mto be? (Please type a\033[31m number \033[31mfrom 0-10): \033[36m");
 	    lighting = Integer.parseInt(Keyboard.readString());
 	    this.setLight(lighting);
 	    if (lighting > 8) {ambiance -=1;}
 	    // MUSIC VOLUME
-	    System.out.print("\033[34mHow loud do you want your music to be? (Please type a\033[31m number\033[31m from 0-10): \033[36m");
+	    System.out.print("\033[34mHow loud do you want your \033[31mmusic\033[34m to be? (Please type a\033[31m number\033[31m from 0-10): \033[36m");
 	    musicVol = Integer.parseInt(Keyboard.readString());
 	    this.setVolume(musicVol);
 	    if (musicVol > 8) {ambiance -=1;}
@@ -324,10 +324,10 @@ public class RestaurantV2 extends Directory{
     	DEA officer = new DEA();
     	FDA officer2 = new FDA();
 	if (months > 1) {
-    		System.out.println("Would you like to add illegal items to your menu? Your customers will be addicted to coming to your restaurant! ;) type (y/n");
+    		System.out.print("\033[34mWould you like to add illegal items to your menu? Your customers will be addicted to coming to your restaurant! ;) type (y/n )     \033[36m");
     		if (Keyboard.readString().equals("y")) {
     			hasDrugs = true;
-    			rating +=1;
+    			this.rating +=1;
     		}
     	}
 
@@ -340,9 +340,8 @@ public class RestaurantV2 extends Directory{
 		
 		if ( (int) (Math.random() * 10) == 5 || cleanliness < 5) {
 			officer2.setPassedInspection(false);
-			System.out.println(officer2.getName() + " from the FDA has shut you down because you have EColi");
+			System.out.println(officer2.getName() + " from the FDA has shut you down because you have E. Coli");
 		}    	
-	// MONTHLY SPECIALS: to come but calcRev > monthly specials
     }
 
 
@@ -515,6 +514,12 @@ public class RestaurantV2 extends Directory{
 	
     public boolean hasCarpet() {
 	return hasCarpets;
+    }
+    public double getCashMoney(){
+	return cashMoney;
+    }
+    public String getName(){
+	return name;
     }
 
     

@@ -12,7 +12,7 @@ public class RestaurantRushV2 extends Directory{
 	System.out.println("You have $100,000 in funds. ");
 	System.out.println("\033[35m These are the items you can add to your menu:");
 	printITEMS_DIR();
-	System.out.println("\033[34mPlease Enter the number of the rows you wish to add to your menu. You must choose 15 items\n");
+	System.out.println("\033[34mPlease enter the \033[31mnumber\033[34m of the rows you wish to add to your menu. You must choose 15 items\n");
 	int ctr = 0;
 	while (ctr < 15) {
 	    System.out.print(" \033[36m \t" + (ctr + 1) + ": ");
@@ -28,7 +28,7 @@ public class RestaurantRushV2 extends Directory{
 	
        System.out.println(" \033[35mThese are the chefs");
        printCHEF_DIR();
-       System.out.print("\033[34m Which Chefs do you want to add to your squad? Please enter the two Chef numbers you want \n \033[36m \t #");
+       System.out.print("\033[34m Which\033[31m Chefs\033[34m do you want to add to your squad? Please enter the two Chef numbers you want \n \033[36m \t #");
            int itemRow = Integer.parseInt(Keyboard.readString());
 	   Chef temp = (Chef) CHEF_DIR.get(itemRow - 1);
 	   starter.chefDir.add(temp);
@@ -38,7 +38,7 @@ public class RestaurantRushV2 extends Directory{
 	   starter.chefDir.add(temp);
 	   System.out.println("\033[35m These are the managers:");
 	   printMANAGER_DIR();
-	   System.out.print("\033[34m Which Managers do you want to add to your squad? Please enter the two Manager numbers you want \n \033[36m \t #");
+	   System.out.print("\033[34m Which\033[31m Managers\033[34m do you want to add to your squad? Please enter the two Manager numbers you want \n \033[36m \t #");
 	    itemRow = Integer.parseInt(Keyboard.readString());
 	    Manager temp1 = (Manager) MANAGER_DIR.get(itemRow - 1);
 	    starter.managerDir.add(temp1);
@@ -48,11 +48,11 @@ public class RestaurantRushV2 extends Directory{
 	    starter.managerDir.add(temp1);
 	System.out.println("\033[35m These are the waiters");
 	printWAITER_DIR();
-	System.out.print("\033[34m Which Waiters do you want to add to your squad? Please enter the two Waiter numbers you want \n \033[36m\t #");
+	System.out.print("\033[34m Which \033[31mWaiters\033[34m do you want to add to your squad? Please enter the two Waiter numbers you want \n \033[36m\t #");
 	    itemRow = Integer.parseInt(Keyboard.readString());
 	    Waiter temp2 = (Waiter) WAITER_DIR.get(itemRow - 1);
 	    starter.waiterDir.add(temp2);
-	    System.out.print(" \t\033[36m#");
+	    System.out.print("  \t\033[36m #");
 	    itemRow = Integer.parseInt(Keyboard.readString());
 	    temp2 = (Waiter) WAITER_DIR.get(itemRow - 1);
 	    starter.waiterDir.add(temp2);
@@ -60,33 +60,33 @@ public class RestaurantRushV2 extends Directory{
 	int lighting;
         int musicVol;
    
-	System.out.println("\033[31m Now it's time to customize your restaurant's ambiance");
-	System.out.print("\033[34m Do you want to add booths to your restaurant? (type y/n): \033[36m");
+	System.out.println("\033[31m Now it's time to customize your restaurant's ambiance!");
+	System.out.print("\033[34m Do you want to add\033[31m booths \033[34mto your restaurant? (type y/n): \033[36m");
 	String ans = Keyboard.readString();
 	starter.makeBooths((ans.equals("y")));
 	
-	System.out.print("\033[34m Do you want to add karaoke to your restaurant? (type y/n): \033[36m");
+	System.out.print("\033[34m Do you want to add \033[31mkaraoke \033[34mto your restaurant? (type y/n): \033[36m");
 	ans = Keyboard.readString();
 	starter.setKara((ans.equals("y")));
 	
-	System.out.print("\033[34m Do you want to add Live Entertainment to your restaurant? (type y/n): \033[36m");
+	System.out.print("\033[34m Do you want to add\033[31m Live Entertainment\033[34m to your restaurant? (type y/n): \033[36m");
 	ans = Keyboard.readString();
 	starter.setLiveEnt((ans.equals("y")));
 	
-	System.out.print("\033[34m Do you want to add carpets to your restaurant? (type y/n):\033[36m ");
+	System.out.print("\033[34m Do you want to add \033[31mcarpets\033[34m to your restaurant? (type y/n):\033[36m ");
 	ans = Keyboard.readString();
 	starter.setCarpet((ans.equals("y")));
 	 
-	System.out.print("\033[34m Do you want to add a bar to your restaurant? (type y/n):\033[36m ");
+	System.out.print("\033[34m Do you want to add a\033[31m bar \033[34mto your restaurant? (type y/n):\033[36m ");
 	ans = Keyboard.readString();
 	starter.makeBar((ans.equals("y")));
 	
-	System.out.print("\033[34m How strong do you want you lighting to be? (Please type a \033[31mnumber\033[34m from 0-10):\033[36m ");
+	System.out.print("\033[34m How strong do you want you\033[31m lighting\033[34m to be? (Please type a \033[31mnumber\033[34m from 0-10):\033[36m ");
 	lighting = Integer.parseInt(Keyboard.readString());
 	starter.setLight(lighting);
 	if (lighting > 7) {starter.setAmbiance(starter.getAmbiance() - 1);}
 		
-	System.out.print("\033[34m How loud do you want your music to be? (Please type a\033[31m number\033[34m from 0-10): \033[36m");
+	System.out.print("\033[34m How loud do you want your \033[31mmusic\033[34m to be? (Please type a\033[31m number\033[34m from 0-10): \033[36m");
 	musicVol = Integer.parseInt(Keyboard.readString());
 	starter.setVolume(musicVol);
 	if (musicVol > 8) {starter.setAmbiance(starter.getAmbiance() -1);}
@@ -117,11 +117,14 @@ public class RestaurantRushV2 extends Directory{
 		starter.runOperations(testMonths);
 		//starter.customizeMonthly(starter);
 		starter.calculateExpenses();
-		// stillAlive();
 		starter.calculateRevenue();
+		if (starter.getCashMoney() >= 1000000){
+		    System.out.println("YOUR RESTAURANT, " + starter.getName() + "MADE OVER $1,000,000! YOU WIN!");
+		    return;
+		}
 		if (starter.isAlive() == false) {
-			System.out.println("You lost.");
-			testMonths = 12;
+		    System.out.println("You lost.");
+		    return;
 		}
 		testMonths++;
       }
