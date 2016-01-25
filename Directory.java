@@ -57,47 +57,71 @@ public Directory(){
     WAITER_DIR.add(s);
         
         // items
-    Items poe =      new Food("Pizza            ", 4, 1, false);
+    Items poe =      new Food("Pizza             ", 4, 1, false);
     ITEMS_DIR.add(poe);
-    Items lala =     new Food("Spaghetti        ", 7, 1, false);
+    Items lala =     new Food("Spaghetti         ", 7, 1, false);
     ITEMS_DIR.add(lala);
-    Items dipsy =    new Food("Chicken Burrito  ", 7, 2, false);
+    Items dipsy =    new Food("Chicken Burrito   ", 7, 2, false);
     ITEMS_DIR.add(dipsy);
-    Food TW =        new Food("Guacamole        ", 5, 3, false);
+    Food TW =        new Food("Guacamole         ", 5, 3, false);
     ITEMS_DIR.add(TW);
-    Food Barnie =    new Food("Sushi            ", 7, 4, false);
+    Food Barnie =    new Food("Sushi             ", 7, 4, false);
     ITEMS_DIR.add(Barnie);
-    Food hacker =    new Food("Steak            ", 15, 4, false);
+    Food hacker =    new Food("Steak             ", 15, 4, false);
     ITEMS_DIR.add(hacker); 
-    Food troy =      new Food("Hamburger        ", 10, 4, false);
+    Food troy =      new Food("Hamburger         ", 10, 4, false);
     ITEMS_DIR.add(troy);
-    Food gabriella = new Food("Veggie Burger    ", 9, 2, false);
+    Food gabriella = new Food("Veggie Burger     ", 9, 2, false);
     ITEMS_DIR.add(gabriella);
-    Food sharpay =   new Food("Chicken Tacos    ", 7, 2, false);
+    Food sharpay =   new Food("Chicken Tacos     ", 7, 2, false);
     ITEMS_DIR.add(sharpay);
-    Food Dora =      new Food("Pancakes         ", 5, 1, false);
+    Food Dora =      new Food("Pancakes          ", 5, 1, false);
     ITEMS_DIR.add(Dora);
-    Food Boots =     new Food("Waffles          ", 5, 1, false);
+    Food Boots =     new Food("Waffles           ", 5, 1, false);
     ITEMS_DIR.add(Boots);
-    Food Diego =     new Food("Mozzarella Panini", 9, 2, false);
+    Food Diego =     new Food("Mozzarella Panini ", 9, 2, false);
     ITEMS_DIR.add(Diego);
-    Food Barbie =    new Food("Veggie Panini     ", 9, 2, false); 
+    Food Barbie =    new Food("Veggie Panini      ", 9, 2, false); 
     ITEMS_DIR.add(Barbie);
-    Food zach =      new Food("Caesar Salad      ", 7, 2, false);
+    Food zach =      new Food("Caesar Salad       ", 7, 2, false);
     ITEMS_DIR.add(zach);
-    Food cody =      new Food("Falafel           ", 6, 1, false);
+    Food cody =      new Food("Falafel            ", 6, 1, false);
     ITEMS_DIR.add(cody);
     
-    Bev AA = new Bev ("Beer           ", 6, 1, true);
-    ITEMS_DIR.add(AA);
-    Bev bb = new Bev ("Merlot         ", 10, 2, true);
-    ITEMS_DIR.add(bb);
-    Bev cc = new Bev ("Sparkling Water", 1, 1,false);
-    ITEMS_DIR.add(cc);
-    Bev dd = new Bev ("Margherita     ", 7, 3,true);
-    ITEMS_DIR.add(dd);
-    Bev ee = new Bev ("Lemonade       ", 2, 3,false);
-    ITEMS_DIR.add(ee);
+    Items uh =      new Food("Brownies           ", 4, 2, false);
+    ITEMS_DIR.add(uh);
+    Items hu =      new Food("Ice Cream          ", 4, 1, false);
+    ITEMS_DIR.add(hu);
+    Items oof =      new Food("Apple Pie a la mode", 4, 3, false);
+    ITEMS_DIR.add(oof);
+    Items alpha =      new Food("Greek Salad        ", 6, 2, false);
+    ITEMS_DIR.add(alpha);
+    Items beta =      new Food("French Fries       ", 4, 1, false);
+    ITEMS_DIR.add(beta);
+    
+    
+    
+    
+    Bev theta = new Bev ("Beer           ", 6, 1, true);
+    ITEMS_DIR.add(theta);
+    Bev kappa = new Bev ("Merlot         ", 10, 2, true);
+    ITEMS_DIR.add(kappa);
+    Bev gamma = new Bev ("Sparkling Water", 1, 1,false);
+    ITEMS_DIR.add(gamma);
+    Bev phi = new Bev ("Margherita     ", 7, 3,true);
+    ITEMS_DIR.add(phi);
+    Bev lambda = new Bev ("Lemonade       ", 2, 3,false);
+    ITEMS_DIR.add(lambda);
+    Bev poopoo = new Bev ("Cosmopolitan   ", 8, 3,false);
+    ITEMS_DIR.add(poopoo);
+    Bev guns = new Bev ("Rose           ", 8, 1,false);
+    ITEMS_DIR.add(guns);
+    Bev lalaland = new Bev ("Mojito         ", 9, 3,false);
+    ITEMS_DIR.add(lalaland);
+    Bev itsoneAM = new Bev ("Chardonnay     ", 10, 1,false);
+    ITEMS_DIR.add(itsoneAM);
+    Bev haha = new Bev ("Green Juice    ", 5, 3,false);
+    ITEMS_DIR.add(haha);
   }
 
 
