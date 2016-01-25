@@ -406,23 +406,17 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	    lighting = Integer.parseInt(Keyboard.readString());
 	    this.setLight(lighting);
 	    if (lighting > 8) {ambiance -=1;}
+    
 	    // MUSIC VOLUME
 	    System.out.print("\033[34mHow loud do you want your \033[31mmusic\033[34m to be? (Please type a\033[31m number\033[31m from 0-10): \033[36m");
 	    musicVol = Integer.parseInt(Keyboard.readString());
 	    this.setVolume(musicVol);
 	    if (musicVol > 8) {ambiance -=1;}
+	    ans = "n";
     	}
 	
     	DEA officer = new DEA();
     	FDA officer2 = new FDA();
-	if (months > 1) {
-    		System.out.print("\033[34mWould you like to add illegal items to your menu? Your customers will be addicted to coming to your restaurant! ;) type (y/n )     \033[36m");
-    		if (Keyboard.readString().equals("y")) {
-    			hasDrugs = true;
-    			this.rating +=1;
-    		}
-    	}
-
     	if (hasDrugs == true) {
     		if ( (int)(Math.random()*10)%3 == 0   ) {
     			System.out.println( "\033[37m" + officer.getName() + " from the DEA have shut down your operation. You lost.");
@@ -597,7 +591,13 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
        cashMoney += revenue;
        System.out.println("After " + (month + 1) + " months of owning a restaurant, you started this month with $" + startOfMonthMoney + ", spent $" + expenses+ " and brought in $" + revenue +
 			  " in revenue. You now have $" + cashMoney + " in the bank.");
-       month++;
+       System.out.print("\033[34mReady for month " + (month + 2) + "? (type y/n): \033[36m");
+       if (Keyboard.readString().equals("y")){
+	   month++;
+       }
+       else {
+	   return;
+       }
 
     }
       

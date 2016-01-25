@@ -116,7 +116,6 @@ public class RestaurantRushV2 extends Directory{
     while (testMonths < 36) {
 
 	starter.runOperations(testMonths);
-	//starter.customizeMonthly(starter);
 	starter.calculateExpenses();
 	starter.calculateRevenue();
 	if (starter.getCashMoney() >= 1000000){
