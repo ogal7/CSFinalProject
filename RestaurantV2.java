@@ -594,10 +594,11 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
        // FINDING WAITER CAPACITY
        for (Waiter waiter : waiterDir){
 	   waiterCapacity +=  waiter.getSalary() * (.5 + (waiter.getRating() + waiter.getAccuracy() + waiter.getSpeed()) / 10);
+	   waiterCapacity *= (1 + (waiter.getRating() * .05))
        }
        for (Waiter waiter : waiterDir){
 	   if (waiter.getFromJail() == true){
-	       waiterCapacity -= 150;//felons are capable too!
+	       waiterCapacity -= 10;//felons are capable too!
 	   }
        } 
 
