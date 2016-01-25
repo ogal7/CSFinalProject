@@ -459,7 +459,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 		if ( (int) (Math.random() * 10) == 5 || cleanliness < 5) {
 			officer2.setPassedInspection(false);
 			System.out.println("\033[37m" + officer2.getName() + " from the FDA has shut you down because you have E. Coli");
-			System.exit();
+			System.exit(0);
 		}
     }
 
