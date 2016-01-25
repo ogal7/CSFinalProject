@@ -450,7 +450,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     	}
 
     	if (hasDrugs == true) {
-    		if ( (int)(Math.random()*10)%3 == 0   ) {
+    		if ( ((int)(Math.random()*10))%4 == 0   ) {
     			System.out.println( "\033[37m" + officer.getName() + " from the DEA have shut down your operation. You lost.");
     			cashMoney = 0;
     		}
