@@ -11,7 +11,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     protected ArrayList<Manager> managerDir;
     protected ArrayList<Chef> chefDir;
     protected ArrayList<Items> menu;
-    private double startOfMonthMoney;
+    //private double startOfMonthMoney;
     private String name;
     private int size;
     private double priceScale;
@@ -420,22 +420,24 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
        double waiterCapacity = 0; //finito
        double chefCapacity = 0;   //finito
        double managerCapacity = 0;//finito
+       double startOfMonthMoney = cashMoney;
+       
 
        // FINDING MENU CAPACITY
        for (Items item : menu){
 	   if (item instanceof Food){
 	       if (((Food)item).getRottenness() == false){
-		   menuCapacity += item.getPrice();
+		   menuCapacity += (item.getPrice()*priceScale);
 	       }
 	   }
        }
        for (Items item : menu){
 	   if (item instanceof Bev){
 	       if (((Bev)item).hasAlcohol() == true){
-		   menuCapacity += item.getPrice() * 1.2;
+		   menuCapacity += (item.getPrice() * priceScale * 1.2);
 	       }
 	       else {
-		   menuCapacity += item.getPrice();
+		   menuCapacity += (item.getPrice() *priceScale);
 	       }
 	   }
        }
@@ -446,23 +448,23 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 
        // FINDING WAITER CAPACITY
        for (Waiter waiter : waiterDir){
-	   waiterCapacity += waiter.getSalary() * 12.5 * (.5 + (waiter.getRating() + waiter.getAccuracy() + waiter.getSpeed()) / 10);
+	   waiterCapacity += ( (waiter.getSalary()/12) * (.5 + (waiter.getRating() + waiter.getAccuracy() + waiter.getSpeed()) / 10);
        }
        for (Waiter waiter : waiterDir){
 	   if (waiter.getFromJail() == true){
-	       waiterCapacity -= 250;
+	       waiterCapacity -= 150;//felons are capable too!
 	   }
        } 
 
        // FINDING CHEF CAPACITY
        for (Chef chef : chefDir){
-	   chefCapacity += chef.getSalary() * (.5 + (chef.getRating() + chef.getSpeed() + chef.getAccuracy() + chef.getCookingKnowledge()) / 15);
+	   chefCapacity += ((chef.getSalary()/12) * (.5 + (chef.getRating() + chef.getSpeed() + chef.getAccuracy() + chef.getCookingKnowledge()) / 15));
        }
        chefCapacity *= 18 * chefCapacity / 5000;
 
        // FINDING MANAGER CAPACITY
        for (Manager manager : managerDir){
-	   managerCapacity = manager.getSalary() * (.5 + manager.getRating() - manager.getGreediness() / 10)  * 120;
+	   managerCapacity = ((manager.getSalary()/12) * (.5 + manager.getRating() - manager.getGreediness() / 10)  * 120);
        }
 
        // SETTING REVENUE 
