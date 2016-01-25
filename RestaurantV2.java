@@ -75,6 +75,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	month = 0;
 	expenses = 0;
 	hasSeasonalPackage = false;
+	cleanliness = this.getCleanlinessInit();
     }
     
   // Methods
@@ -458,9 +459,12 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 		if ( (int) (Math.random() * 10) == 5 || cleanliness < 5) {
 			officer2.setPassedInspection(false);
 			System.out.println("\033[37m" + officer2.getName() + " from the FDA has shut you down because you have E. Coli");
+			System.exit();
 		}
     }
 
+
+   	
 
 
     public void customize(){
@@ -582,7 +586,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	   }
        }
        for (Items item : menu){
-	   menuCapacity -= (item.getMaintenance() * .10);
+	   menuCapacity -= (item.getMaintenance() * 5);
        } 
        menuCapacity /= .4;
        menuCapacity *= size;
