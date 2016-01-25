@@ -582,9 +582,10 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	   }
        }
        for (Items item : menu){
-	   menuCapacity -= (item.getMaintenance() * 10);
+	   menuCapacity -= (item.getMaintenance() * .10);
        } 
        menuCapacity /= .4;
+       menuCapacity *= size;
 
        // FINDING WAITER CAPACITY
        for (Waiter waiter : waiterDir){
