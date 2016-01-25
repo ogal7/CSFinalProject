@@ -448,7 +448,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 
        // FINDING WAITER CAPACITY
        for (Waiter waiter : waiterDir){
-	   waiterCapacity += ( (waiter.getSalary()/12) * (.5 + (waiter.getRating() + waiter.getAccuracy() + waiter.getSpeed()) / 10);
+	   waiterCapacity +=  waiter.getSalary() * (.5 + (waiter.getRating() + waiter.getAccuracy() + waiter.getSpeed()) / 10);
        }
        for (Waiter waiter : waiterDir){
 	   if (waiter.getFromJail() == true){
@@ -458,13 +458,13 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 
        // FINDING CHEF CAPACITY
        for (Chef chef : chefDir){
-	   chefCapacity += ((chef.getSalary()/12) * (.5 + (chef.getRating() + chef.getSpeed() + chef.getAccuracy() + chef.getCookingKnowledge()) / 15));
+	   chefCapacity += chef.getSalary() * (.5 + (chef.getRating() + chef.getSpeed() + chef.getAccuracy() + chef.getCookingKnowledge()) / 15);
        }
        chefCapacity *= 18 * chefCapacity / 5000;
 
        // FINDING MANAGER CAPACITY
        for (Manager manager : managerDir){
-	   managerCapacity = ((manager.getSalary()/12) * (.5 + manager.getRating() - manager.getGreediness() / 10)  * 120);
+	   managerCapacity = manager.getSalary() * (.5 + manager.getRating() - manager.getGreediness() / 10)  * 120;
        }
 
        // SETTING REVENUE 
