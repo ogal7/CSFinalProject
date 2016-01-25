@@ -111,7 +111,7 @@ public class RestaurantRushV2 extends Directory{
     System.out.print("\033[34mPlease pick a \033[31mprice scale in decimal form\033[34m. We will multiply the preset food item prices by this number: \t \033[36m x");
     double priceScale = (double) Keyboard.readDouble();
     RestaurantV2 starter = new RestaurantV2(name, size, priceScale);  
-    System.out.println("Would you rather play to make money or to see if you can survive a number of years? (type $/#): \033[36m");
+    System.out.print("Would you rather play to make money or to see if you can survive a number of years? (type $/#): \033[36m");
     if (Keyboard.readString().equals("$")){
 	totalMonths = 100000;
 	System.out.print("Do you want to play for $1,000,000 (for amateurs), $2 million (for seasoned restaurant owners), or 3 years (for restaurant geniuses)? (type 1, 2, or 3): \033[36m");
