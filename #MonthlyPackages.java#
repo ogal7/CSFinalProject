@@ -1,8 +1,5 @@
 public interface MonthlyPackages{
 
-
-    
-
     public void january();
 
      public void february();

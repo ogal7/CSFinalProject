@@ -78,6 +78,115 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     }
     
   // Methods
+
+    public void january(){
+	System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
+	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
+	if (Keyboard.readString() == "y"){
+	    setCleanliness(10);
+	    Food k = new Food("Kale Salad", 10, 2,  false);
+	    menu.add(k);
+	}
+    }
+
+     public void february(){
+	 System.out.println("\033[37mIt's February, and love is in the air \033[31m<3 \033[37m\n This month, you can purchase champagne and have a Valentine's Day themed celebration to attract customers! \n But you can only do it in February!");
+	System.out.print("\033[34mDo you want to purchase the February Package for $400? (type y/n): \033[36m");
+	if (Keyboard.readString() == "y"){
+	    Bev w = new Bev("Champagne", 20, 3, true);
+	    menu.add(w);
+	    rating += 1;
+	}
+     }
+
+     public void march(){
+	 System.out.println("\033[37m It's March! \n You have been introduced to the black market, and if you add illegal substances to your food, your customers will become addicted to coming ;) \n But it can only happen in March!");
+	System.out.print("\033[34mDo you want to purchase the March Package for $400? (type y/n): \033[36m");
+	if (Keyboard.readString() == "y"){
+	    hasDrugs = true;
+	    rating += 3;
+	}
+     }
+
+     public void april(){
+	 System.out.println("\033[37mAPRIL FOOLS! \n Everybody's in a goofy mood this month! \n This package comes with Jell-O and oreos with toothpaste! \n Get everyone in your restaurant laughing this month!");
+	System.out.print("\033[34mDo you want to purchase the April Package for $400? (type y/n): \033[36m");
+	if (Keyboard.readString() == "y"){
+	    rating +=1;
+	    Food k = new Food("Jell-O", 3, 1,  false);
+	    menu.add(k);
+	    Food j = new Food("Oreos with Toothpaste", 2, 2,  false);
+	    menu.add(j);
+	}
+    }
+
+     public void may(){
+	 System.out.println("\033[37mApril showers brig May flowers! \n Everyone is excited for the temperatures to rise and the flowers to bloom. \n This month, you can purchase flowers to decorate your restaurant, and add rose water to your menu! \n This is a once-a-year opportunity!");
+	System.out.print("\033[34mDo you want to purchase the May Package for $400? (type y/n): \033[36m");
+	if (Keyboard.readString() == "y"){
+	    Bev k = new Bev("RoseWater", 7, 2, false);
+	    menu.add(k);
+	}
+     }
+
+     public void june(){
+	 System.out.println("\033[37mWhat time is it? \n SUMMAH TAHM!!! \n It's June, and all of the students are out of school. \n This month, you can add ice cream to the menu for mass appeal! \n But it can only happen in June!");
+	System.out.print("\033[34mDo you want to purchase the June Package for $400? (type y/n): \033[36m");
+	if (Keyboard.readString() == "y"){
+	    Food k = new Food("Ice Cream", 4, 2,  false);
+	    menu.add(k);
+	    rating += 1;
+	}
+    }
+
+     public void july(){
+     	 System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
+	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
+	if (Keyboard.readString() == "y"){
+	    
+	}
+    }
+
+     public void august(){
+     	 System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
+	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
+	if (Keyboard.readString() == "y"){
+	    
+	}
+    }
+
+     public void september(){
+     	 System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
+	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
+	if (Keyboard.readString() == "y"){
+	    
+	}
+    }
+
+     public void october(){
+     	 System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
+	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
+	if (Keyboard.readString() == "y"){
+	    
+	}
+    }
+
+     public void november(){
+     	 System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
+	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
+	if (Keyboard.readString() == "y"){
+	    
+	}
+    }
+
+     public void december(){
+     	 System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
+	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
+	if (Keyboard.readString() == "y"){
+	    
+	}
+    }
+    
 	public boolean isAlive () {
 		if (cashMoney < 0) {
 			return false;
@@ -103,6 +212,10 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	rating = (double) rating/num;
 	return rating;
 }
+    public void setCleanliness(double d){
+	cleanliness = d;
+    }
+    
 
 	public double getAmbiance() {
 		return ambiance;
@@ -326,7 +439,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 
 
     public void customize(){
-	if (hasSeasonalPackage && (month%3==false)){
+	if (hasSeasonalPackage && (month%3 != 0)){
 	    System.out.println("\033[35m You have a seasonal package!");
 	    return;
 	}
@@ -351,46 +464,48 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	System.out.print("Would you like to hear the special features of the month? (type y/n): \033[36m");
 	if ((Keyboard.readString().equals("y"))) {
 		if (month % 12 == 0){
-		    starter.january();
+		    this.january();
 		}
 		if (month % 12 == 1){
-		    starter.february();
+		    this.february();
 		}
 		if (month % 12 == 2){
-		    starter.march();
+		    this.march();
 		}
 		if (month % 12 == 3){
-		    starter.april();
+		    this.april();
 		}
 		if (month % 12 == 4){
-		    starter.may();
+		    this.may();
 		}
 		if (month % 12 == 5){
-		    starter.june();
+		    this.june();
 		}
 		if (month % 12 == 6){
-		    starter.july();
+		    this.july();
 		}
 		if (month % 12 == 7){
-		    starter.august();
+		    this.august();
 		}
 		if (month % 12 == 8){
-		    starter.september();
+		    this.september();
 		}
 		if (month % 12 == 9){
-		    starter.october();
+		    this.october();
 		}
 		if (month % 12 == 10){
-		    starter.november();
+		    this.november();
 		}
 		if (month % 12 == 11){
-		    starter.december();
+		    this.december();
 		}
 	    }
 
 	
     }// end of customize
-	
+
+
+    
 	
     
 
