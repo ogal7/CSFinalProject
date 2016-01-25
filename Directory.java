@@ -152,7 +152,7 @@ public static void printMANAGER_DIR(){
 	if (i == 0){
 	    System.out.println("FOOD ITEMS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FOOD ITEMS");
 	}
-	if (i == 15){
+	if (i == 20){
 	    System.out.println("BEVERAGES~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~BEVERAGES");
 	}
 	System.out.println(" \t " + (i + 1) + ") " + ITEMS_DIR.get(i));
