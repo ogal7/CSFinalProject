@@ -11,7 +11,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     protected ArrayList<Manager> managerDir;
     protected ArrayList<Chef> chefDir;
     protected ArrayList<Items> menu;
-    //private double startOfMonthMoney;
+    private double startOfMonthMoney;
     private String name;
     private int size;
     private double priceScale;
@@ -80,6 +80,10 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     
   // Methods
 
+    public int getMonth(){
+	return month;
+    }
+    
     public void january(){
 	System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
 	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
@@ -122,7 +126,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     }
 
      public void may(){
-	 System.out.println("\033[37mApril showers brig May flowers! \n Everyone is excited for the temperatures to rise and the flowers to bloom. \n This month, you can purchase flowers to decorate your restaurant, and add rose water to your menu! \n This is a once-a-year opportunity!");
+	 System.out.println("\033[37mApril showers bring May flowers! \n Everyone is excited for the temperatures to rise and the flowers to bloom. \n This month, you can purchase flowers to decorate your restaurant, and add rose water to your menu! \n This is a once-a-year opportunity!");
 	System.out.print("\033[34mDo you want to purchase the May Package for $400? (type y/n): \033[36m");
 	if (Keyboard.readString() == "y"){
 	    Bev k = new Bev("RoseWater", 7, 2, false);
@@ -469,7 +473,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	    return;
 	}
 	if (month%3 == 0) {
-    		System.out.println("\033[34mWould you like to purchase a seasonal package? It lasts 3 months and costs less than 3 monthly packages! (type y/n): \033[36m");
+    		System.out.print("\033[34mWould you like to purchase a seasonal package? \nIt lasts 3 months and costs less than 3 monthly packages! (type y/n): \033[36m");
     		if (Keyboard.readString().equals("y")) {
     			if (month == 0) {
 			    this.setPackage(0);
@@ -486,7 +490,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 			return;	
     		} 
     	}// END OF SEASONAL EDITS
-	System.out.print("Would you like to hear the special features of the month? (type y/n): \033[36m");
+	System.out.print("\033[34mWould you like to hear the special features of the month? (type y/n): \033[36m");
 	if ((Keyboard.readString().equals("y"))) {
 		if (month % 12 == 0){
 		    this.january();
@@ -561,7 +565,6 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
        double waiterCapacity = 0; //finito
        double chefCapacity = 0;   //finito
        double managerCapacity = 0;//finito
-       double startOfMonthMoney = cashMoney;
        
 
        // FINDING MENU CAPACITY

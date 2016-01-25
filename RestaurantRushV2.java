@@ -69,7 +69,7 @@ public class RestaurantRushV2 extends Directory{
 	ans = Keyboard.readString();
 	starter.setKara((ans.equals("y")));
 	
-	System.out.print("\033[34m Do you want to add\033[31m Live Entertainment\033[34m to your restaurant? (type y/n): \033[36m");
+	System.out.print("\033[34m Do you want to add\033[31m live entertainment\033[34m to your restaurant? (type y/n): \033[36m");
 	ans = Keyboard.readString();
 	starter.setLiveEnt((ans.equals("y")));
 	
@@ -96,7 +96,9 @@ public class RestaurantRushV2 extends Directory{
    
   // Main
   public static void main(String [] args) {
-    int testMonths = 1;
+    int totalMonths = 12;
+    int ans = 0;
+    double target$ = 1000000;
     ArrayList menu = new ArrayList<Object>();
     ArrayList myDir = new ArrayList<Employee>();
       // Welcome intro: rules & regs
@@ -109,27 +111,42 @@ public class RestaurantRushV2 extends Directory{
     System.out.print("\033[34mPlease pick a \033[31mprice scale in decimal form\033[34m. We will multiply the preset food item prices by this number: \t \033[36m x");
     double priceScale = (double) Keyboard.readDouble();
     RestaurantV2 starter = new RestaurantV2(name, size, priceScale);  
+    System.out.println("Would you rather play to make money or to see if you can survive a number of years? (type $/#): \033[36m");
+    if (Keyboard.readString().equals("$")){
+	totalMonths = 100000;
+	System.out.print("Do you want to play for $1,000,000 (for amateurs), $2 million (for seasoned restaurant owners), or 3 years (for restaurant geniuses)? (type 1, 2, or 3): \033[36m");
+	ans = Integer.parseInt(Keyboard.readString());
+	target$ *= ans;
+    }
+	     
+    else {
+	System.out.print("Do you want to play for 1 year (for first-timers), 2 years (for experienced folk), or 3 years (for restaurant experts)? (type 1, 2, or 3): \033[36m");
+	 ans = Integer.parseInt(Keyboard.readString());
+	 totalMonths *= ans;
+	 target$ = 1000000000;
+    }
     customize(starter);
     starter.calculateExpenses();
     starter.calculateRevenue();
     // Play
-    while (testMonths < 36) {
+    
 
-	starter.runOperations(testMonths);
+    while (starter.getMonth() < totalMonths) {
+
+	starter.runOperations(starter.getMonth());
+	starter.customize();
 	starter.calculateExpenses();
 	starter.calculateRevenue();
-	if (starter.getCashMoney() >= 1000000){
-	    System.out.println("YOUR RESTAURANT, " + starter.getName() + "MADE OVER $1,000,000! YOU WIN!");
-	    return;
+	if (starter.getCashMoney() >= target$){
+	    System.out.println("YOUR RESTAURANT, " + starter.getName() + "MADE OVER $" +target$ +"! YOU WIN !");
+	    System.exit(0);
 	}
 	if (starter.isAlive() == false) {
 	    System.out.println("You lost.");
-	    testMonths = 36;
-	    break;
+	    System.exit(0);
 	}
-	testMonths++;
       }
-    System.out.println("You have gone 3 full years without making $1,000,000 in revenue. You have lost.");
+    System.out.println("YOUR RESTAURANT," + starter.getName() + "SURVIVED FOR " + ans + "YEARS! YOU WIN!");
   }
 
 }
