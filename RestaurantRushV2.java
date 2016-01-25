@@ -113,22 +113,23 @@ public class RestaurantRushV2 extends Directory{
     starter.calculateExpenses();
     starter.calculateRevenue();
     // Play
-    while (testMonths < 4) {
-		starter.runOperations(testMonths);
-		//starter.customizeMonthly(starter);
-		starter.calculateExpenses();
-		starter.calculateRevenue();
-		if (starter.getCashMoney() >= 1000000){
-		    System.out.println("YOUR RESTAURANT, " + starter.getName() + "MADE OVER $1,000,000! YOU WIN!");
-		    return;
-		}
-		if (starter.isAlive() == false) {
-		    System.out.println("You lost.");
-		    return;
-		}
-		testMonths++;
+    while (testMonths < 36) {
+
+	starter.runOperations(testMonths);
+	//starter.customizeMonthly(starter);
+	starter.calculateExpenses();
+	starter.calculateRevenue();
+	if (starter.getCashMoney() >= 1000000){
+	    System.out.println("YOUR RESTAURANT, " + starter.getName() + "MADE OVER $1,000,000! YOU WIN!");
+	    return;
+	}
+	if (starter.isAlive() == false) {
+	    System.out.println("You lost.");
+	    return;
+	}
+	testMonths++;
       }
-    System.out.println("Test Complete!");
+    System.out.println("You have gone 3 full years without making $1,000,000 in revenue. You have lost.");
   }
 
 }

@@ -1,7 +1,7 @@
 import cs1.Keyboard; 
 import java.util.ArrayList;   
 
-public class RestaurantV2 extends Directory{
+public class RestaurantV2 extends Directory implements MonthlyPackages{
 
 
   // Instance vars
@@ -27,6 +27,7 @@ public class RestaurantV2 extends Directory{
     private double ambiance; //out of 10
     private boolean hasDrugs;
     private double rating;
+    private boolean hasSeasonalPackage;
   //Constructor
     public RestaurantV2(){
     	name = "";
@@ -49,6 +50,7 @@ public class RestaurantV2 extends Directory{
 	expenses = 0;
 	cleanliness = this.getCleanlinessInit();
 	rating = 10.0;
+	hasSeasonalPackage = false;
     }
     
     
@@ -72,11 +74,10 @@ public class RestaurantV2 extends Directory{
 	hasBar = false;
 	month = 0;
 	expenses = 0;
+	hasSeasonalPackage = false;
     }
     
   // Methods
-    // public static void stillAlive(){}
-
 	public boolean isAlive () {
 		if (cashMoney < 0) {
 			return false;
@@ -299,28 +300,6 @@ public class RestaurantV2 extends Directory{
 	    if (musicVol > 8) {ambiance -=1;}
     	}
 	
-	// SEASONAL CHANGES
-    	if (months%3 == 0) {
-    		System.out.println("\033[34mWould you like to purchase a seasonal package? (type y/n): \033[36m");
-    		if (Keyboard.readString().equals("y")) {
-    			if (months == 0) {
-			    System.out.println("\033[35mYou have added the Winter Package! \n Your restaurant has been decorated with snowflakes and snowmen, and is offering lasagna and hot chocolate to customers!");
-			    this.setPackage(0);
-    			}
-    			if (months == 3) {
-			    System.out.println("\033[35mYou have added the Spring Package! \n Your restaurant has been decorated with fresh flowers and string lights, and is offering spring salmon and chocolate milk to customers!");
-			    this.setPackage(3);
-    			}
-    			if (months == 6) {
-			    System.out.println("\033[35mYou have added the Summer Package! \n Your restaurant has been decorated with surfboards and tiki torches, and is offering smoothies and hotlemonade to customers!");
-			    this.setPackage(6);
-    			}
-    			if (months == 9) {
-			    System.out.println("\033[35mYou have added the Fall Package! \n Your restaurant has been decorated with leaves and gords, and is offering chili and chai tea lattes to customers!");
-			    this.setPackage(9);
-    			}
-    		} 
-    	}// END OF SEASONAL EDITS
     	DEA officer = new DEA();
     	FDA officer2 = new FDA();
 	if (months > 1) {
@@ -333,17 +312,87 @@ public class RestaurantV2 extends Directory{
 
     	if (hasDrugs == true) {
     		if ( (int)(Math.random()*10)%3 == 0   ) {
-    			System.out.println( officer.getName() + " from the DEA have shut down your operation. You lost.");
+    			System.out.println( "\033[37m" + officer.getName() + " from the DEA have shut down your operation. You lost.");
     			cashMoney = 0;
     		}
     	}
 		
 		if ( (int) (Math.random() * 10) == 5 || cleanliness < 5) {
 			officer2.setPassedInspection(false);
-			System.out.println(officer2.getName() + " from the FDA has shut you down because you have E. Coli");
-		}    	
+			System.out.println("\033[37m" + officer2.getName() + " from the FDA has shut you down because you have E. Coli");
+		}
     }
 
+
+
+    public void customize(){
+	if (hasSeasonalPackage && (month%3==false)){
+	    System.out.println("\033[35m You have a seasonal package!");
+	    return;
+	}
+	if (month%3 == 0) {
+    		System.out.println("\033[34mWould you like to purchase a seasonal package? It lasts 3 months and costs less than 3 monthly packages! (type y/n): \033[36m");
+    		if (Keyboard.readString().equals("y")) {
+    			if (month == 0) {
+			    this.setPackage(0);
+    			}
+    			if (month == 3) {
+			    this.setPackage(3);
+    			}
+    			if (month == 6) {
+			    this.setPackage(6);
+    			}
+    			if (month == 9) {
+			    this.setPackage(9);
+    			}
+			return;	
+    		} 
+    	}// END OF SEASONAL EDITS
+	System.out.print("Would you like to hear the special features of the month? (type y/n): \033[36m");
+	if ((Keyboard.readString().equals("y")) {
+		if (month % 12 == 0){
+		    starter.january();
+		}
+		if (month % 12 == 1){
+		    starter.february();
+		}
+		if (month % 12 == 2){
+		    starter.march();
+		}
+		if (month % 12 == 3){
+		    starter.april();
+		}
+		if (month % 12 == 4){
+		    starter.may();
+		}
+		if (month % 12 == 5){
+		    starter.june();
+		}
+		if (month % 12 == 6){
+		    starter.july();
+		}
+		if (month % 12 == 7){
+		    starter.august();
+		}
+		if (month % 12 == 8){
+		    starter.september();
+		}
+		if (month % 12 == 9){
+		    starter.october();
+		}
+		if (month % 12 == 10){
+		    starter.november();
+		}
+		if (month % 12 == 11){
+		    starter.december();
+		}
+	    }
+
+	
+    }// end of customize
+	
+	
+    
 
 
     public void calculateExpenses(){
@@ -426,8 +475,8 @@ public class RestaurantV2 extends Directory{
        if(managerCapacity <= menuCapacity && managerCapacity <= waiterCapacity && managerCapacity <= chefCapacity){
 	   revenue = managerCapacity;}
        // Check for revenue
-       
-       System.out.println("revenue = " +revenue+ "\n menuCapacity = " + menuCapacity + "\n waiterCapacity = " + waiterCapacity + "\n managerCapacity = " + managerCapacity + "\n chefCapacity = " + chefCapacity);
+
+       revenue *= (1 + rating/10);
        cashMoney += revenue;
        System.out.println("After " + (month + 1) + " months of owning a restaurant, you started this month with $" + startOfMonthMoney + ", spent $" + expenses+ " and brought in $" + revenue +
 			  " in revenue. You now have $" + cashMoney + " in the bank.");
@@ -469,25 +518,25 @@ public class RestaurantV2 extends Directory{
 
     public void setPackage(int m) {
     	if (m == 0) {
-    		System.out.println("Winter Package");
-    		cashMoney -= 1000;
+	     System.out.println("\033[35mYou have added the Winter Package! \n Your restaurant has been decorated with snowflakes and snowmen, and is offering lasagna and hot chocolate to customers!");
+	    cashMoney -= 1000;
     	}
     	if (m == 3) {
-    		System.out.println("Spring Package");
-    		cashMoney -= 1000;
+	     System.out.println("\033[35mYou have added the Spring Package! \n Your restaurant has been decorated with fresh flowers and string lights, and is offering spring salmon and chocolate milk to customers!");
+	     cashMoney -= 1000;
     	}
     	if (m == 6){
-    		System.out.println("Summer Package");
+	    System.out.println("\033[35mYou have added the Summer Package! \n Your restaurant has been decorated with surfboards and tiki torches, and is offering smoothies and hotlemonade to customers!");
     		cashMoney -= 1000;
     	}
     	if (m == 9) {
-    		System.out.println("Fall Package");	
+    		System.out.println("\033[35mYou have added the Fall Package! \n Your restaurant has been decorated with leaves and gords, and is offering chili and chai tea lattes to customers!");	
     		cashMoney -= 1000;
     	}
     } 
 
 
-    // get methos
+    // get methods
      public int getLight(){
 	return lighting;
     }
@@ -521,9 +570,6 @@ public class RestaurantV2 extends Directory{
     public String getName(){
 	return name;
     }
-
-    
-    // public static void lose(){}
 
 }
  
