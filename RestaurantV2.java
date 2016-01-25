@@ -443,21 +443,12 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	
     	DEA officer = new DEA();
     	FDA officer2 = new FDA();
-<<<<<<< HEAD
-=======
-	if (months > 1 && hasDrugs == false) {
-    		System.out.print("\033[34mWould you like to add illegal items to your menu? Your customers will be addicted to coming to your restaurant! ;) type (y/n )     \033[36m");
-    		if (Keyboard.readString().equals("y")) {
-    			hasDrugs = true;
-    			this.rating +=1;
-    		}
-    	}
 
->>>>>>> origin
     	if (hasDrugs == true) {
     		if ( ((int)(Math.random()*10))%4 == 0   ) {
     			System.out.println( "\033[37m" + officer.getName() + " from the DEA have shut down your operation. You lost.");
     			cashMoney = 0;
+			System.exit(0);
     		}
     	}
 		
@@ -564,8 +555,9 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     
     
     public  void calculateRevenue(){
-       double revenue = 0;
-       double menuCapacity = 0;   //finito
+	String fixThis = "";
+	double revenue = 0;
+	double menuCapacity = 0;   //finito
        double waiterCapacity = 0; //finito
        double chefCapacity = 0;   //finito
        double managerCapacity = 0;//finito
@@ -591,7 +583,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	   }
        }
        for (Items item : menu){
-	   menuCapacity -= (item.getMaintenance() * 5);
+	   menuCapacity -= (item.getMaintenance() * 2);
        } 
        menuCapacity /= .4;
        menuCapacity *= size * 15;
@@ -619,19 +611,26 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 
        // SETTING REVENUE 
        if (menuCapacity <= waiterCapacity && menuCapacity <= managerCapacity && menuCapacity <= chefCapacity){
-	   revenue = menuCapacity;}
+	   revenue = menuCapacity;
+	   fixThis = "menu!";
+       }
        if(waiterCapacity <= menuCapacity && waiterCapacity <= managerCapacity && waiterCapacity <= chefCapacity){
-	   revenue = waiterCapacity;}
+	   revenue = waiterCapacity;
+	   fixThis = "waitstaff!";
+       }
        if (chefCapacity <= waiterCapacity && chefCapacity <= managerCapacity && chefCapacity <= menuCapacity){
-	   revenue = chefCapacity;}
+	   revenue = chefCapacity;
+	   fixThis = "chefs!";
+       }
        if(managerCapacity <= menuCapacity && managerCapacity <= waiterCapacity && managerCapacity <= chefCapacity){
-	   revenue = managerCapacity;}
+	   revenue = managerCapacity;
+	   fixThis = "managers!";
+       }
        // Check for revenue
 
        revenue *= (1 + rating/10);
        cashMoney += revenue;
-       System.out.println("After " + (month + 1) + " months of owning a restaurant, you started this month with $" + startOfMonthMoney + ", spent $" + expenses+ " and brought in $" + revenue +
-			  " in revenue. You now have $" + cashMoney + " in the bank.");
+       System.out.println("\033[32mAfter " + (month + 1) + " months of owning a restaurant, you started this month with $" + startOfMonthMoney + ", spent $" + expenses+ " and brought in $" + revenue +" in revenue. There is a problem with your " + fixThis + " You should probably fix that. You now have $" + cashMoney + " in the bank.");
        System.out.print("\033[34mReady for month " + (month + 2) + "? (type y/n): \033[36m");
        if (Keyboard.readString().equals("y")){
 	   month++;
