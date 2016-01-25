@@ -534,11 +534,6 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     }// end of customize
 
 
-    
-	
-    
-
-
     public void calculateExpenses(){
 	expenses = 0;
 	for (Manager i : managerDir){
@@ -601,6 +596,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	       waiterCapacity -= 10;//felons are capable too!
 	   }
        } 
+       waiterCapacity *= 18 * waiterCapacity / 6000;
 
        // FINDING CHEF CAPACITY
        for (Chef chef : chefDir){
