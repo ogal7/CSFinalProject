@@ -312,7 +312,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 		    System.out.print("\t Row: ");
 		    int itemRow = Keyboard.readInt();
 		    this.menu.remove(itemRow - 1);
-		    System.out.print("\033[34mWant to remove sonmething else? (y/n)    \033[36m");
+		    System.out.print("\033[34mWant to remove something else? (y/n)    \033[36m");
 		    ans = Keyboard.readString();
 		}
 	    }
@@ -441,7 +441,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	
     	DEA officer = new DEA();
     	FDA officer2 = new FDA();
-	if (months > 1) {
+	if (months > 1 && hasDrugs == false) {
     		System.out.print("\033[34mWould you like to add illegal items to your menu? Your customers will be addicted to coming to your restaurant! ;) type (y/n )     \033[36m");
     		if (Keyboard.readString().equals("y")) {
     			hasDrugs = true;
