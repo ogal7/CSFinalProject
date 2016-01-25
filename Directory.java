@@ -8,52 +8,52 @@ public class Directory {
    protected static final ArrayList ITEMS_DIR = new ArrayList<Items>();
 
 public Directory(){
-    Chef a = new Chef ("Lisa", 5500, .9, 8,8, 9. );
+    Chef a = new Chef ("Lisa", 5500, 9, 8,8, 9. );
     CHEF_DIR.add(a);
-    Chef b = new Chef ("Bart", 4500, .5, 6, 2, 3. );
+    Chef b = new Chef ("Bart", 4500, 5, 6, 2, 3. );
     CHEF_DIR.add(b);
-    Chef c = new Chef ("Homer", 4000, .1, 1, 5, 1. );
+    Chef c = new Chef ("Homer", 4000, 1, 1, 5, 1. );
     CHEF_DIR.add(c);
-    Chef d = new Chef ("Marge", 5000, .6, 2, 7, 2. );
+    Chef d = new Chef ("Marge", 5000, 6, 2, 7, 2. );
     CHEF_DIR.add(d);
-    Chef e = new Chef ("Spongebob", 4500, .2, 1, 1, 6. );
+    Chef e = new Chef ("Spongebob", 4500, 2, 1, 1, 6. );
     CHEF_DIR.add(e);
-    Chef f = new Chef ("Patrick Star", 4000, .1, 1, 1, 2. );
+    Chef f = new Chef ("Patrick Star", 4000, 1, 1, 1, 2. );
     CHEF_DIR.add(f);
-    Chef g = new Chef ("Squidward", 5500, .8, 4, 10, 6. );
+    Chef g = new Chef ("Squidward", 5500, 8, 4, 10, 6. );
     CHEF_DIR.add(g);
         
     //managers
-    Manager x = new Manager("Meredith", 5000, .7, 10, 2,1);
+    Manager x = new Manager("Meredith", 5000, 7, 10, 2,1);
     MANAGER_DIR.add(x);
-    Manager y = new Manager("Cristina", 4750, .9, 10, 5,1);
+    Manager y = new Manager("Cristina", 4750, 9, 10, 5,1);
     MANAGER_DIR.add(y);
-    Manager z = new Manager("George", 4500, .6, 7, 1,1);
+    Manager z = new Manager("George", 4500, 6, 7, 1,1);
     MANAGER_DIR.add(z);
-    Manager xx = new Manager("Alex", 5250, .7, 9, 6,1);
+    Manager xx = new Manager("Alex", 5250, 7, 9, 6,1);
     MANAGER_DIR.add(xx);
-    Manager yy = new Manager("Izzie", 4750, .6 , 7, 1,1);
+    Manager yy = new Manager("Izzie", 4750, 6 , 7, 1,1);
      MANAGER_DIR.add(yy);
-    Manager zz = new Manager("Miranda Bailey", 4500, .9, 8,  2,1);
+    Manager zz = new Manager("Miranda Bailey", 4500, 9, 8,  2,1);
     MANAGER_DIR.add(zz);
-    Manager aa = new Manager("Callie", 4500,  .8, 9, 3,1);
+    Manager aa = new Manager("Callie", 4500,  8, 9, 3,1);
     MANAGER_DIR.add(aa);
         
     //String n, double req, double rat, int s, int acc, boolean isfel    
     //waiters
-    Waiter m = new Waiter("Ted", 2000, .7, 7, 9, false);
+    Waiter m = new Waiter("Ted", 2000, 7, 7, 9, false);
     WAITER_DIR.add(m);
-    Waiter n = new Waiter("Robin", 1900, .9, 9, 10,  false);
+    Waiter n = new Waiter("Robin", 1900, 9, 9, 10,  false);
     WAITER_DIR.add(n);
-    Waiter o = new Waiter("Lily", 1500, .8, 7, 10, false);
+    Waiter o = new Waiter("Lily", 1500, 8, 7, 10, false);
     WAITER_DIR.add(o);
-    Waiter p = new Waiter("Marshall", 1500, .7, 7, 8, false);
+    Waiter p = new Waiter("Marshall", 1500, 7, 7, 8, false);
     WAITER_DIR.add(p);
-    Waiter q = new Waiter("Barney", 1500, .9, 10, 5,  true);
+    Waiter q = new Waiter("Barney", 1500, 9, 10, 5,  true);
     WAITER_DIR.add(q);
-    Waiter r = new Waiter("Ranjit", 1400, .9, 6, 9,  false);
+    Waiter r = new Waiter("Ranjit", 1400, 9, 6, 9,  false);
     WAITER_DIR.add(r);
-    Waiter s = new Waiter("Patrice", 1500, .8, 7, 6, false);
+    Waiter s = new Waiter("Patrice", 1500, 8, 7, 6, false);
     WAITER_DIR.add(s);
         
         // items

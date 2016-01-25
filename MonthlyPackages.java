@@ -1,5 +1,6 @@
 public interface MonthlyPackages{
 
+<<<<<<< HEAD
     public void january(RestaurantV2 r){
 	System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
 	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
@@ -107,3 +108,28 @@ public interface MonthlyPackages{
 	    
 	}
     }
+=======
+    public void january();
+
+     public void february();
+
+     public void march();
+
+     public void april();
+
+     public void may();
+
+     public void june();
+
+     public void july();
+
+     public void august();
+
+     public void september();
+
+     public void october();
+
+     public void november();
+
+     public void december();
+>>>>>>> a436f9e76c170d14217d76095f5d759730dfa902

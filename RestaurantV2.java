@@ -11,7 +11,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     protected ArrayList<Manager> managerDir;
     protected ArrayList<Chef> chefDir;
     protected ArrayList<Items> menu;
-    private double startOfMonthMoney;
+    //private double startOfMonthMoney;
     private String name;
     private int size;
     private double priceScale;
@@ -37,7 +37,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	chefDir = new ArrayList<Chef>();
 	managerDir = new ArrayList<Manager>();
 	menu = new ArrayList<Items>();
-	startOfMonthMoney = 0;
+	//startOfMonthMoney = 0;
 	size = 5;
 	lighting = 7;
 	hasBooths = false;
@@ -63,7 +63,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	chefDir = new ArrayList<Chef>();
 	managerDir = new ArrayList<Manager>();
 	menu = new ArrayList<Items>();
-	startOfMonthMoney = 0;
+	//startOfMonthMoney = 0;
 	size = 5;
 	lighting = 7;
 	hasBooths = false;
@@ -100,7 +100,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 		rating += x.getRating();
 		num += 1;
 	}
-	rating /= num;
+	rating = (double) rating/num;
 	return rating;
 }
 
@@ -138,7 +138,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     public void runOperations(int months){ //
 	String ans = "";
 	double num = 0;
-	startOfMonthMoney = cashMoney;
+	double startOfMonthMoney = cashMoney;
 
 	// MENU
 	System.out.println("\033[35mThis is your current menu: \n" + this.printMenu());
@@ -349,7 +349,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     		} 
     	}// END OF SEASONAL EDITS
 	System.out.print("Would you like to hear the special features of the month? (type y/n): \033[36m");
-	if ((Keyboard.readString().equals("y")) {
+	if ((Keyboard.readString().equals("y"))) {
 		if (month % 12 == 0){
 		    starter.january();
 		}
@@ -420,22 +420,24 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
        double waiterCapacity = 0; //finito
        double chefCapacity = 0;   //finito
        double managerCapacity = 0;//finito
+       double startOfMonthMoney = cashMoney;
+       
 
        // FINDING MENU CAPACITY
        for (Items item : menu){
 	   if (item instanceof Food){
 	       if (((Food)item).getRottenness() == false){
-		   menuCapacity += item.getPrice();
+		   menuCapacity += (item.getPrice()*priceScale);
 	       }
 	   }
        }
        for (Items item : menu){
 	   if (item instanceof Bev){
 	       if (((Bev)item).hasAlcohol() == true){
-		   menuCapacity += item.getPrice() * 1.2;
+		   menuCapacity += (item.getPrice() * priceScale * 1.2);
 	       }
 	       else {
-		   menuCapacity += item.getPrice();
+		   menuCapacity += (item.getPrice() *priceScale);
 	       }
 	   }
        }
@@ -446,11 +448,11 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 
        // FINDING WAITER CAPACITY
        for (Waiter waiter : waiterDir){
-	   waiterCapacity += waiter.getSalary() * 12.5 * (.5 + (waiter.getRating() + waiter.getAccuracy() + waiter.getSpeed()) / 10);
+	   waiterCapacity +=  waiter.getSalary() * (.5 + (waiter.getRating() + waiter.getAccuracy() + waiter.getSpeed()) / 10);
        }
        for (Waiter waiter : waiterDir){
 	   if (waiter.getFromJail() == true){
-	       waiterCapacity -= 250;
+	       waiterCapacity -= 150;//felons are capable too!
 	   }
        } 
 
