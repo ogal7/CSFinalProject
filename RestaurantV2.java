@@ -37,7 +37,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	chefDir = new ArrayList<Chef>();
 	managerDir = new ArrayList<Manager>();
 	menu = new ArrayList<Items>();
-	startOfMonthMoney = 0;
+	//startOfMonthMoney = 0;
 	size = 5;
 	lighting = 7;
 	hasBooths = false;
