@@ -105,7 +105,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
      }
 
      public void march(){
-	 System.out.println("\033[37m It's March! \n You have been introduced to the black market, and if you add illegal substances to your food, your customers will become addicted to coming ;) \n But it can only happen in March!");
+	System.out.println("\033[37m It's March! \n You have been introduced to the black market, and if you add illegal substances to your food, your customers will become addicted to coming ;) \n But it can only happen in March!");
 	System.out.print("\033[34mDo you want to purchase the March Package for $400? (type y/n): \033[36m");
 	if (Keyboard.readString() == "y"){
 	    hasDrugs = true;
