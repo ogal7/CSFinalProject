@@ -124,7 +124,8 @@ public class RestaurantRushV2 extends Directory{
 	}
 	if (starter.isAlive() == false) {
 	    System.out.println("You lost.");
-	    return;
+	    testMonths = 36;
+	    break;
 	}
 	testMonths++;
       }

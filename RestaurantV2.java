@@ -75,6 +75,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	month = 0;
 	expenses = 0;
 	hasSeasonalPackage = false;
+	cleanliness = this.getCleanlinessInit();
     }
     
   // Methods
@@ -140,50 +141,75 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     }
 
      public void july(){
-     	 System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
-	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
+     	 System.out.println("\033[37mHAPPY FOURTH OF JULY!!! \n It's July, and everyone's trying to support this awful country. \n This month, you can add festive items to your menu, like Fireworks Ice Cream and Patriotic Ice Cream soda! This is a july only offer so you better get the hot stuff while it lasts!");
+	System.out.print("\033[34mDo you want to purchase the July Package for $400? (type y/n): \033[36m");
 	if (Keyboard.readString() == "y"){
-	    
+	    Food k = new Food("Fireworks Ice Cream", 5, 2, false);
+	    Bev a = new Bev("Patriotic Ice Cream Soda", 6, 2, false);
+	    menu.add(k);
+	    menu.add(a);
+	    rating +=1;
 	}
     }
 
      public void august(){
-     	 System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
-	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
+     	 System.out.println("\033[37mHip Hip Hurray for Summer! It's August, and everyone's working to keep cool from the heat.\n This month you can add classy items like Rose and Tapas to end the summer with triumph!\n ");
+	System.out.print("\033[34mDo you want to purchase the August Package for $400? (type y/n): \033[36m");
 	if (Keyboard.readString() == "y"){
-	    
+	    Bev r = new Bev("Rose", 8, 1, true);
+	    Food t = new Food("Tapas", 7, 2, false);
+	    menu.add(r);
+	    menu.add(t);
 	}
     }
 
      public void september(){
-     	 System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
-	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
+     	 System.out.println("\033[37mWell damn it's back to school and work! \n It's September, and everyone's getting back into the swing of things.\n This month, you can purchase Cosmopolitans and Carbonara.");
+	System.out.print("\033[34mDo you want to purchase the September Package for $400? (type y/n): \033[36m");
 	if (Keyboard.readString() == "y"){
-	    
+	    Food x = new Food("Carbonara", 8, 3, false);
+	    Bev y = new Bev("Cosmopolitan", 7, 3, true);
+	    menu.add(x);
+	    menu.add(y);
 	}
     }
 
      public void october(){
-     	 System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
-	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
+     	 System.out.println("\033[37mHAPPY HALLOWEEN!!\n It's October so prepare to spook your customers with how scarily good your food is! \n This month, you can add Pumpkin Pie, Pumpkin Spice Lattes, and Candy Cake! - This is a limited time offer!");
+	System.out.print("\033[34mDo you want to purchase the October Package for $400? (type y/n): \033[36m");
 	if (Keyboard.readString() == "y"){
-	    
+	    Food x = new Food("Pumpkin Pie", 5, 3, false);
+	    Food z = new Food("Candy Cake", 5, 3, false);
+	    Bev y = new Bev("Pumpkin Spice Latte", 3, 2, false);
+	    menu.add(x);
+	    menu.add(y);
+	    menu.add(z);
 	}
     }
 
      public void november(){
-     	 System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
+     	 System.out.println("\033[37mIt's getting colder! \n It's November, and Thanksgiving is coming up! \n This month, you can add a Thanksgiving Dinner to your menu, complete with Turkey, Mashed Potatoes, Gravy, Cranberry Sauce, and Stuffing! And don't forget dessert~Apple Pie is also included! ");
 	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
 	if (Keyboard.readString() == "y"){
-	    
+	    Food x = new Food("Thanksgiving Dinner", 20, 4, false);
+	    Food z = new Food("Apple Pie", 5, 3, false);
+	    menu.add(x);
+	    menu.add(z);
 	}
     }
 
      public void december(){
-     	 System.out.println("\033[37mHAPPY NEW YEAR!!! \n It's January, and everyone's working to keep their resolutions alive. \n This month, you can purchase cleaning supplies (which will keep those pesky FDA inspectors happy), and add a kale salad to your menu! \n But it can only happen in January!");
+     	 System.out.println("\033[37mHappy Holidays! Let it go, Let it go! \n It's December, and the cold never bothered you anyway.\n This month, you can add Eggnog, Yule Log Cake, Peppermint Mocha Lattes, and Chili Bread Bowls! This offer only lasts for December!");
 	System.out.print("\033[34mDo you want to purchase the January Package for $400? (type y/n): \033[36m");
 	if (Keyboard.readString() == "y"){
-	    
+	    Food x = new Food("Chili Bread Bowl", 6, 2, false);
+	    Food z = new Food("Yule Log Cake", 5, 3, false);
+	    Bev y = new Bev("Egg Nog", 3, 1, false);
+	    Bev a = new Bev("Peppermint Mocha Latte", 4, 2, false);
+	    menu.add(x);
+	    menu.add(y);
+	    menu.add(z);
+	    menu.add(a);
 	}
     }
     
@@ -209,7 +235,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 		rating += x.getRating();
 		num += 1;
 	}
-	rating = (double) rating/num;
+	rating = (double) rating/num; 
 	return rating;
 }
     public void setCleanliness(double d){
@@ -286,7 +312,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 		    System.out.print("\t Row: ");
 		    int itemRow = Keyboard.readInt();
 		    this.menu.remove(itemRow - 1);
-		    System.out.print("\033[34mWant to remove sonmething else? (y/n)    \033[36m");
+		    System.out.print("\033[34mWant to remove something else? (y/n)    \033[36m");
 		    ans = Keyboard.readString();
 		}
 	    }
@@ -417,8 +443,19 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	
     	DEA officer = new DEA();
     	FDA officer2 = new FDA();
+<<<<<<< HEAD
+=======
+	if (months > 1 && hasDrugs == false) {
+    		System.out.print("\033[34mWould you like to add illegal items to your menu? Your customers will be addicted to coming to your restaurant! ;) type (y/n )     \033[36m");
+    		if (Keyboard.readString().equals("y")) {
+    			hasDrugs = true;
+    			this.rating +=1;
+    		}
+    	}
+
+>>>>>>> origin
     	if (hasDrugs == true) {
-    		if ( (int)(Math.random()*10)%3 == 0   ) {
+    		if ( ((int)(Math.random()*10))%4 == 0   ) {
     			System.out.println( "\033[37m" + officer.getName() + " from the DEA have shut down your operation. You lost.");
     			cashMoney = 0;
     		}
@@ -427,9 +464,12 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 		if ( (int) (Math.random() * 10) == 5 || cleanliness < 5) {
 			officer2.setPassedInspection(false);
 			System.out.println("\033[37m" + officer2.getName() + " from the FDA has shut you down because you have E. Coli");
+			System.exit(0);
 		}
     }
 
+
+   	
 
 
     public void customize(){
@@ -551,9 +591,10 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	   }
        }
        for (Items item : menu){
-	   menuCapacity -= (item.getMaintenance() * 10);
+	   menuCapacity -= (item.getMaintenance() * 5);
        } 
        menuCapacity /= .4;
+       menuCapacity *= size * 15;
 
        // FINDING WAITER CAPACITY
        for (Waiter waiter : waiterDir){
@@ -689,4 +730,4 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     }
 
 }
- 
+  
