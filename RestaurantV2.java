@@ -349,7 +349,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     		} 
     	}// END OF SEASONAL EDITS
 	System.out.print("Would you like to hear the special features of the month? (type y/n): \033[36m");
-	if ((Keyboard.readString().equals("y")) {
+	if ((Keyboard.readString().equals("y"))) {
 		if (month % 12 == 0){
 		    starter.january();
 		}
