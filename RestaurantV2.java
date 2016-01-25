@@ -100,7 +100,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 		rating += x.getRating();
 		num += 1;
 	}
-	rating /= num;
+	rating = (double) rating/num;
 	return rating;
 }
 
