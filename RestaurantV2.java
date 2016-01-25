@@ -337,9 +337,9 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 		System.out.print(" \t # of years (0 - 10): ");
 		num = Keyboard.readInt();
 		for (Object i : chefDir){
-		    //Chef a = new Chef();
-		    //i = a;
+		    //increasing cooking knowledge
 		    ((Chef)i).setCookingKnowledge(   ((Chef)i).getCookingKnowledge() + num);
+		    //making sure it doesn't exceed bounds
 		    if (((Chef)i).getCookingKnowledge() > 10) ((Chef)i).setCookingKnowledge(10);
 		    ((Chef)i).setSalary(((Chef)i).getSalary() * (1 + num * .1));
 		}
@@ -352,7 +352,9 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 		System.out.print(" \t # of weeks (0 - 10): ");
 		num = Keyboard.readInt();
 		for (Object i : waiterDir){
+		//increasing accuracy	
 		    ((Waiter)i).setAccuracy(((Waiter)i).getAccuracy() + num);
+		    // making sure acc stays within bounds
 		    if (((Waiter)i).getAccuracy() > 10) ((Waiter)i).setAccuracy(10);
 		 
 		    ((Waiter)i).setSalary(((Waiter)i).getSalary() * (1 + num * .1));
@@ -363,9 +365,10 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 		System.out.println("\033[35mThese are your managers: \n");
 		System.out.println(this.printManagerDir());
 		System.out.println("\033[31mThe way to improve your managers is to be nice to them. \nManagers' greediness will decrease and their ratings willg go up, but their salary\nwill increase because you will have to take them out to dinner. \n\033[34mHow many times do you want to take your managers out to dinner? \033[36m");
-		System.out.print(" \t # of times (0 - 10): ");
+		System.out.print(" \t # of times (y0 - 10): ");
 		num = Keyboard.readInt();
 		for (Object i : managerDir){
+			//making your managers less greedy and making sure they stay within range
 		    ((Manager)i).setGreediness(((Manager)i).getGreediness() - num);
 		    if (((Manager)i).getGreediness() < 0) ((Manager)i).setGreediness(0);
 		    ((Manager)i).setRating(((Manager)i).getRating() + (.1 * num));
@@ -396,7 +399,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	    System.out.println("\t It's got a bar");
 	}
 	if (hasCarpet()){
-	    System.out.println("\t It's got a carpet");
+	    System.out.println("\t It's got carpets");
 	}
 	System.out.println("\t It's lighting is set to " + lighting);
 	System.out.println("\t It's music volume is set to " + musicVol);
@@ -444,12 +447,12 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	    if (musicVol > 8) {ambiance -=1;}
 	    ans = "n";
     	}
-	
+	//my baes
     	DEA officer = new DEA();
     	FDA officer2 = new FDA();
 
     	if (hasDrugs == true) {
-    		if ( ((int)(Math.random()*10))%4 == 0   ) {
+    		if ( ((int)(Math.random()*10))%4 == 0   ) {//20% chance of being shut down
     			System.out.println( "\033[37m" + officer.getName() + " from the DEA have shut down your operation. You lost.");
     			cashMoney = 0;
 			System.exit(0);
@@ -463,8 +466,6 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 		}
     }
 
-
-   	
 
 
     public void customize(){
@@ -549,6 +550,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
 	    expenses += i.getPrice();
 	}
 	cashMoney -= expenses;
+	cashMoney -= (size * .5 * 100);//maintenance fees for bigger restaurants
     }
 	
     
@@ -585,22 +587,22 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
        } 
        menuCapacity /= .4;
        menuCapacity *= size * 15;
+       menuCapacity *= (1+ (1 - (priceScale*.1)));
 
        // FINDING WAITER CAPACITY
        for (Waiter waiter : waiterDir){
-	   waiterCapacity +=  waiter.getSalary() * (.5 + (waiter.getRating() + waiter.getAccuracy() + waiter.getSpeed()) / 10);
+	   waiterCapacity +=  waiter.getSalary() * (.5 + (waiter.getRating() + waiter.getAccuracy() + waiter.getSpeed()) / 20);
 	   waiterCapacity *= (1 + (waiter.getRating() * .05));
        }
        for (Waiter waiter : waiterDir){
 	   if (waiter.getFromJail() == true){
 	       waiterCapacity -= 10;//felons are capable too!
 	   }
-       } 
-       waiterCapacity *= 18 * waiterCapacity / 6000;
+       }
 
        // FINDING CHEF CAPACITY
        for (Chef chef : chefDir){
-	   chefCapacity += chef.getSalary() * (.5 + (chef.getRating() + chef.getSpeed() + chef.getAccuracy() + chef.getCookingKnowledge()) / 15);
+	   chefCapacity += chef.getSalary() * (.5 + (chef.getRating() + chef.getSpeed() + chef.getAccuracy() + chef.getCookingKnowledge()) / 40);
        }
        chefCapacity *= 18 * chefCapacity / 5000;
 
@@ -677,18 +679,22 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     	if (m == 0) {
 	     System.out.println("\033[35mYou have added the Winter Package! \n Your restaurant has been decorated with snowflakes and snowmen, and is offering lasagna and hot chocolate to customers!");
 	    cashMoney -= 1000;
+	    rating += .5;
     	}
     	if (m == 3) {
 	     System.out.println("\033[35mYou have added the Spring Package! \n Your restaurant has been decorated with fresh flowers and string lights, and is offering spring salmon and chocolate milk to customers!");
 	     cashMoney -= 1000;
+	     rating += .5;
     	}
     	if (m == 6){
 	    System.out.println("\033[35mYou have added the Summer Package! \n Your restaurant has been decorated with surfboards and tiki torches, and is offering smoothies and hotlemonade to customers!");
     		cashMoney -= 1000;
+    		rating += .5;
     	}
     	if (m == 9) {
     		System.out.println("\033[35mYou have added the Fall Package! \n Your restaurant has been decorated with leaves and gords, and is offering chili and chai tea lattes to customers!");	
     		cashMoney -= 1000;
+    		rating += .5;
     	}
     } 
 
