@@ -11,7 +11,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
     protected ArrayList<Manager> managerDir;
     protected ArrayList<Chef> chefDir;
     protected ArrayList<Items> menu;
-    private double startOfMonthMoney;
+    //private double startOfMonthMoney;
     private String name;
     private int size;
     private double priceScale;
@@ -562,6 +562,7 @@ public class RestaurantV2 extends Directory implements MonthlyPackages{
        double waiterCapacity = 0; //finito
        double chefCapacity = 0;   //finito
        double managerCapacity = 0;//finito
+       double startOfMonthMoney = cashMoney;
        
 
        // FINDING MENU CAPACITY
